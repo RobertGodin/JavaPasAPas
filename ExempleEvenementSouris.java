@@ -5,17 +5,17 @@ import java.awt.event.*;
 public class ExempleEvenementSouris extends JFrame 
   implements MouseListener
 {
-    // Variables d'objet qui contiennent les coordonnées de la souris
-    // Le premier sera dessiné à la coordonnée (0,0)
-    private static int x = 0; // Coordonnée x du Bot à dessiner
-    private static int y = 0; // Coordonnée y du Bot à dessiner
+    // Variables d'objet qui contiennent les coordonnï¿½es de la souris
+    // Le premier sera dessinï¿½ ï¿½ la coordonnï¿½e (0,0)
+    private static int x = 0; // Coordonnï¿½e x du Bot ï¿½ dessiner
+    private static int y = 0; // Coordonnï¿½e y du Bot ï¿½ dessiner
     
     public ExempleEvenementSouris() {
-        super("Exemple de traitement d'événements de la souris");
+        super("Exemple de traitement d'ï¿½vï¿½nements de la souris");
         
-        // Le paramètre this de addMouseListener() indique que l'objet qui doit 
-        // réagir aux événements de souris est l'objet 
-        // qui est créé par ce constructeur
+        // Le paramï¿½tre this de addMouseListener() indique que l'objet qui doit 
+        // rï¿½agir aux ï¿½vï¿½nements de souris est l'objet 
+        // qui est crï¿½ï¿½ par ce constructeur
         addMouseListener(this);
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -23,17 +23,17 @@ public class ExempleEvenementSouris extends JFrame
         this.setVisible(true);
     }
 
-    // Méthode d'objet de la classe ExempleEvenementSouris qui est 
-    // appelée si le bouton de souris est enfoncé
+    // Mï¿½thode d'objet de la classe ExempleEvenementSouris qui est 
+    // appelï¿½e si le bouton de souris est enfoncï¿½
     public void mousePressed(MouseEvent leMouseEvent){
-      x = leMouseEvent.getX(); // place la coordonnée x de la souris dans la variable x
-      y = leMouseEvent.getY(); // place la coordonnée y de la souris dans la variable y
-      // repaint() provoque un nouvel appel à paint()
+      x = leMouseEvent.getX(); // place la coordonnï¿½e x de la souris dans la variable x
+      y = leMouseEvent.getY(); // place la coordonnï¿½e y de la souris dans la variable y
+      // repaint() provoque un nouvel appel ï¿½ paint()
       repaint();
     }
 
-    // Il faut absolument définir les autres méthodes pour les autres
-    // événements de souris même s'il ne font rien
+    // Il faut absolument dï¿½finir les autres mï¿½thodes pour les autres
+    // ï¿½vï¿½nements de souris mï¿½me s'ils ne font rien
     public void mouseClicked(MouseEvent leMouseEvent){}
     public void mouseEntered(MouseEvent leMouseEvent){}
     public void mouseExited(MouseEvent leMouseEvent){}
@@ -41,7 +41,7 @@ public class ExempleEvenementSouris extends JFrame
    
     public static void paintBot (Graphics g, int x, int y, int largeur, int hauteur) {
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tï¿½te
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche
