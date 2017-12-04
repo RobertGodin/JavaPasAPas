@@ -15,18 +15,18 @@ import javax.swing.*;
 public class MondeDuJeu {
 
     // Taille du monde
-    public static final int LARGEURMONDE = 600;
-    public static final int HAUTEURMONDE = 600;
+    public static final int LARGEURMONDE = 3000;
+    public static final int HAUTEURMONDE = 3000;
 
     protected Vector vecteurEntites;
     
     public MondeDuJeu() {
         vecteurEntites = new Vector();
-        vecteurEntites.addElement(new BotAnimeAvecCri(10,100,20,40,3,3,true,"Son2.wav"));
-        vecteurEntites.addElement(new ItiAnimeAvecCriVolant(200,50,50,100,3,0,true,"Son3.wav"));
-        vecteurEntites.addElement(new KennyAnimeAvecCri(100,50,30,60,3,9,true,"Son1.wav"));
-        vecteurEntites.addElement(new EntiteAnimeAvecCriEtSequenceImages(50,100,100,100,5,5,true,"Son4.wav",9,"coq"));
-        vecteurEntites.addElement(new EntiteAnimeAvecCriEtSequenceImages(175,300,50,50,0,0,true,"invince.wav",6,"homer"));
+        vecteurEntites.addElement(new BotAnimeAvecCri(10,100,100,200,3,3,true,"Son2.wav"));
+        vecteurEntites.addElement(new ItiAnimeAvecCriVolant(200,50,100,200,3,0,true,"Son3.wav"));
+        vecteurEntites.addElement(new KennyAnimeAvecCri(100,50,100,200,3,9,true,"Son1.wav"));
+        vecteurEntites.addElement(new EntiteAnimeAvecCriEtSequenceImages(50,100,300,300,5,5,true,"Son4.wav",9,"coq"));
+        vecteurEntites.addElement(new EntiteAnimeAvecCriEtSequenceImages(175,300,200,200,0,0,true,"invince.wav",6,"homer"));
     }
     public void prochaineScene(){
         for(Iterator unIterator = vecteurEntites.iterator(); unIterator.hasNext();){

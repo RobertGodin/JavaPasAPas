@@ -13,9 +13,9 @@ public class DessinDuWazzupMan extends JFrame {
     public DessinDuWazzupMan() {
         super("Check mon anus");
     }
-    // paint() est appelée indirectement lors de la création du JFrame par show()
+    // paint() est appelï¿½e indirectement lors de la crï¿½ation du JFrame par show()
     public void paint (Graphics g) {
-        int x = 100; // Coordonnées x,y du coin supérieur gauche du bonhomme
+        int x = 100; // Coordonnï¿½es x,y du coin supï¿½rieur gauche du bonhomme
         int y = 50;
         int largeur = 100; // Largeur et hauteur du bonhomme
         int hauteur = 200;
@@ -41,7 +41,7 @@ public class DessinDuWazzupMan extends JFrame {
                 }
             }
         );
-        leFrame.setSize(300,300);
+        leFrame.setSize(1000,1000);
         leFrame.show();        
     }
 }
