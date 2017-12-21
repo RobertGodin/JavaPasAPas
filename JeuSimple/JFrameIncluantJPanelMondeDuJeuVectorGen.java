@@ -1,8 +1,9 @@
 package JeuSimple;
 import javax.swing.JFrame;
-public class JFrameIncluantJPanelMondeDuJeu extends JFrame{
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+public class JFrameIncluantJPanelMondeDuJeuVectorGen extends JFrame{
 
-    public JFrameIncluantJPanelMondeDuJeu() {
+    public JFrameIncluantJPanelMondeDuJeuVectorGen() {
         super("Jeu simple");
         JPanelPourMondeJeuSimple leJPanelAnimation =  
             new JPanelPourMondeJeuSimple();
@@ -16,6 +17,6 @@ public class JFrameIncluantJPanelMondeDuJeu extends JFrame{
     }
 
     public static void main (String args[]) {
-        new JFrameIncluantJPanelMondeDuJeu();
+        new JFrameIncluantJPanelMondeDuJeuVectorGen();
     }
 }
