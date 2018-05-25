@@ -11,7 +11,7 @@ public class DessinDuWazzupMan extends JFrame {
 
     /** Constructeur de ExempleDessinJFrame */
     public DessinDuWazzupMan() {
-        super("Check mon anus");
+        super("Creation de Fred");
     }
     // paint() est appel�e indirectement lors de la cr�ation du JFrame par show()
     public void paint (Graphics g) {
