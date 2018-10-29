@@ -1,10 +1,9 @@
 /*
  * ExempleAppletDessin.java
- * Dessins avec méthodes de la classe Graphics dans le contexte d'un applet
- * Created on 15 août 2000, 15:36
+ * Dessins avec mï¿½thodes de la classe Graphics dans le contexte d'un applet
+ * Created on 15 aoï¿½t 2000, 15:36
  */
 
-package LivreJava;
 import java.awt.*;
 import javax.swing.JApplet;
 import java.awt.Graphics;
@@ -16,13 +15,13 @@ import java.awt.Graphics;
 public class ExempleAppletDessin extends JApplet {
 
     public void paint (Graphics g) {
-        int x = 100; // Coordonnées x,y du coin supérieur gauche du bonhomme
+        int x = 100; // Coordonnï¿½es x,y du coin supï¿½rieur gauche du bonhomme
         int y = 20;
         int largeur = 100; // Largeur et hauteur du bonhomme
         int hauteur = 200;
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La tête
+        // La tï¿½te
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire

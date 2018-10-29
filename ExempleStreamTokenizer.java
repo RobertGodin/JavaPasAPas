@@ -1,17 +1,17 @@
 /* Illustration du StreamTokenizer
- * Lit le fichier plants.txt, affiche à l'écran chacun des jetons (noPlant,description,prixUnitaire) et
+ * Lit le fichier plants.txt, affiche ï¿½ l'ï¿½cran chacun des jetons (noPlant,description,prixUnitaire) et
  * stocke le contenu dans un vecteur d'objets Plant */
-package LivreJava;
+
 import java.io.*;
 import java.util.*;
 public class ExempleStreamTokenizer{
     public static void main (String args[]) {
         try{
-            FileReader unFichier = new FileReader("C:/forte4j/Development/LivreJava/Plants.txt");
+            FileReader unFichier = new FileReader("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Plants.txt");
             StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
-            // Les 5 lignes suivantes ne sont pas nécessaires car les paramètres
-            // donnés sont les valeurs de défaut
+            // Les 5 lignes suivantes ne sont pas nï¿½cessaires car les paramï¿½tres
+            // donnï¿½s sont les valeurs de dï¿½faut
             unStreamTokenizer.quoteChar((int)'"');
             unStreamTokenizer.whitespaceChars((int)'\r',(int)'\r');
             unStreamTokenizer.whitespaceChars((int)'\n',(int)'\n');
@@ -31,7 +31,7 @@ public class ExempleStreamTokenizer{
                 {System.out.println("Le format du fichier est incorrect : noPlant attendu"); System.exit(1);}
                 //Lecture de la description    
                 unStreamTokenizer.nextToken();
-                if(unStreamTokenizer.ttype == (int)'"'){//Est-ce bien une chaîne encadrée par " ?
+                if(unStreamTokenizer.ttype == (int)'"'){//Est-ce bien une chaï¿½ne encadrï¿½e par " ?
                     description = unStreamTokenizer.sval;
                 } else
                 {System.out.println("Le format du fichier est incorrect : description attendue"); System.exit(1);}
@@ -42,7 +42,7 @@ public class ExempleStreamTokenizer{
                 } else
                 {System.out.println("Le format du fichier est incorrect : prix attendu"); System.exit(1);}
 
-                //Création de l'objet Plant
+                //Crï¿½ation de l'objet Plant
                 Plant unPlant = new Plant(noPlant, description, prixUnitaire);
                 System.out.println(noPlant + " " + description + " " + prixUnitaire);
                 vecteurDePlants.addElement(unPlant);

@@ -1,11 +1,10 @@
 
 /*
- * Exemple d'interaction avec la souris. Lorsque le bouton est enfoncé, 
- * le programme dessine un autre bonhomme à la position courante de la souris
- * (coin inférieur gauche du rectangle englobant).
+ * Exemple d'interaction avec la souris. Lorsque le bouton est enfoncï¿½, 
+ * le programme dessine un autre bonhomme ï¿½ la position courante de la souris
+ * (coin infï¿½rieur gauche du rectangle englobant).
  */
 
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -15,12 +14,12 @@ public class ClickSouris extends JFrame {
     private int y = 0;
     
     public ClickSouris() {
-        super("Exemple d'utilisation d'une méthode statique paintBonhomme");
-        // Ajoute un objet écouteur des événements de souris du JFrame
+        super("Exemple d'utilisation d'une mï¿½thode statique paintBonhomme");
+        // Ajoute un objet ï¿½couteur des ï¿½vï¿½nements de souris du JFrame
         addMouseListener (
             new MouseAdapter(){
-                // Cette méthode indique comment répondre à l'événement correspondant
-                // à enfoncer le bouton de la souris
+                // Cette mï¿½thode indique comment rï¿½pondre ï¿½ l'ï¿½vï¿½nement correspondant
+                // ï¿½ enfoncer le bouton de la souris
                 public void mousePressed(MouseEvent e){
                     x = e.getX();
                     y = e.getY();
@@ -31,9 +30,9 @@ public class ClickSouris extends JFrame {
     }
    
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme ï¿½ l'ï¿½chelle dans un rectangle englobant de paramï¿½tres x,y,largeur,hauteur
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tï¿½te
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

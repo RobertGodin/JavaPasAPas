@@ -1,9 +1,7 @@
 
 /*
- * Exemple d'utilisation d'une méthode statique pour dessiner le bonhomme
+ * Exemple d'utilisation d'une mï¿½thode statique pour dessiner le bonhomme
  */
-
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -11,13 +9,13 @@ import java.awt.event.*;
 public class ExempleMethodeStatiquePaintBonhomme extends JFrame {
 
     public ExempleMethodeStatiquePaintBonhomme() {
-        super("Exemple d'utilisation d'une méthode statique paintBonhomme");
+        super("Exemple d'utilisation d'une mï¿½thode statique paintBonhomme");
     }
    
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme ï¿½ l'ï¿½chelle dans un rectangle englobant de paramï¿½tres x,y,largeur,hauteur
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tï¿½te
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

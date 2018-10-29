@@ -3,9 +3,8 @@
  * Animation d'un bonhomme bondissant
  * Utilise BonhommeQuiBouge
  * Boucle d'animation explicite
- * Created on 18 août 2000, 10:15
+ * Created on 18 aoï¿½t 2000, 10:15
  */
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -31,7 +30,7 @@ public class Animation2 extends JPanel{
         }
     }
     
-    // paintComponent() est appelée indirectement par repaint()
+    // paintComponent() est appelï¿½e indirectement par repaint()
     // N.B. Swing utilise le double buffering
     
     public void paintComponent (Graphics g) {

@@ -1,11 +1,11 @@
 /*
  * ExempleAnimation.java
- * Animation simple qui bouge le bonhomme de gauche à droite
- * Exemple de composante pour l'animation réalisée avec un JPanel
- * Un Timer est utilisé pour réaliser la boucle d'animation
- * Created on 18 août 2000, 10:15
+ * Animation simple qui bouge le bonhomme de gauche ï¿½ droite
+ * Exemple de composante pour l'animation rï¿½alisï¿½e avec un JPanel
+ * Un Timer est utilisï¿½ pour rï¿½aliser la boucle d'animation
+ * Created on 18 aoï¿½t 2000, 10:15
  */
-package LivreJava;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -24,14 +24,14 @@ public class ExempleAnimation extends JPanel implements ActionListener{
             chrono.start();
         }
     }
-    // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
+    // Le chrono appelle actionPerformed pï¿½riodiquement (boucle d'animation)
     public void actionPerformed( ActionEvent e){
         repaint();
         unBonhomme.setX(unBonhomme.getX()+5);
         if (unBonhomme.getX() >= 200){chrono.stop();}
     }
     
-    // paintComponent() est appelée indirectement par repaint()
+    // paintComponent() est appelï¿½e indirectement par repaint()
     // N.B. Swing utilise le double buffering
     
     public void paintComponent (Graphics g) {

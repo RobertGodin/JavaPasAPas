@@ -2,7 +2,6 @@
  * Exercice : dessiner plusieurs bonhommes avec sous-classes
  */
 
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -10,7 +9,7 @@ import java.awt.event.*;
 public class PlusieursObjetsSousClasses extends JFrame {
 
     public PlusieursObjetsSousClasses() {
-        super("Exemple avec trois classes indépendantes");
+        super("Exemple avec trois classes indï¿½pendantes");
     }
    
     public void paint (Graphics g) {

@@ -2,7 +2,6 @@
  * Exemple de dessin avec paint dans JFrame
  */
 
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -11,13 +10,13 @@ public class DessinDansJFrame extends JFrame {
 
     /** Constructeur de ExempleDessinJFrame */
     public DessinDansJFrame() {
-        super("Exemples de méthodes de Graphics dans un JFrame");
+        super("Exemples de mï¿½thodes de Graphics dans un JFrame");
     }
-    // paint() est appelée indirectement lors de la création du JFrame par show()
+    // paint() est appelï¿½e indirectement lors de la crï¿½ation du JFrame par show()
     public void paint (Graphics g) {
         
         g.setColor(Color.green);
-        g.fillOval(100,100,200,200); // La tête
+        g.fillOval(100,100,200,200); // La tï¿½te
 
         g.setColor(Color.black);
         g.fillRect(150,150,20,20); // L'oeil gauche

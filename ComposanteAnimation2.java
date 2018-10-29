@@ -1,11 +1,11 @@
 /*
  * ComposanteAnimation2.java
  * Plusieurs bonhommes dans un Vector
- * Le Iti vole (changement du dessin à chaque état)
- * Ajoute un coq (animation par séquence d'images)
+ * Le Iti vole (changement du dessin ï¿½ chaque ï¿½tat)
+ * Ajoute un coq (animation par sï¿½quence d'images)
  * Created on 1 juillet 2001, 21:52
  */
-package LivreJava;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.net.URL;
@@ -14,17 +14,17 @@ import java.util.*;
 import java.net.*;
 import javax.swing.*;
 public class ComposanteAnimation2 {
-    protected Vector vecteurEntités;
+    protected Vector vecteurEntitï¿½s;
     protected ImageIcon imagesCoq[];
     protected Component contenant;
     
     public ComposanteAnimation2(Component contenant) {
         this.contenant = contenant;
         
-        vecteurEntités = new Vector();
-        vecteurEntités.addElement(new KenyAnimé(100,50,100,200,3,3,true,"Son1.wav",1));
-        vecteurEntités.addElement(new BotAnimé(10,100,20,40,3,3,true,"Son2.wav",1));
-        vecteurEntités.addElement(new ItiVolant(200,50,100,200,3,0,true,"Son3.wav",3));
+        vecteurEntitï¿½s = new Vector();
+        vecteurEntitï¿½s.addElement(new KenyAnimï¿½(100,50,100,200,3,3,true,"Son1.wav",1));
+        vecteurEntitï¿½s.addElement(new BotAnimï¿½(10,100,20,40,3,3,true,"Son2.wav",1));
+        vecteurEntitï¿½s.addElement(new ItiVolant(200,50,100,200,3,0,true,"Son3.wav",3));
         
         // Charger les images du coq
         imagesCoq = new ImageIcon[8];
@@ -33,24 +33,24 @@ public class ComposanteAnimation2 {
             imagesCoq[i] = new ImageIcon(url);
         }
         
-        vecteurEntités.addElement(new CoqVolant(50,50,100,100,5,5,true,"Son4.wav",8,contenant,imagesCoq));
+        vecteurEntitï¿½s.addElement(new CoqVolant(50,50,100,100,5,5,true,"Son4.wav",8,contenant,imagesCoq));
     }
     public void changerMonde(){
-        for(Iterator unIterator = vecteurEntités.iterator(); unIterator.hasNext();){
-            ((EntitéAnimée)unIterator.next()).changer();
+        for(Iterator unIterator = vecteurEntitï¿½s.iterator(); unIterator.hasNext();){
+            ((Entitï¿½Animï¿½e)unIterator.next()).changer();
         }
     }
     public void paint(Graphics g){
-        for(Iterator unIterator = vecteurEntités.iterator(); unIterator.hasNext();){
-            ((EntitéAnimée)unIterator.next()).paintSiVisible(g);
+        for(Iterator unIterator = vecteurEntitï¿½s.iterator(); unIterator.hasNext();){
+            ((Entitï¿½Animï¿½e)unIterator.next()).paintSiVisible(g);
         }
     }
     public void mousePressed(MouseEvent e){
-        for(Iterator unIterator = vecteurEntités.iterator(); unIterator.hasNext();){
-            EntitéAnimée uneEntitéAnimée = (EntitéAnimée)unIterator.next();
-            if (uneEntitéAnimée.touche(e.getX(),e.getY())) {
-                uneEntitéAnimée.setVisible(false);
-                uneEntitéAnimée.crier();
+        for(Iterator unIterator = vecteurEntitï¿½s.iterator(); unIterator.hasNext();){
+            Entitï¿½Animï¿½e uneEntitï¿½Animï¿½e = (Entitï¿½Animï¿½e)unIterator.next();
+            if (uneEntitï¿½Animï¿½e.touche(e.getX(),e.getY())) {
+                uneEntitï¿½Animï¿½e.setVisible(false);
+                uneEntitï¿½Animï¿½e.crier();
             }
         }
     }

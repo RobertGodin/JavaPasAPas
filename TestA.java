@@ -4,8 +4,6 @@
  * Created on 4 juillet 2001, 17:08
  */
 
-package LivreJava;
-
 /**
  *
  * @author  Robert

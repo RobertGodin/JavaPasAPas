@@ -1,7 +1,7 @@
-package LivreJava;
+
 import java.awt.*;
 import javax.swing.*;
-public class CoqVolant extends EntitéAnimée {
+public class CoqVolant extends Entitï¿½Animï¿½e {
 
     protected ImageIcon imagesAnimation[];
     protected MediaTracker unMediaTracker;
@@ -16,9 +16,9 @@ public class CoqVolant extends EntitéAnimée {
     }
 
     public void paint (Graphics g) {
-        if (imagesAnimation[étatCourant].getImageLoadStatus()==MediaTracker.COMPLETE){
-            //        imagesAnimation[étatCourant].paintIcon(contenant,g,x,y);
-                    g.drawImage(imagesAnimation[étatCourant].getImage(),x,y,largeur,hauteur,contenant);
+        if (imagesAnimation[ï¿½tatCourant].getImageLoadStatus()==MediaTracker.COMPLETE){
+            //        imagesAnimation[ï¿½tatCourant].paintIcon(contenant,g,x,y);
+                    g.drawImage(imagesAnimation[ï¿½tatCourant].getImage(),x,y,largeur,hauteur,contenant);
         }
     }
 }

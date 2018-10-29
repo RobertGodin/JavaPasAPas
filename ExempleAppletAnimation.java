@@ -1,10 +1,9 @@
 /*
  * ExempleAppletAnimation.java
  * Applet qui utilise la composante ExempleAnimation
- * Created on 15 août 2000, 15:36
+ * Created on 15 aoï¿½t 2000, 15:36
  */
 
-package LivreJava;
 import java.awt.*;
 import javax.swing.JApplet;
 import java.awt.Graphics;

@@ -2,7 +2,6 @@
  * ExempleObjetBonhomme.java
  * Utilisation de la classe Bonhomme
  */
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -13,7 +12,7 @@ public class ExempleObjetBonhomme extends JFrame {
         super("Exemple d'utilisation d'un objet de la classe Bonhomme");
     }   
     
-    // paint() est appelée indirectement lors de la création du JFrame par show()
+    // paint() est appelï¿½e indirectement lors de la crï¿½ation du JFrame par show()
     public void paint (Graphics g) {
         Bonhomme unBonhomme = new Bonhomme(100,100,100,200);
         unBonhomme.paint(g);

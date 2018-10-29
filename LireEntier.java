@@ -1,5 +1,4 @@
-/* Lecture dans le fichier d'un entier à l'aide d'un DataInputStream */
-package LivreJava;
+/* Lecture dans le fichier d'un entier ï¿½ l'aide d'un DataInputStream */
 import java.io.*;
 public class LireEntier{
     public static void main (String args[]) {
@@ -7,10 +6,10 @@ public class LireEntier{
         try{
             unFichier = 
                 new DataInputStream(
-                    new FileInputStream("C:/forte4j/Development/LivreJava/UnEntier.dat"));
+                    new FileInputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/UnEntier.dat"));
             int unEntier = unFichier.readInt();
             unFichier.close();
-            System.out.println("Valeur décimale de l'entier : "+unEntier);
+            System.out.println("Valeur dï¿½cimale de l'entier : "+unEntier);
         }
         catch (IOException e){
             System.err.println("Exception\n" + e.toString());

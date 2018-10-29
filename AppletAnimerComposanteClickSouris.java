@@ -1,5 +1,5 @@
 // Applet compatible Java 1 avec double tampon qui anime avec ComposanteAnimation
-package LivreJava;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -10,7 +10,7 @@ public class AppletAnimerComposanteClickSouris
   protected Graphics tamponGraphics;
   protected Thread leThreadAnimation;
   protected Dimension d;
-  //Déclarer la composante
+  //Dï¿½clarer la composante
   protected ComposanteAnimation uneComposanteAnimation;
 
   public void init() {
@@ -30,11 +30,11 @@ public class AppletAnimerComposanteClickSouris
 
   public void update(Graphics g) {
     tamponGraphics.clearRect(0,0,d.width,d.height);
-    //Changer l'état du monde pour le prochain cliché
+    //Changer l'ï¿½tat du monde pour le prochain clichï¿½
     uneComposanteAnimation.changerMonde();
-    //Prendre un cliché du monde
+    //Prendre un clichï¿½ du monde
     uneComposanteAnimation.paint(tamponGraphics);
-    // copier tamponImage sur l'écran
+    // copier tamponImage sur l'ï¿½cran
     g.drawImage(tamponImage, 0, 0, this);
   }
 

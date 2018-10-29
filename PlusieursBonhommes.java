@@ -1,9 +1,8 @@
 
 /*
- * Exercice : dessiner plusieurs bonhommes avec méthodes statiques
+ * Exercice : dessiner plusieurs bonhommes avec mï¿½thodes statiques
  */
 
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -11,11 +10,11 @@ import java.awt.event.*;
 public class PlusieursBonhommes extends JFrame {
 
     public PlusieursBonhommes() {
-        super("Exemple d'utilisation d'une méthode statique paintBonhomme");
+        super("Exemple d'utilisation d'une mï¿½thode statique paintBonhomme");
     }
    
     public static void paintBonhommeKeny (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme ï¿½ l'ï¿½chelle dans un rectangle englobant de paramï¿½tres x,y,largeur,hauteur
         int milieux = x + (largeur/2);
         int milieuy = y + (hauteur/2);
         // Le corps
@@ -23,7 +22,7 @@ public class PlusieursBonhommes extends JFrame {
         g.fillRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
         g.setColor(Color.black);
         g.drawRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
-        // La tête
+        // La tï¿½te
         g.setColor(new Color(255,100,0));
         g.fillOval(x,y,largeur,hauteur/2);
         g.setColor(Color.black);
@@ -51,9 +50,9 @@ public class PlusieursBonhommes extends JFrame {
     }
 
             public static void paintBonhommeBot (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme ï¿½ l'ï¿½chelle dans un rectangle englobant de paramï¿½tres x,y,largeur,hauteur
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tï¿½te
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche
@@ -67,7 +66,7 @@ public class PlusieursBonhommes extends JFrame {
     public static void paintBonhommeIti (Graphics g, int x, int y, int largeur, int hauteur) {
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La tête
+        // La tï¿½te
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire

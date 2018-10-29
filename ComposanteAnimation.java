@@ -3,7 +3,6 @@
  * 
  * Created on 1 juillet 2001, 21:52
  */
-package LivreJava;
 import java.awt.*;
 import java.awt.event.*;
 public class ComposanteAnimation {

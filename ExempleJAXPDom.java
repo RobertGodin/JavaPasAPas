@@ -1,4 +1,3 @@
-package LivreJava;
 
 // Packages de JAXP
 import javax.xml.parsers.*;

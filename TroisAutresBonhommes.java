@@ -3,7 +3,6 @@
  * Exercice trois autres bonhommes (Keny)
  */
 
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -11,11 +10,11 @@ import java.awt.event.*;
 public class TroisAutresBonhommes extends JFrame {
 
     public TroisAutresBonhommes() {
-        super("Exemple d'utilisation d'une méthode statique paintBonhomme");
+        super("Exemple d'utilisation d'une mï¿½thode statique paintBonhomme");
     }
    
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme ï¿½ l'ï¿½chelle dans un rectangle englobant de paramï¿½tres x,y,largeur,hauteur
         int milieux = x + (largeur/2);
         int milieuy = y + (hauteur/2);
         // Le corps
@@ -23,7 +22,7 @@ public class TroisAutresBonhommes extends JFrame {
         g.fillRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
         g.setColor(Color.black);
         g.drawRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
-        // La tête
+        // La tï¿½te
         g.setColor(new Color(255,100,0));
         g.fillOval(x,y,largeur,hauteur/2);
         g.setColor(Color.black);

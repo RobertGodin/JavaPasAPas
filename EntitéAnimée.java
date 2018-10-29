@@ -1,16 +1,16 @@
-package LivreJava;
+
 import java.awt.*;
 import java.net.URL;
 import java.applet.*;
-public class EntitéAnimée{
+public class Entitï¿½Animï¿½e{
 
     protected int x,y,largeur,hauteur,vitesseX, vitesseY;
     protected boolean visible;
     protected AudioClip unSon;
-    protected int étatCourant = 0;
+    protected int ï¿½tatCourant = 0;
     protected int nombreEtats = 3;
 
-    public EntitéAnimée(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY,
+    public Entitï¿½Animï¿½e(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY,
                     boolean visible, String fichierAudio, int nombreEtats) {
         this.x = x;
         this.y = y;
@@ -20,9 +20,9 @@ public class EntitéAnimée{
         this.vitesseY = vitesseY;
         this.visible = visible;
         this.nombreEtats = nombreEtats;
-        // Chargement du clip audio. L'URL part de la racine qui est le répertoire
+        // Chargement du clip audio. L'URL part de la racine qui est le rï¿½pertoire
         // contenant le fichier .class
-        URL url = EntitéAnimée.class.getResource(fichierAudio);
+        URL url = Entitï¿½Animï¿½e.class.getResource(fichierAudio);
         // Cast du contenu en AudioClip
         try{unSon = (AudioClip)url.getContent();}
         catch(Exception exception){System.err.println(exception.toString());}
@@ -40,11 +40,11 @@ public class EntitéAnimée{
     public boolean getVisible(){return visible;}
     
     public void changer(){
-        // Passer à l'état suivant dans le processus d'animation
+        // Passer ï¿½ l'ï¿½tat suivant dans le processus d'animation
         if (x+largeur+vitesseX > 500 || x < 0){
             vitesseX = -vitesseX;
             // Le bonhomme fait un son lorsqu'il frappe la fin du monde !
-            // On arrête le son précédent au cas où il ne serait pas terminé
+            // On arrï¿½te le son prï¿½cï¿½dent au cas oï¿½ il ne serait pas terminï¿½
         }
         x=x+vitesseX;
         if (y+hauteur+vitesseY > 500 || y < 0){
@@ -53,7 +53,7 @@ public class EntitéAnimée{
         }
         y=y+vitesseY;
         // Etat suivant d'affichage
-        étatCourant = (étatCourant + 1)%nombreEtats;
+        ï¿½tatCourant = (ï¿½tatCourant + 1)%nombreEtats;
     }
     public void crier (){
         unSon.play();
@@ -62,7 +62,7 @@ public class EntitéAnimée{
         return ((unX >= x) && (unX <= x + largeur) && (unY >= y) && (unY <= y + hauteur));
     }
     public void paint (Graphics g) {
-        // Méthode abstraite
+        // Mï¿½thode abstraite
     }
     public void paintSiVisible (Graphics g) {
         if(visible){paint(g);}

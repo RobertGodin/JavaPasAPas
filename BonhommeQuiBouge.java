@@ -1,10 +1,9 @@
 /*
  * BonhommeQuiBouge.java
  * A une position (x,y), une dimension (largeur, hauteur) et
- * une vitesse de déplacement (vitesseX,vitesseY)
- * Created on 28 août 2000, 17:34
+ * une vitesse de dï¿½placement (vitesseX,vitesseY)
+ * Created on 28 aoï¿½t 2000, 17:34
  */
-package LivreJava;
 import java.awt.*;
 import java.net.URL;
 import java.applet.*;
@@ -22,7 +21,7 @@ public class BonhommeQuiBouge{
         this.largeur = largeur;
         this.vitesseX = vitesseX;
         this.vitesseY = vitesseY;
-        // Chargement du clip audio. L'URL part de la racine qui est le répertoire
+        // Chargement du clip audio. L'URL part de la racine qui est le rï¿½pertoire
         // contenant le fichier .class
         URL url = BonhommeQuiBouge.class.getResource("Son1.wav");
         // Cast du contenu en AudioClip
@@ -38,7 +37,7 @@ public class BonhommeQuiBouge{
         if (x+largeur+vitesseX > 400 || x < 0){
             vitesseX = -vitesseX;
             // Le bonhomme fait un son lorsqu'il frappe la fin du monde !
-            // On arrête le son précédent au cas où il ne serait pas terminé
+            // On arrï¿½te le son prï¿½cï¿½dent au cas oï¿½ il ne serait pas terminï¿½
             unSon.stop();
             unSon.play();
         }
@@ -59,7 +58,7 @@ public class BonhommeQuiBouge{
         g.fillRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
         g.setColor(Color.black);
         g.drawRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
-        // La tête
+        // La tï¿½te
         g.setColor(new Color(255,100,0));
         g.fillOval(x,y,largeur,hauteur/2);
         g.setColor(Color.black);

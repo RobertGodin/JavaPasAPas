@@ -1,11 +1,10 @@
 /*
  * AppAnimerComposanteAnimation2.java
  * Utilise ComposanteAnimation2
- * Animation de plusieurs entités
+ * Animation de plusieurs entitï¿½s
  * Boucle d'animation explicite
- * Interactivité simple qui répond à la souris
+ * Interactivitï¿½ simple qui rï¿½pond ï¿½ la souris
  */
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -38,7 +37,7 @@ public class AppAnimerComposanteAnimation2 extends JPanel{
         }
     }
     
-    // paintComponent() est appelée indirectement par repaint()
+    // paintComponent() est appelï¿½e indirectement par repaint()
     // N.B. Swing utilise le double buffering
     
     public void paintComponent (Graphics g) {
@@ -49,7 +48,7 @@ public class AppAnimerComposanteAnimation2 extends JPanel{
 
     public static void main (String args[]) {
         AppAnimerComposanteAnimation2 lePanelAnimation =  new AppAnimerComposanteAnimation2();
-        JFrame leFrame = new JFrame("Animation avec interactivité simple");
+        JFrame leFrame = new JFrame("Animation avec interactivitï¿½ simple");
         leFrame.getContentPane().add(lePanelAnimation);
         leFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         leFrame.setSize(500,500);

@@ -1,10 +1,10 @@
 /*
  * ExempleObjetBonhomme.java
  * Exemple de dessin avec paint dans JFrame
- * Encapsulation du dessin dans une méthode statique pintBonhomme
- * Created on 18 août 2000, 10:15
+ * Encapsulation du dessin dans une mï¿½thode statique pintBonhomme
+ * Created on 18 aoï¿½t 2000, 10:15
  */
-package LivreJava;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -17,7 +17,7 @@ public class ExerciceBoucleBonhomme extends JFrame {
         super("Exemple d'utilisation d'un objet de la classe Bonhomme");
     }   
     
-    // paint() est appelée indirectement lors de la création du JFrame par show()
+    // paint() est appelï¿½e indirectement lors de la crï¿½ation du JFrame par show()
     public void paint (Graphics g) {
         int w = 50;
         int compteur = 10;

@@ -4,10 +4,9 @@
  * Animation d'un bonhomme bondissant
  * Utilise BonhommeQuiBouge
  * Boucle d'animation explicite
- * Interactivité simple qui répond à la souris
- * Created on 18 août 2000, 10:15
+ * Interactivitï¿½ simple qui rï¿½pond ï¿½ la souris
+ * Created on 18 aoï¿½t 2000, 10:15
  */
-package LivreJava;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -40,7 +39,7 @@ public class AppAnimerComposanteEtClickSouris extends JPanel{
         }
     }
     
-    // paintComponent() est appelée indirectement par repaint()
+    // paintComponent() est appelï¿½e indirectement par repaint()
     // N.B. Swing utilise le double buffering
     
     public void paintComponent (Graphics g) {
@@ -51,7 +50,7 @@ public class AppAnimerComposanteEtClickSouris extends JPanel{
 
     public static void main (String args[]) {
         AppAnimerComposanteEtClickSouris lePanelAnimation =  new AppAnimerComposanteEtClickSouris();
-        JFrame leFrame = new JFrame("Animation avec interactivité simple");
+        JFrame leFrame = new JFrame("Animation avec interactivitï¿½ simple");
         leFrame.getContentPane().add(lePanelAnimation);
         leFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         leFrame.setSize(400,600);

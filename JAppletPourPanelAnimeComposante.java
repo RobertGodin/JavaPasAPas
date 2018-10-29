@@ -4,7 +4,6 @@
  * Created on 2 juillet 2001, 18:43
  */
 
-package LivreJava;
 import java.awt.*;
 import javax.swing.JApplet;
 import java.awt.Graphics;

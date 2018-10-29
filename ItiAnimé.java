@@ -1,8 +1,8 @@
-package LivreJava;
-import java.awt.*;
-public class ItiAnimé extends EntitéAnimée {
 
-    public ItiAnimé(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
+import java.awt.*;
+public class ItiAnimï¿½ extends Entitï¿½Animï¿½e {
+
+    public ItiAnimï¿½(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
                     boolean visible, String fichierAudio) {
         super(x,y,largeur,hauteur,vitesseX,vitesseY,visible,fichierAudio,1);
     }
@@ -10,7 +10,7 @@ public class ItiAnimé extends EntitéAnimée {
     public void paint (Graphics g) {
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La tête
+        // La tï¿½te
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire

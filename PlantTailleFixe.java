@@ -1,7 +1,7 @@
-package LivreJava;
+
 import java.io.Serializable;
 public class PlantTailleFixe implements Serializable{
-    private int noPlant; //numéro de catalogue du plant
+    private int noPlant; //numï¿½ro de catalogue du plant
     private char[] description =  new char[15]; //description du plant
     private double prixUnitaire; //prix unitaire du plant
 

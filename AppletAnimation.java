@@ -1,5 +1,5 @@
 // Applet compatible Java 1 avec double tampon
-package LivreJava;
+
 import java.awt.*;
 
 public class AppletAnimation
@@ -9,7 +9,7 @@ public class AppletAnimation
   protected Graphics tamponGraphics;
   protected Thread leThreadAnimation;
   protected Dimension d;
-  //Déclarer objets du monde
+  //Dï¿½clarer objets du monde
   protected BonhommeQuiBouge unBonhomme;
 
   public void init() {
@@ -26,7 +26,7 @@ public class AppletAnimation
     tamponGraphics.clearRect(0,0,d.width,d.height);
     unBonhomme.deplacer();
     unBonhomme.paint(tamponGraphics);
-    // copier tamponImage sur l'écran
+    // copier tamponImage sur l'ï¿½cran
     g.drawImage(tamponImage, 0, 0, this);
   }
 
