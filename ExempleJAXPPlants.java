@@ -1,10 +1,8 @@
 /**
- * Création d'un arbre DOM avec JAXP
- * Parcours de l'arbre pour extraire les données et les insérer
+ * Crï¿½ation d'un arbre DOM avec JAXP
+ * Parcours de l'arbre pour extraire les donnï¿½es et les insï¿½rer
  * dans le vecteurs d'objets Plant
  */
-
-package LivreJava;
 
 // Packages de JAXP
 import javax.xml.parsers.*;
@@ -19,21 +17,21 @@ import java.util.*;
 public class ExempleJAXPPlants {
 
     public static void main(String[] args) throws Exception {
-        // Création d'un DocumentBuilderFactory et configuration des paramètres
+        // Crï¿½ation d'un DocumentBuilderFactory et configuration des paramï¿½tres
         DocumentBuilderFactory unDocBuildFact = DocumentBuilderFactory.newInstance();
         unDocBuildFact.setValidating(true);
         unDocBuildFact.setIgnoringElementContentWhitespace(true);
 
-        // Création d'un DocumentBuilder
+        // Crï¿½ation d'un DocumentBuilder
         DocumentBuilder unDocumentBuilder = unDocBuildFact.newDocumentBuilder();
 
         // Parsage du document
-        File leFile = new File("D:/oracle/oraDev/jdev/mywork/WorkspaceLivreJava/LivreJava/classes/LivreJava/Plants.xml");
+        File leFile = new File("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Plants.xml");
         Document unDocument = unDocumentBuilder.parse(leFile);
         Vector vecteurDePlants = new Vector();
-        Node unElementCatalogue = unDocument.getDocumentElement(); // Cherche l'élément racine <catalogue>
+        Node unElementCatalogue = unDocument.getDocumentElement(); // Cherche l'ï¿½lï¿½ment racine <catalogue>
 
-        // Itérer sur les noeuds <Plant> qui sont les enfants de <Catalogue>
+        // Itï¿½rer sur les noeuds <Plant> qui sont les enfants de <Catalogue>
         NodeList listeNodePlants = unElementCatalogue.getChildNodes();
         int tailleListe = listeNodePlants.getLength();
         for (int i = 0; i < tailleListe ; i++) {
