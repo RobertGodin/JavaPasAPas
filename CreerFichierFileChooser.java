@@ -5,8 +5,8 @@ public class CreerFichierFileChooser extends JFrame {
     public CreerFichierFileChooser () throws Exception {
         JFileChooser unFileChooser = new JFileChooser();
         unFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        int résultat = unFileChooser.showSaveDialog(this);
-        if (résultat != JFileChooser.CANCEL_OPTION){
+        int resultat = unFileChooser.showSaveDialog(this);
+        if (resultat != JFileChooser.CANCEL_OPTION){
             File leFile = unFileChooser.getSelectedFile();
             if (leFile != null && !(leFile.getName().equals(""))){
                 FileOutputStream unFichier = new FileOutputStream(leFile);
