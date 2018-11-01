@@ -8,7 +8,7 @@ public class LireFluxPlants{
         
         ObjectInputStream fichierFluxPlants =
         new ObjectInputStream (
-            new FileInputStream("C:/forte4j/Development/LivreJava/FluxPlants.dat"));
+            new FileInputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/FluxPlants.dat"));
         
         while(true){
             Plant unPlant =  new Plant(0,"",0.0);
