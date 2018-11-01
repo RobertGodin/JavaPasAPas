@@ -3,7 +3,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class JPanelPourMondeJeuVectorGen extends JPanel implements ActionListener, MouseListener{
+public class JPanelPourMondeDuJeuVectorGen extends JPanel implements ActionListener, MouseListener{
 
     public static final int INTERVALLEENTRESCENES = 50; // En ms
 
@@ -17,7 +17,7 @@ public class JPanelPourMondeJeuVectorGen extends JPanel implements ActionListene
     public static final int HAUTEURJPANEL = MondeDuJeuVectorGen.HAUTEURMONDE;
     
     // Conctructeur initialise le monde � animer
-    public JPanelPourMondeJeuVectorGen() {
+    public JPanelPourMondeDuJeuVectorGen() {
       leMondeDuJeu = new MondeDuJeuVectorGen();
       addMouseListener (this);
      }
