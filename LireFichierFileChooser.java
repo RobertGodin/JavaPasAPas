@@ -5,8 +5,8 @@ public class LireFichierFileChooser extends JFrame {
     public LireFichierFileChooser () throws Exception {
         JFileChooser unFileChooser = new JFileChooser();
         unFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        int r�sultat = unFileChooser.showOpenDialog(this);
-        if (r�sultat != JFileChooser.CANCEL_OPTION){
+        int resultat = unFileChooser.showOpenDialog(this);
+        if (resultat != JFileChooser.CANCEL_OPTION){
             File leFile = unFileChooser.getSelectedFile();
             if (leFile != null && !(leFile.getName().equals(""))){
                 FileInputStream unFichier = new FileInputStream(leFile);
