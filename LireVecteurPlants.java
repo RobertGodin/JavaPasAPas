@@ -9,7 +9,7 @@ public class LireVecteurPlants{
         
         ObjectInputStream fichierFluxPlants =
         new ObjectInputStream (
-            new FileInputStream("C:/forte4j/Development/LivreJava/VecteurPlants.dat"));
+            new FileInputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/VecteurPlants.dat"));
         Vector vecteurDePlants = (Vector) fichierFluxPlants.readObject();
         fichierFluxPlants.close();
         
