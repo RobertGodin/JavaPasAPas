@@ -5,13 +5,13 @@ public class JFrameIncluantJPanelMondeDuJeuVectorGen extends JFrame{
 
     public JFrameIncluantJPanelMondeDuJeuVectorGen() {
         super("Jeu simple");
-        JPanelPourMondeJeuSimple leJPanelAnimation =  
-            new JPanelPourMondeJeuSimple();
+        JPanelPourMondeDuJeuVectorGen leJPanelAnimation =  
+            new JPanelPourMondeDuJeuVectorGen();
         this.getContentPane().add(leJPanelAnimation);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(
-          JPanelPourMondeJeuSimple.LARGEURJPANEL,
-          JPanelPourMondeJeuSimple.HAUTEURJPANEL+60);
+          JPanelPourMondeDuJeuVectorGen.LARGEURJPANEL,
+          JPanelPourMondeDuJeuVectorGen.HAUTEURJPANEL+60);
         this.setVisible(true);
         leJPanelAnimation.start();
     }
