@@ -11,7 +11,7 @@ public class CreerFichierDIrect{
         // Reprend essentiellement le code de ExempleStreamTokenizer
     public static Vector lirePlantsFichierTexte()throws Exception{
 
-        FileReader unFichier = new FileReader("C:/forte4j/Development/LivreJava/Plants.txt");
+        FileReader unFichier = new FileReader("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Plants.txt");
         StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
         // Les 5 lignes suivantes ne sont pas n�cessaires car les param�tres
@@ -57,9 +57,9 @@ public class CreerFichierDIrect{
     
     // La m�thode suivante �crit les objets de vecteurDePlants les uns � la suite
     // des autres dans le fichier FluxPlants.dat par acc�s s�riel
-    public static void �crireFichierFluxPlants (Vector vecteurDePlants) throws Exception{
+    public static void ecrireFichierFluxPlants (Vector vecteurDePlants) throws Exception{
         RandomAccessFile fichierDirectPlants =
-        new RandomAccessFile ("C:/forte4j/Development/LivreJava/DirectPlants.dat","rw");
+        new RandomAccessFile ("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/DirectPlants.dat","rw");
         Enumeration enumerationPlants = vecteurDePlants.elements();
         int numeroEnregistrementRelatif = 0;
         while (enumerationPlants.hasMoreElements()){
@@ -77,6 +77,6 @@ public class CreerFichierDIrect{
 
     public static void main (String args[]) throws Exception{
         Vector vecteurDePlants = lirePlantsFichierTexte();
-        �crireFichierFluxPlants(vecteurDePlants);
+        ecrireFichierFluxPlants(vecteurDePlants);
     }
 }
