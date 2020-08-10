@@ -1,8 +1,6 @@
 
 
 # JavaPasAPas
-  Site Web du livre :    Godin(2020). Java Pas à Pas. Publié sur GitHub. Version préliminaire.
+  Site Web du livre :    Godin et Lemire (2020). Java Pas à Pas. Publié sur GitHub. 
 
-<a href="JavaPasAPas.pdf">Livre JavaPasAPas format pdf</a> 
-<a href="JavaPasAPas.docx">Livre JavaPasAPas format Word</a> 
 
