@@ -1,4 +1,4 @@
-/*
+/**
  * Exemple1.java
  * Ce programme saisit deux entiers et en affiche la somme
  */
