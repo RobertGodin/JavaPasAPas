@@ -1,4 +1,4 @@
-/*
+/**
  * ExerciceForFor.java
  */
 import javax.swing.JOptionPane;

@@ -1,4 +1,4 @@
-/*
+/**
  * ExempleElseAmbigu.java
  * Petit exemple illustrant l'ambiguité du else.
  */

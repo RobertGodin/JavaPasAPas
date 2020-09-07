@@ -1,4 +1,4 @@
-/*
+/**
  * ExerciceWhileSentinelle.java
  * Lire une suite d'entiers jusqu'à ce que l'entier 0 soit entré et afficher la somme
  * des entiers lus.

@@ -1,4 +1,4 @@
-/*
+/**
  * ExempleBloc.java
  * Modification de Exemple1 avec un bloc imbriqué
  */

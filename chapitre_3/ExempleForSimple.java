@@ -1,4 +1,4 @@
-/*
+/**
  * ExempleForSimple.java
  * Exemple d'utilisation d'un énoncé for qui affiche les entiers de 1 à 5
  */

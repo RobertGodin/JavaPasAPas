@@ -1,4 +1,4 @@
-/*
+/**
  * ExerciceWhile3.java
  * Lire dix entiers et en afficher la somme avec un while
  */

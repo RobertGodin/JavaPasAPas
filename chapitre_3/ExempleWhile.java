@@ -1,4 +1,4 @@
-/*
+/**
  * ExempleWhile.java
  * Exemple d'utilisation d'une boucle while avec un compteur
  */

@@ -1,4 +1,4 @@
-/*
+/**
  * ExerciceWhileIf.java
  * Lire 5 entiers et afficher l'entier maximal
  */

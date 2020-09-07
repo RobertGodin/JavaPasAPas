@@ -1,4 +1,4 @@
-/*
+/**
  * Afficher12345.java
  * Afficher les entiers de 1 à 5
  */

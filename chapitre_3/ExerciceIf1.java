@@ -1,4 +1,4 @@
-/*
+/**
  * ExerciceIf1.java
  * Lire deux entiers et afficher la division entière.
  * Si le diviseur est 0 afficher un message à cet effet.

@@ -1,4 +1,4 @@
-/*
+/**
  * ExerciceWhile1.java
  * Afficher les valeurs 0,2,4,6,8,10
  */

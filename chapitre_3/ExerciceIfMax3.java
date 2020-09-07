@@ -1,4 +1,4 @@
-/*
+/**
  * ExerciceIfMax3.java
  * Lire trois entiers et afficher le maximum des trois
  */

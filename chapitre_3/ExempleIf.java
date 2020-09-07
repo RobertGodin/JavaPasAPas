@@ -1,4 +1,4 @@
-/*
+/**
  * ExempleIf.java
  * Petit exemple illustrant l'énoncé if.
  */

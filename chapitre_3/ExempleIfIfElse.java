@@ -1,4 +1,4 @@
-/*
+/**
  * ExempleIfIfElse.java
  * Introduction d'un bloc pour terminer un if sans else
  */
