@@ -1,6 +1,6 @@
-/*
+/**
  * ExempleLogique.java
- * Petit exemple illustrant l'énoncé if.
+ * Petit exemple illustrant l'ï¿½noncï¿½ if.
  */
 import javax.swing.JOptionPane;
 public class ExempleLogique{
@@ -8,7 +8,7 @@ public class ExempleLogique{
         String unString = JOptionPane.showInputDialog("Entrez un premier nombre entier");
         int unInt = Integer.parseInt(unString);
 
-        // Exemples d'opérateurs logiques
+        // Exemples d'opï¿½rateurs logiques
         if (unInt > 10 & unInt < 20)
             JOptionPane.showMessageDialog(null,unInt + " est entre 10 et 20");
         if (unInt == 100 | unInt == 200)
