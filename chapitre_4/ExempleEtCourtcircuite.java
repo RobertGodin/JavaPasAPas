@@ -1,6 +1,6 @@
-/*
+/**
  * ExempleEtCourtcircuite.java
- * Petit exemple illustrant l'énoncé if.
+ * Petit exemple illustrant l'ï¿½noncï¿½ if.
  */
 import javax.swing.JOptionPane;
 public class ExempleEtCourtcircuite{
@@ -8,7 +8,7 @@ public class ExempleEtCourtcircuite{
         String unString = JOptionPane.showInputDialog("Entrez un premier nombre entier");
         int unInt = Integer.parseInt(unString);
 
-        // Exemple de l'opérateur &
+        // Exemple de l'opï¿½rateur &
         if (unInt != 0 && 10 % unInt == 0)
             JOptionPane.showMessageDialog(null,unInt + " est un diviseur de 10");
         else
