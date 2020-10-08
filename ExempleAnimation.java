@@ -1,9 +1,9 @@
 /*
  * ExempleAnimation.java
- * Animation simple qui bouge le bonhomme de gauche � droite
+ * Animation simple qui bouge le bonhomme de gauche à droite
  * Exemple de composante pour l'animation r�alis�e avec un JPanel
  * Un Timer est utilis� pour r�aliser la boucle d'animation
- * Created on 18 ao�t 2000, 10:15
+ * Created on 18 août 2000, 10:15
  */
 
 import java.awt.*;
@@ -31,7 +31,7 @@ public class ExempleAnimation extends JPanel implements ActionListener{
         if (unBonhomme.getX() >= 200){chrono.stop();}
     }
     
-    // paintComponent() est appel�e indirectement par repaint()
+    // paintComponent() est appelée indirectement par repaint()
     // N.B. Swing utilise le double buffering
     
     public void paintComponent (Graphics g) {

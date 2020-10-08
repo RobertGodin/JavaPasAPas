@@ -13,7 +13,7 @@ public class DessinDuWazzupMan extends JFrame {
     public DessinDuWazzupMan() {
         super("Creation de Fred");
     }
-    // paint() est appel�e indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
     public void paint (Graphics g) {
         int x = 100; // Coordonn�es x,y du coin sup�rieur gauche du bonhomme
         int y = 50;

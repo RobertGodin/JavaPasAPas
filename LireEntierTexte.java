@@ -1,4 +1,4 @@
-/* Lecture dans le fichier d'un entier sous forme de texte � l'aide d'un FileReader */
+/* Lecture dans le fichier d'un entier sous forme de texte à l'aide d'un FileReader */
 
 import java.io.*;
 public class LireEntierTexte{

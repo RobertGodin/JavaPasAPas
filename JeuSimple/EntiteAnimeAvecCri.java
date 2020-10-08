@@ -2,7 +2,7 @@ package JeuSimple;
 import java.net.URL;
 import java.applet.*;
 public abstract class EntiteAnimeAvecCri extends EntiteAnime{
-  protected AudioClip unCri; //Cri de l'entité
+  protected AudioClip unCri; //Cri de l'entitï¿½
 
   public EntiteAnimeAvecCri (
       int x, int y, int largeur, int hauteur,
@@ -12,7 +12,7 @@ public abstract class EntiteAnimeAvecCri extends EntiteAnime{
         // Le fichier est dans le dossier de EntiteAnimeAvecCri.class
         // Cherche l'URL du fichier
         URL url = EntiteAnimeAvecCri.class.getResource(nomFichierAudio);
-        // Charge le clip audio à partir de l'URL      
+        // Charge le clip audio Ã  partir de l'URL      
         unCri = Applet.newAudioClip(url);
   }
   public void crier (){unCri.play();}

@@ -1,4 +1,4 @@
-/* Cr�ation d'un DataOutputStream � partir d'un fichier et �criture d'un entier dans le fichier */
+/* Cr�ation d'un DataOutputStream à partir d'un fichier et �criture d'un entier dans le fichier */
 package LivreJava;
 import java.io.*;
 public class EcrireEntier{

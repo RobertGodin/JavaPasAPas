@@ -1,4 +1,4 @@
-/* Lecture dans le fichier d'un entier � l'aide d'un DataInputStream */
+/* Lecture dans le fichier d'un entier à l'aide d'un DataInputStream */
 import java.io.*;
 public class LireEntier{
     public static void main (String args[]) {

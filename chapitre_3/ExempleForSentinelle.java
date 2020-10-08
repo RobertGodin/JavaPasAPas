@@ -1,7 +1,7 @@
 /**
  * ExempleForSentinelle.java
- * Lire une suite d'entiers jusqu'à ce que l'entier 0 soit entré et afficher la somme
- * des entiers lus. Exemple illustrant un for sans la partie mise-à-jour.
+ * Lire une suite d'entiers jusqu'Ã  ce que l'entier 0 soit entrÃ© et afficher la somme
+ * des entiers lus. Exemple illustrant un for sans la partie mise-ï¿½-jour.
  */
 import javax.swing.JOptionPane;
 public class ExempleForSentinelle {

@@ -29,7 +29,7 @@ public class PanelAnimeComposanteAnimation extends JPanel implements ActionListe
         uneComposanteAnimation.changerMonde();
     }
     
-    // paintComponent() est appel�e indirectement par repaint()
+    // paintComponent() est appelée indirectement par repaint()
     // N.B. Swing utilise le double buffering
     
     public void paintComponent (Graphics g) {

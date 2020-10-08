@@ -2,7 +2,6 @@
  * BonhommeQuiBouge.java
  * A une position (x,y), une dimension (largeur, hauteur) et
  * une vitesse de d�placement (vitesseX,vitesseY)
- * Created on 28 ao�t 2000, 17:34
  */
 import java.awt.*;
 import java.net.URL;

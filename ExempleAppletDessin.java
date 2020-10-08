@@ -1,7 +1,7 @@
 /*
  * ExempleAppletDessin.java
  * Dessins avec m�thodes de la classe Graphics dans le contexte d'un applet
- * Created on 15 ao�t 2000, 15:36
+ * Created on 15 août 2000, 15:36
  */
 
 import java.awt.*;

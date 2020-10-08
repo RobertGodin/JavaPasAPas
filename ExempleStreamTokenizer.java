@@ -1,5 +1,5 @@
 /* Illustration du StreamTokenizer
- * Lit le fichier plants.txt, affiche � l'�cran chacun des jetons (noPlant,description,prixUnitaire) et
+ * Lit le fichier plants.txt, affiche à l'�cran chacun des jetons (noPlant,description,prixUnitaire) et
  * stocke le contenu dans un vecteur d'objets Plant */
 
 import java.io.*;
@@ -10,7 +10,7 @@ public class ExempleStreamTokenizer{
             FileReader unFichier = new FileReader("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Plants.txt");
             StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
-            // Les 5 lignes suivantes ne sont pas n�cessaires car les param�tres
+            // Les 5 lignes suivantes ne sont pas nécessaires car les param�tres
             // donn�s sont les valeurs de d�faut
             unStreamTokenizer.quoteChar((int)'"');
             unStreamTokenizer.whitespaceChars((int)'\r',(int)'\r');

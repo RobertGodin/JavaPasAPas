@@ -16,7 +16,7 @@ public class JPanelPourMondeJeuSimple extends JPanel implements ActionListener, 
     public static final int LARGEURJPANEL = MondeDuJeu.LARGEURMONDE;
     public static final int HAUTEURJPANEL = MondeDuJeu.HAUTEURMONDE;
     
-    // Conctructeur initialise le monde � animer
+    // Conctructeur initialise le monde à animer
     public JPanelPourMondeJeuSimple() {
       leMondeDuJeu = new MondeDuJeu();
       addMouseListener (this);
@@ -31,11 +31,11 @@ public class JPanelPourMondeJeuSimple extends JPanel implements ActionListener, 
     // Le chrono appelle actionPerformed p�riodiquement (boucle d'animation)
     public void actionPerformed( ActionEvent e){
         repaint();
-        // Produire la prochaine sc�ne du monde � animer
+        // Produire la prochaine sc�ne du monde à animer
         leMondeDuJeu.prochaineScene(); 
     }
     
-    // paintComponent() est appel�e indirectement par repaint()
+    // paintComponent() est appelée indirectement par repaint()
     // N.B. Swing utilise le double tampon : pas besoin d'effacer !  
     public void paintComponent (Graphics g) {
         super.paintComponent(g);
@@ -48,7 +48,7 @@ public class JPanelPourMondeJeuSimple extends JPanel implements ActionListener, 
       leMondeDuJeu.mousePressed(leMouseEvent);
     }
     // Il faut absolument d�finir les autres m�thodes pour les autres
-    // �v�nements de souris m�me s'il ne font rien
+    // �v�nements de souris même s'il ne font rien
     public void mouseClicked(MouseEvent leMouseEvent){}
     public void mouseEntered(MouseEvent leMouseEvent){}
     public void mouseExited(MouseEvent leMouseEvent){}

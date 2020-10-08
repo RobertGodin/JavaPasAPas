@@ -12,7 +12,7 @@ public class ExerciceTroisBonhommes extends JFrame {
     public ExerciceTroisBonhommes() {
         super("Dessiner trois bonhommes");
     }
-    // paint() est appel�e indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
     public void paint (Graphics g) {
         int a = 2;
         int b = 3;

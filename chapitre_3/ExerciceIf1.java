@@ -1,7 +1,7 @@
 /**
  * ExerciceIf1.java
- * Lire deux entiers et afficher la division entière.
- * Si le diviseur est 0 afficher un message à cet effet.
+ * Lire deux entiers et afficher la division entiÃ¨re.
+ * Si le diviseur est 0 afficher un message Ã  cet effet.
  */
 import javax.swing.JOptionPane;
 public class ExerciceIf1 {

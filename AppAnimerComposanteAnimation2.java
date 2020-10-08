@@ -3,7 +3,7 @@
  * Utilise ComposanteAnimation2
  * Animation de plusieurs entit�s
  * Boucle d'animation explicite
- * Interactivit� simple qui r�pond � la souris
+ * Interactivit� simple qui r�pond à la souris
  */
 import java.awt.*;
 import javax.swing.*;
@@ -37,7 +37,7 @@ public class AppAnimerComposanteAnimation2 extends JPanel{
         }
     }
     
-    // paintComponent() est appel�e indirectement par repaint()
+    // paintComponent() est appelée indirectement par repaint()
     // N.B. Swing utilise le double buffering
     
     public void paintComponent (Graphics g) {

@@ -1,6 +1,6 @@
 /**
  * ExempleElseAmbigu.java
- * Petit exemple illustrant l'ambiguité du else.
+ * Petit exemple illustrant l'ambiguitÃ© du else.
  */
 import javax.swing.JOptionPane;
 public class ExempleElseAmbigu{
@@ -15,7 +15,7 @@ public class ExempleElseAmbigu{
           if (entier2 > 10)
             JOptionPane.showMessageDialog(null,entier1 + " et "+ entier2 + " sont plus grands que 10");
         else
-            JOptionPane.showMessageDialog(null,entier1 + " est inférieur ou égal à 10");            
+            JOptionPane.showMessageDialog(null,entier1 + " est infï¿½rieur ou ï¿½gal Ã  10");            
 
         System.exit(0);
     }

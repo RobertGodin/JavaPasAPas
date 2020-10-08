@@ -2,7 +2,7 @@
  * AnimationAvecBoucle.java
  * Exemple de composante pour l'animation r�alis�e avec un JPanel
  * Boucle d'animation explicite
- * Created on 18 ao�t 2000, 10:15
+ * Created on 18 août 2000, 10:15
  */
 import java.awt.*;
 import javax.swing.*;
@@ -27,7 +27,7 @@ public class AnimationAvecBoucle extends JPanel{
         }
     }
     
-    // paintComponent() est appel�e indirectement par repaint()
+    // paintComponent() est appelée indirectement par repaint()
     // N.B. Swing utilise le double buffering
     
     public void paintComponent (Graphics g) {

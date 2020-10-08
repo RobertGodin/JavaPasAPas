@@ -7,11 +7,11 @@ public class ExempleCreationObjetString{
       String string2 = string1;
       String string3 = new String("abcdef");
 
-      // string1 et string2 font référence au même objet
+      // string1 et string2 font rÃ©fÃ©rence au mÃªme objet
       System.out.println(string1 == string2); //true
-      // string1 et string3 sont deux objets différents
+      // string1 et string3 sont deux objets diffÃ©rents
       System.out.println(string1 == string3); //true
-      // par contre, string1 et string3 ont le même contenu
+      // par contre, string1 et string3 ont le mÃªme contenu
       System.out.println(string1.equals(string3)); //true
       }
 }

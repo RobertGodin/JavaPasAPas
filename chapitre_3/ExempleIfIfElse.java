@@ -16,7 +16,7 @@ public class ExempleIfIfElse{
             JOptionPane.showMessageDialog(null,entier1 + " et "+ entier2 + " sont plus grands que 10");
         }
         else
-            JOptionPane.showMessageDialog(null,entier1 + " est inférieur ou égal à 10");            
+            JOptionPane.showMessageDialog(null,entier1 + " est infï¿½rieur ou ï¿½gal Ã  10");            
 
         System.exit(0);
     }

@@ -12,7 +12,7 @@ public class DessinDansJFrame extends JFrame {
     public DessinDansJFrame() {
         super("Exemples de m�thodes de Graphics dans un JFrame");
     }
-    // paint() est appel�e indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
     public void paint (Graphics g) {
         
         g.setColor(Color.green);

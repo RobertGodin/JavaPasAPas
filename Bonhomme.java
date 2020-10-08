@@ -1,7 +1,7 @@
 /*
  * Bonhomme.java
  *
- * Created on 27 ao�t 2000, 12:14
+ * Created on 27 août 2000, 12:14
  */
 
 import java.awt.*;

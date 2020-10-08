@@ -1,4 +1,4 @@
-/* Cr�ation d'un PrintWriter � partir d'un fichier et �criture de texte avec println */
+/* Cr�ation d'un PrintWriter à partir d'un fichier et �criture de texte avec println */
 
 import java.io.*;
 public class EcrireTexteabc12{

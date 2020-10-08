@@ -1,6 +1,6 @@
 /**
  * ExempleEtCourtcircuite.java
- * Petit exemple illustrant l'�nonc� if.
+ * Petit exemple illustrant l'énoncé if.
  */
 import javax.swing.JOptionPane;
 public class ExempleEtCourtcircuite{

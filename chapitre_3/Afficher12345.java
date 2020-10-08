@@ -1,6 +1,6 @@
 /**
  * Afficher12345.java
- * Afficher les entiers de 1 à 5
+ * Afficher les entiers de 1 Ã  5
  */
 import javax.swing.JOptionPane;
 public class Afficher12345{

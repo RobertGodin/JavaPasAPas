@@ -7,16 +7,16 @@ public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements Ac
 
     public static final int INTERVALLEENTRESCENES = 50; // En ms
 
-    // Le chrono génère un événement à chaque intervalle
+    // Le chrono gï¿½nï¿½re un ï¿½vï¿½nement Ã  chaque intervalle
     private Timer chrono;
-    // Le monde à animer
+    // Le monde Ã  animer
     private MondeDuJeu leMondeDuJeu;
 
     // Taille du JPanel
     public static final int LARGEURJPANEL = MondeDuJeu.LARGEURMONDE;
     public static final int HAUTEURJPANEL = MondeDuJeu.HAUTEURMONDE;
     
-    // Conctructeur initialise le monde à animer
+    // Conctructeur initialise le monde Ã  animer
     public JPanelPourMondeDuJeuSimpleAvecAdapator() {
       leMondeDuJeu = new MondeDuJeu();
       addMouseListener (
@@ -34,19 +34,19 @@ public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements Ac
             chrono.start();
         }
     }
-    // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
+    // Le chrono appelle actionPerformed pï¿½riodiquement (boucle d'animation)
     public void actionPerformed( ActionEvent e){
         repaint();
-        // Produire la prochaine scène du monde à animer
+        // Produire la prochaine scï¿½ne du monde Ã  animer
         leMondeDuJeu.prochaineScene(); 
     }
     
-    // paintComponent() est appelée indirectement par repaint()
+    // paintComponent() est appelÃ©e indirectement par repaint()
     // N.B. Swing utilise le double tampon : pas besoin d'effacer !  
     public void paintComponent (Graphics g) {
         super.paintComponent(g);
 
-        // Dessine les entités de l'animation
+        // Dessine les entitï¿½s de l'animation
         leMondeDuJeu.paint(g);
     }
 }

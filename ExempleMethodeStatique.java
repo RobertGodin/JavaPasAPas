@@ -2,7 +2,7 @@
  * ExempleMethodeStatique.java
  * Exemple d'utilisation d'une m�thode statique pour l'abstraction proc�durale
  * Encapsulation du dessin dans une m�thode statique pintBonhomme
- * Created on 18 ao�t 2000, 10:15
+ * Created on 18 août 2000, 10:15
  */
 
 import java.awt.*;
@@ -49,7 +49,7 @@ public class ExempleMethodeStatique extends JFrame {
         g.drawRect(x+(largeur*7/8),milieuy-(hauteur/16),largeur/8,(hauteur/3)+(hauteur/16));
     }
     
-    // paint() est appel�e indirectement lors de la cr�ation du JFrame pas show()
+    // paint() est appelée indirectement lors de la cr�ation du JFrame pas show()
     public void paint (Graphics g) {
         paintBonhomme(g,100,50,100,200);
         paintBonhomme(g,200,100,50,100);

@@ -1,7 +1,7 @@
 /*
  * ExempleDessinJFrame.java
  * Exemple de dessin avec paint dans JFrame
- * Created on 18 ao�t 2000, 10:15
+ * Created on 18 août 2000, 10:15
  */
 
 import java.awt.*;
@@ -18,7 +18,7 @@ public class ExempleDessinJFrame extends JFrame {
     public ExempleDessinJFrame() {
         super("Exemples de m�thodes de Graphics dans un JFrame");
     }
-    // paint() est appel�e indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
     public void paint (Graphics g) {
         int x = 100; // Coordonn�es x,y du coin sup�rieur gauche du bonhomme
         int y = 50;

@@ -40,7 +40,7 @@ public class Entit�Anim�e{
     public boolean getVisible(){return visible;}
     
     public void changer(){
-        // Passer � l'�tat suivant dans le processus d'animation
+        // Passer à l'�tat suivant dans le processus d'animation
         if (x+largeur+vitesseX > 500 || x < 0){
             vitesseX = -vitesseX;
             // Le bonhomme fait un son lorsqu'il frappe la fin du monde !

@@ -1,8 +1,8 @@
-/* Illustration de l'acc�s direct avec un fichier � adressage relatif
- * Op�rations permises :
- *      s�lectionner un enregistrement par son NER
- *      modifier le prix d'un enregistrement s�lectionn� par son NER
- *      cr�er un nouvel enregistrement (toujours � la fin)
+/* Illustration de l'accès direct avec un fichier à adressage relatif
+ * Opérations permises :
+ *      sélectionner un enregistrement par son NER
+ *      modifier le prix d'un enregistrement sélectionné par son NER
+ *      créer un nouvel enregistrement (toujours à la fin)
  *      (ne permet pas la suppression)
  */
 
@@ -13,12 +13,12 @@ public class AccesDirect{
     
     public static void main (String args[]) throws Exception{
         //Ouverture du fichier ou creation si n'existe pas
-        int nombreAlloue; // nombre d'enregistrements actuellement allou�s
+        int nombreAlloue; // nombre d'enregistrements actuellement alloués
         RandomAccessFile fichierDirectPlants;
         File leFichier = new File("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/DirectPlants.dat");
         if (leFichier.exists()){// Fichier existe ?
             fichierDirectPlants = new RandomAccessFile (leFichier,"rw");
-            // Cherche le nombre d'enregistrements actuellement allou�s
+            // Cherche le nombre d'enregistrements actuellement alloués
             nombreAlloue = fichierDirectPlants.readInt();
         }else{ // Le fichier n'existe pas, il faut initialiser nombreAlloue
             fichierDirectPlants = new RandomAccessFile (leFichier,"rw");
@@ -40,7 +40,7 @@ public class AccesDirect{
                 chaineNER = JOptionPane.showInputDialog("Entrez le num�ro d'enregistrement relatif :");
                 numeroER = Integer.parseInt(chaineNER);
                 if (numeroER >= 0 && numeroER < nombreAlloue){
-                    // S�lectionner un enregistrement par son NER
+                    // sélectionner un enregistrement par son NER
                     fichierDirectPlants.seek(numeroER*Plant.tailleMaxEnregistrement()+4);
                     unPlant.lireEnregistrementTailleMax(fichierDirectPlants);
 
@@ -60,7 +60,7 @@ public class AccesDirect{
                 chaineNER = JOptionPane.showInputDialog("Entrez le num�ro d'enregistrement relatif :");
                 numeroER = Integer.parseInt(chaineNER);
                 if (numeroER >= 0 && numeroER < nombreAlloue){
-                    // D'abord s�lectionner l'enregistrement par son NER
+                    // D'abord sélectionner l'enregistrement par son NER
                     fichierDirectPlants.seek(numeroER*Plant.tailleMaxEnregistrement()+4);
                     unPlant.lireEnregistrementTailleMax(fichierDirectPlants);
 
@@ -83,7 +83,7 @@ public class AccesDirect{
                 }
                 break;
 
-                case 3: // Cr�er un enregistrement
+                case 3: // créer un enregistrement
                 String chaineNoPlant = JOptionPane.showInputDialog("Entrez le noPlant :");
                 unPlant.setNoPlant(Integer.parseInt(chaineNoPlant));
                 unPlant.setDescription(JOptionPane.showInputDialog("Entrez la description :"));
@@ -100,7 +100,7 @@ public class AccesDirect{
                 "\ndescription :" + unPlant.getDescription() +
                 "\nprixUnitaire :" + unPlant.getPrixUnitaire());
 
-                // Incr�menter le nombre d'enregistrements allou�s
+                // Incr�menter le nombre d'enregistrements alloués
                 nombreAlloue++;
                 fichierDirectPlants.seek(0);
                 fichierDirectPlants.writeInt(nombreAlloue);

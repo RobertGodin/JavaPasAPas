@@ -1,6 +1,6 @@
 /**
  * ExempleIf.java
- * Petit exemple illustrant l'énoncé if.
+ * Petit exemple illustrant l'Ã©noncÃ© if.
  */
 import javax.swing.JOptionPane;
 public class ExempleIf{
@@ -8,7 +8,7 @@ public class ExempleIf{
         String unString = JOptionPane.showInputDialog("Entrez un premier nombre entier");
         int unInt = Integer.parseInt(unString);
 
-        // Exemple d'énoncé if
+        // Exemple d'Ã©noncÃ© if
         if (unInt > 10)
             JOptionPane.showMessageDialog(null,unInt + " est plus grand que 10");
         else

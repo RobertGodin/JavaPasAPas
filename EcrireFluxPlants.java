@@ -1,6 +1,6 @@
 /* Illustration de la cr�ation d'un fichier d'objets s�riel
  * Lit le fichier plants.txt, stocke le contenu dans un vecteur d'objets Plant et
- * cr�e ensuite le fichier d'objets fluxPlants.dat par acc�s s�riel*/
+ * cr�e ensuite le fichier d'objets fluxPlants.dat par accès s�riel*/
 
 import java.io.*;
 import java.util.*;
@@ -14,7 +14,7 @@ public class EcrireFluxPlants{
         FileReader unFichier = new FileReader("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Plants.txt");
         StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
-        // Les 5 lignes suivantes ne sont pas n�cessaires car les param�tres
+        // Les 5 lignes suivantes ne sont pas nécessaires car les param�tres
         // donn�s sont les valeurs de d�faut
         unStreamTokenizer.quoteChar((int)'"');
         unStreamTokenizer.whitespaceChars((int)'\r',(int)'\r');
@@ -55,8 +55,8 @@ public class EcrireFluxPlants{
         return vecteurDePlants;
     }
     
-    // La m�thode suivante �crit les objets de vecteurDePlants les uns � la suite
-    // des autres dans le fichier FluxPlants.dat par acc�s s�riel
+    // La m�thode suivante �crit les objets de vecteurDePlants les uns à la suite
+    // des autres dans le fichier FluxPlants.dat par accès s�riel
     public static void ecrireFichierFluxPlants (Vector vecteurDePlants) throws Exception{
         ObjectOutputStream fichierFluxPlants =
         new ObjectOutputStream (
@@ -67,7 +67,7 @@ public class EcrireFluxPlants{
         /* pour JDK 1 :      
         Enumeration enumerationPlants = vecteurDePlants.elements();
         while (enumerationPlants.hasMoreElements()){
-            // le writeObject ajoute le nouvel objet � la fin du fichier
+            // le writeObject ajoute le nouvel objet à la fin du fichier
             fichierFluxPlants.writeObject(enumerationPlants.nextElement());
         }*/
         fichierFluxPlants.close();

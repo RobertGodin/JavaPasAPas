@@ -7,11 +7,11 @@ public class Exemple2{
 
     public static void main (String args[]) {
 
-        // Saisir les deux chaînes de caractères qui représentent des nombres entiers
+        // Saisir les deux chaÃ®nes de caractÃ¨res qui reprÃ©sentent des nombres entiers
         String chaine1 = JOptionPane.showInputDialog("Entrez un premier nombre entier");
         String chaine2 = JOptionPane.showInputDialog("Entrez un second nombre entier");
 
-        // Convertir les chaînes en entiers
+        // Convertir les chaÃ®nes en entiers
         int entier1 = Integer.parseInt(chaine1);
         int entier2 = Integer.parseInt(chaine2);
 
@@ -21,7 +21,7 @@ public class Exemple2{
         // Afficher la somme avec JOptionPane.showMessageDialog
         JOptionPane.showMessageDialog(null,"La somme des deux entiers est " + somme);
 
-        // Appel de System.exit(0) nécessaire à cause des appels à
+        // Appel de System.exit(0) nÃ©cessaire Ã  cause des appels Ã 
         // JOptionPane.showInputDialog et JOptionPane.showMessageDialog
         System.exit(0);
     }

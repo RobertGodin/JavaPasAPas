@@ -20,7 +20,7 @@ public class ExemplesStringVide{
       System.out.println(string3 == null); //false
 
       System.out.println(string4 == ""); //false
-      // System.out.println(string4.equals("")); provoquerait une exception à l'exécution
+      // System.out.println(string4.equals("")); provoquerait une exception Ã  l'exÃ©cution
       System.out.println(string4 == null); //true
     }
 }

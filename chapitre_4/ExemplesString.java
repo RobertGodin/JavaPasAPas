@@ -7,24 +7,24 @@ public class ExemplesString{
       String string3 = "abcdef";
       String string4 = new String("abcdef");
 
-      // Tous les litéraux identiques (à la compilation) sont traduits
-      // par une référence au même objet
+      // Tous les litï¿½raux identiques (ï¿½ la compilation) sont traduits
+      // par une rï¿½fï¿½rence au mï¿½me objet
       System.out.println(string3 == "abcdef"); // true
       System.out.println("abc"+"def" == "abcdef"); //true
       
-      // Par contre, si le litéral est calculé à l'exécution, ce n'est pas le cas
+      // Par contre, si le litï¿½ral est calculï¿½ Ã  l'exÃ©cution, ce n'est pas le cas
       System.out.println(string1 + string2 == "abcdef"); //false
 
-      // Le constructeur String produit toujours un objet différent de l'objet
-      // correspondant au litéral
+      // Le constructeur String produit toujours un objet diffï¿½rent de l'objet
+      // correspondant au litï¿½ral
       System.out.println(string4 == "abcdef"); //false
 
-      // La méthode intern() de la classe String permet de convertir 
-      // la référence à l'objet correspondant au litéral
+      // La mï¿½thode intern() de la classe String permet de convertir 
+      // la rï¿½fï¿½rence Ã  l'objet correspondant au litï¿½ral
       System.out.println((string1 + string2).intern() == "abcdef"); //true
       System.out.println(string4.intern() == "abcdef"); //true
 
-      // La méthode equals() permet de comparer le contenu de l'objet plutôt que la référence
+      // La mï¿½thode equals() permet de comparer le contenu de l'objet plutï¿½t que la rï¿½fï¿½rence
       System.out.println((string1 + string2).equals("abcdef")); //true
       System.out.println(string4.equals("abcdef")); //true
     }

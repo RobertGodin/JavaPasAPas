@@ -6,9 +6,9 @@ public class ExempleEvenementSouris extends JFrame
   implements MouseListener
 {
     // Variables d'objet qui contiennent les coordonn�es de la souris
-    // Le premier sera dessin� � la coordonn�e (0,0)
-    private static int x = 0; // Coordonn�e x du Bot � dessiner
-    private static int y = 0; // Coordonn�e y du Bot � dessiner
+    // Le premier sera dessin� à la coordonn�e (0,0)
+    private static int x = 0; // Coordonn�e x du Bot à dessiner
+    private static int y = 0; // Coordonn�e y du Bot à dessiner
     
     public ExempleEvenementSouris() {
         super("Exemple de traitement d'�v�nements de la souris");
@@ -24,16 +24,16 @@ public class ExempleEvenementSouris extends JFrame
     }
 
     // M�thode d'objet de la classe ExempleEvenementSouris qui est 
-    // appel�e si le bouton de souris est enfonc�
+    // appelée si le bouton de souris est enfonc�
     public void mousePressed(MouseEvent leMouseEvent){
       x = leMouseEvent.getX(); // place la coordonn�e x de la souris dans la variable x
       y = leMouseEvent.getY(); // place la coordonn�e y de la souris dans la variable y
-      // repaint() provoque un nouvel appel � paint()
+      // repaint() provoque un nouvel appel à paint()
       repaint();
     }
 
     // Il faut absolument d�finir les autres m�thodes pour les autres
-    // �v�nements de souris m�me s'ils ne font rien
+    // �v�nements de souris même s'ils ne font rien
     public void mouseClicked(MouseEvent leMouseEvent){}
     public void mouseEntered(MouseEvent leMouseEvent){}
     public void mouseExited(MouseEvent leMouseEvent){}

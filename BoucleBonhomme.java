@@ -12,7 +12,7 @@ public class BoucleBonhomme extends JFrame {
         super("Affichage d'une s�rie de bonhommes");
     }   
     
-    // paint() est appel�e indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
     public void paint (Graphics g) {
         Bonhomme unBonhomme = new Bonhomme(0,50,100,200);
         for(int x=0; x<=200; x = x + 5){

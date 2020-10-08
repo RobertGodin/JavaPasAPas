@@ -1,6 +1,6 @@
 /**
  * ExempleForSimple.java
- * Exemple d'utilisation d'un énoncé for qui affiche les entiers de 1 à 5
+ * Exemple d'utilisation d'un Ã©noncÃ© for qui affiche les entiers de 1 Ã  5
  */
 import javax.swing.JOptionPane;
 public class ExempleForSimple {

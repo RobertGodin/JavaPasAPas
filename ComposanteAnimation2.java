@@ -1,7 +1,7 @@
 /*
  * ComposanteAnimation2.java
  * Plusieurs bonhommes dans un Vector
- * Le Iti vole (changement du dessin � chaque �tat)
+ * Le Iti vole (changement du dessin à chaque �tat)
  * Ajoute un coq (animation par s�quence d'images)
  * Created on 1 juillet 2001, 21:52
  */

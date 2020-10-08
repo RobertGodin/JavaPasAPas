@@ -1,7 +1,7 @@
 
 /*
  * Exemple d'interaction avec la souris. Lorsque le bouton est enfonc�, 
- * le programme dessine un autre bonhomme � la position courante de la souris
+ * le programme dessine un autre bonhomme à la position courante de la souris
  * (coin inf�rieur gauche du rectangle englobant).
  */
 
@@ -18,8 +18,8 @@ public class ClickSouris extends JFrame {
         // Ajoute un objet �couteur des �v�nements de souris du JFrame
         addMouseListener (
             new MouseAdapter(){
-                // Cette m�thode indique comment r�pondre � l'�v�nement correspondant
-                // � enfoncer le bouton de la souris
+                // Cette m�thode indique comment r�pondre à l'�v�nement correspondant
+                // à enfoncer le bouton de la souris
                 public void mousePressed(MouseEvent e){
                     x = e.getX();
                     y = e.getY();
@@ -30,7 +30,7 @@ public class ClickSouris extends JFrame {
     }
    
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme � l'�chelle dans un rectangle englobant de param�tres x,y,largeur,hauteur
+    //Bonhomme à l'�chelle dans un rectangle englobant de param�tres x,y,largeur,hauteur
         g.setColor(Color.green);
         g.fillOval(x,y,largeur,hauteur/2); // La t�te
 

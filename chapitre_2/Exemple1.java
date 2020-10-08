@@ -7,15 +7,15 @@ public class Exemple1{
 
     public static void main (String args[]) {
 
-        // Déclaration de variables
-        String chaine1, chaine2;      // Les entiers sous forme de chaînes
-        int entier1, entier2, somme;  // Les entiers à additionner
+        // DÃ©claration de variables
+        String chaine1, chaine2;      // Les entiers sous forme de chaÃ®nes
+        int entier1, entier2, somme;  // Les entiers Ã  additionner
 
-        // Saisir les deux chaînes de caractères qui représentent des nombres entiers
+        // Saisir les deux chaÃ®nes de caractÃ¨res qui reprÃ©sentent des nombres entiers
         chaine1 = JOptionPane.showInputDialog("Entrez un premier nombre entier");
         chaine2 = JOptionPane.showInputDialog("Entrez un second nombre entier");
 
-        // Convertir les chaînes en entiers
+        // Convertir les chaÃ®nes en entiers
         entier1 = Integer.parseInt(chaine1);
         entier2 = Integer.parseInt(chaine2);
 
@@ -25,7 +25,7 @@ public class Exemple1{
         // Afficher la somme avec JOptionPane.showMessageDialog
         JOptionPane.showMessageDialog(null,"La somme des deux entiers est " + somme);
 
-        // Appel de System.exit(0) nécessaire à cause des appels à
+        // Appel de System.exit(0) nÃ©cessaire Ã  cause des appels Ã 
         // JOptionPane.showInputDialog et JOptionPane.showMessageDialog
         System.exit(0);
     }

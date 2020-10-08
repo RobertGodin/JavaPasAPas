@@ -3,7 +3,7 @@
  * Applet qui utilise la composante AnimationBoucleTest
  * Lorsque l'on appelle uneAnimation.start() dans init(), il n'y a rien qui se passe ????
  * Est-ce un probl�me de Thread avec l'applet ? 
- * Created on 15 ao�t 2000, 15:36
+ * Created on 15 août 2000, 15:36
  */
 
 import java.awt.*;

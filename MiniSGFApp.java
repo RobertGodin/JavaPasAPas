@@ -25,7 +25,7 @@ public class MiniSGFApp {
             choix = Integer.parseInt(chaineChoix);
             switch(choix){
                 case 1: // lire un bloc
-                chaineNoBloc = JOptionPane.showInputDialog("Entrez le noBloc � lire: ");
+                chaineNoBloc = JOptionPane.showInputDialog("Entrez le noBloc à lire: ");
                 noBloc = Integer.parseInt(chaineNoBloc);
                 try{
                 leGestionnaireAntememoire.lireBlocAntememoire(noBloc, tamponApplication);}
@@ -38,7 +38,7 @@ public class MiniSGFApp {
                 break;
 
                 case 2: // �crire un bloc
-                chaineNoBloc = JOptionPane.showInputDialog("Entrez le noBloc � �crire : ");
+                chaineNoBloc = JOptionPane.showInputDialog("Entrez le noBloc à �crire : ");
                 noBloc = Integer.parseInt(chaineNoBloc);
                 String chaineContenu = JOptionPane.showInputDialog("Entrez le contenu du bloc : ");
                 tamponApplication = chaineContenu.getBytes();
