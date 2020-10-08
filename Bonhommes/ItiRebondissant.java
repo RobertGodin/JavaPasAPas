@@ -1,13 +1,13 @@
 package Bonhommes;
 import java.awt.*;
 public class ItiRebondissant {
-    // Variables d'objet qui décrivent l'état d'un objet ItiRebondissant
-    private int x,y;              // Coordonnées x du Bot
+    // Variables d'objet qui dÃ©crivent l'Ã©tat d'un objet ItiRebondissant
+    private int x,y;              // CoordonnÃ©es x du Bot
     private int largeur,hauteur;  // Taille du Bot
-    private int vitesseX;         // Vitesse de déplacement dans l'axe x 
-    private int vitesseY;         // Vitesse de déplacement dans l'axe y
+    private int vitesseX;         // Vitesse de dÃ©placement dans l'axe x 
+    private int vitesseY;         // Vitesse de dÃ©placement dans l'axe y
     
-    // Constructeur pour initialiser l'état du ItiRebondissant
+    // Constructeur pour initialiser l'Ã©tat du ItiRebondissant
     public ItiRebondissant(
       int x, int y, int largeur, int hauteur,
       int vitesseX,int vitesseY) {
@@ -16,22 +16,22 @@ public class ItiRebondissant {
         this.vitesseX = vitesseX; this.vitesseY = vitesseY;
     }
 
-    // Déplacement pour la prochaine itération
+    // DÃ©placement pour la prochaine itÃ©ration
     public void deplacer(int largeurFenetre, int hauteurFenetre){
       if (x+largeur>=largeurFenetre | x < 0) // Si atteint le bord selon x
         vitesseX = -vitesseX; // Inverser la direction selon x
-      x = x + vitesseX; // Déplacement selon x     
+      x = x + vitesseX; // DÃ©placement selon x     
       if (y+hauteur>=hauteurFenetre | y < 0) // Si atteint le bord selon y
         vitesseY = -vitesseY; // Inverser la direction selon y
-      y = y + vitesseY; // Déplacement selon y           
+      y = y + vitesseY; // DÃ©placement selon y           
     }
 
     // Dessin du Iti
     public void paint(Graphics g) {
-        // Coordonnées du milieu du rectangle englobant pour faciliter les calculs
+        // CoordonnÃ©es du milieu du rectangle englobant pour faciliter les calculs
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La tête
+        // La tÃªte
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire

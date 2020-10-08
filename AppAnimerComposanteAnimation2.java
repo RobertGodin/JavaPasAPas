@@ -1,9 +1,9 @@
 /*
  * AppAnimerComposanteAnimation2.java
  * Utilise ComposanteAnimation2
- * Animation de plusieurs entit�s
+ * Animation de plusieurs entités
  * Boucle d'animation explicite
- * Interactivit� simple qui r�pond à la souris
+ * Intéractivité simple qui répond à la souris
  */
 import java.awt.*;
 import javax.swing.*;
@@ -48,7 +48,7 @@ public class AppAnimerComposanteAnimation2 extends JPanel{
 
     public static void main (String args[]) {
         AppAnimerComposanteAnimation2 lePanelAnimation =  new AppAnimerComposanteAnimation2();
-        JFrame leFrame = new JFrame("Animation avec interactivit� simple");
+        JFrame leFrame = new JFrame("Animation avec Intéractivité simple");
         leFrame.getContentPane().add(lePanelAnimation);
         leFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         leFrame.setSize(500,500);

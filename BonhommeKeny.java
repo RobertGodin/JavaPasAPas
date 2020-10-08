@@ -27,7 +27,7 @@ public class BonhommeKeny{
         g.fillRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
         g.setColor(Color.black);
         g.drawRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
-        // La t�te
+        // La tête
         g.setColor(new Color(255,100,0));
         g.fillOval(x,y,largeur,hauteur/2);
         g.setColor(Color.black);

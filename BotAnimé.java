@@ -1,16 +1,16 @@
 
 import java.awt.*;
-public class BotAnim� extends Entit�Anim�e {
+public class BotAnimé extends EntitéAnimée {
     
-    // Il faut d�finir au moins un constructeur
-    public BotAnim�(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
+    // Il faut définir au moins un constructeur
+    public BotAnimé(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
                     boolean visible, String fichierAudio, int nombreEtats) {
         super(x,y,largeur,hauteur,vitesseX,vitesseY,visible,fichierAudio,1);
     }
 
     public void paint (Graphics g) {
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La t�te
+        g.fillOval(x,y,largeur,hauteur/2); // La tête
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

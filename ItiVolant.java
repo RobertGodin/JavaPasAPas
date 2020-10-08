@@ -1,6 +1,6 @@
 
 import java.awt.*;
-public class ItiVolant extends Entit�Anim�e {
+public class ItiVolant extends EntitéAnimée {
     public ItiVolant(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
                     boolean visible, String fichierAudio, int nombreEtats) {
         super(x,y,largeur,hauteur,vitesseX,vitesseY,visible,fichierAudio,3);
@@ -9,7 +9,7 @@ public class ItiVolant extends Entit�Anim�e {
     public void paint (Graphics g) {
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La t�te
+        // La tête
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire
@@ -21,8 +21,8 @@ public class ItiVolant extends Entit�Anim�e {
         // Le corps
         g.drawLine(milieux,y+hauteur/4,milieux,y+hauteur*3/4);
         // Les bras
-        g.drawLine(x,y+hauteur/4+(hauteur/4)*�tatCourant,milieux,milieuy);
-        g.drawLine(x+largeur,y+hauteur/4+(hauteur/4)*�tatCourant,milieux,milieuy);
+        g.drawLine(x,y+hauteur/4+(hauteur/4)*étatCourant,milieux,milieuy);
+        g.drawLine(x+largeur,y+hauteur/4+(hauteur/4)*étatCourant,milieux,milieuy);
         // Les jambes
         g.drawLine(x,y+hauteur,milieux,y+hauteur*3/4);
         g.drawLine(x+largeur,y+hauteur,milieux,y+hauteur*3/4);

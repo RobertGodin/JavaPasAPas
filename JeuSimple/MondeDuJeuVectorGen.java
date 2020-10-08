@@ -3,7 +3,7 @@ package JeuSimple;
  * MondeDuJeuVectorGen.java
  * Plusieurs bonhommes dans un Vector<EntiteAnime>
  * Le Iti vole (changement du dessin a chaque etat)
- * Ajoute un coq (animation par s�quence d'images)
+ * Ajoute un coq (animation par séquence d'images)
  */
 import java.awt.*;
 import java.awt.event.*;

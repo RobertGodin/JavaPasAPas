@@ -7,11 +7,11 @@ import java.util.*;
 public class ExempleStreamTokenizer{
     public static void main (String args[]) {
         try{
-            FileReader unFichier = new FileReader("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Plants.txt");
+            FileReader unFichier = new FileReader("Plants.txt");
             StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
-            // Les 5 lignes suivantes ne sont pas nécessaires car les param�tres
-            // donn�s sont les valeurs de d�faut
+            // Les 5 lignes suivantes ne sont pas nécessaires car les paramètres
+            // donn�s sont les valeurs de défaut
             unStreamTokenizer.quoteChar((int)'"');
             unStreamTokenizer.whitespaceChars((int)'\r',(int)'\r');
             unStreamTokenizer.whitespaceChars((int)'\n',(int)'\n');
@@ -42,7 +42,7 @@ public class ExempleStreamTokenizer{
                 } else
                 {System.out.println("Le format du fichier est incorrect : prix attendu"); System.exit(1);}
 
-                //Cr�ation de l'objet Plant
+                //création de l'objet Plant
                 Plant unPlant = new Plant(noPlant, description, prixUnitaire);
                 System.out.println(noPlant + " " + description + " " + prixUnitaire);
                 vecteurDePlants.addElement(unPlant);

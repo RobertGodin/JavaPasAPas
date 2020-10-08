@@ -30,7 +30,7 @@ public class AppletAnimerComposanteClickSouris
 
   public void update(Graphics g) {
     tamponGraphics.clearRect(0,0,d.width,d.height);
-    //Changer l'�tat du monde pour le prochain clich�
+    //Changer l'état du monde pour le prochain clich�
     uneComposanteAnimation.changerMonde();
     //Prendre un clich� du monde
     uneComposanteAnimation.paint(tamponGraphics);

@@ -5,16 +5,16 @@ import java.awt.event.*;
 public class ExempleEvenementSouris extends JFrame 
   implements MouseListener
 {
-    // Variables d'objet qui contiennent les coordonn�es de la souris
+    // Variables d'objet qui contiennent les coordonnées de la souris
     // Le premier sera dessin� à la coordonn�e (0,0)
     private static int x = 0; // Coordonn�e x du Bot à dessiner
     private static int y = 0; // Coordonn�e y du Bot à dessiner
     
     public ExempleEvenementSouris() {
-        super("Exemple de traitement d'�v�nements de la souris");
+        super("Exemple de traitement d'événements de la souris");
         
         // Le param�tre this de addMouseListener() indique que l'objet qui doit 
-        // r�agir aux �v�nements de souris est l'objet 
+        // r�agir aux événements de souris est l'objet 
         // qui est cr�� par ce constructeur
         addMouseListener(this);
         
@@ -23,8 +23,8 @@ public class ExempleEvenementSouris extends JFrame
         this.setVisible(true);
     }
 
-    // M�thode d'objet de la classe ExempleEvenementSouris qui est 
-    // appelée si le bouton de souris est enfonc�
+    // méthode d'objet de la classe ExempleEvenementSouris qui est 
+    // appelée si le bouton de souris est enfoncé
     public void mousePressed(MouseEvent leMouseEvent){
       x = leMouseEvent.getX(); // place la coordonn�e x de la souris dans la variable x
       y = leMouseEvent.getY(); // place la coordonn�e y de la souris dans la variable y
@@ -32,8 +32,8 @@ public class ExempleEvenementSouris extends JFrame
       repaint();
     }
 
-    // Il faut absolument d�finir les autres m�thodes pour les autres
-    // �v�nements de souris même s'ils ne font rien
+    // Il faut absolument définir les autres méthodes pour les autres
+    // événements de souris même s'ils ne font rien
     public void mouseClicked(MouseEvent leMouseEvent){}
     public void mouseEntered(MouseEvent leMouseEvent){}
     public void mouseExited(MouseEvent leMouseEvent){}
@@ -41,7 +41,7 @@ public class ExempleEvenementSouris extends JFrame
    
     public static void paintBot (Graphics g, int x, int y, int largeur, int hauteur) {
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La t�te
+        g.fillOval(x,y,largeur,hauteur/2); // La tête
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

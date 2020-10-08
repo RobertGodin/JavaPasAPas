@@ -19,7 +19,7 @@ public class BonhommeAbstrait{
     public int getHauteur(){return hauteur;}
     
     public void paint (Graphics g) {
-        // Rien. La sous-classe doit redéfinir cette méthode.
-        // La méthode est dite abstraite.
+        // Rien. La sous-classe doit redÃ©finir cette mÃ©thode.
+        // La mÃ©thode est dite abstraite.
     }
 }

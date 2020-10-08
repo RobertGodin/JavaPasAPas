@@ -7,7 +7,7 @@ public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements Ac
 
     public static final int INTERVALLEENTRESCENES = 50; // En ms
 
-    // Le chrono g�n�re un �v�nement à chaque intervalle
+    // Le chrono g�n�re un événement à chaque intervalle
     private Timer chrono;
     // Le monde à animer
     private MondeDuJeu leMondeDuJeu;
@@ -46,7 +46,7 @@ public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements Ac
     public void paintComponent (Graphics g) {
         super.paintComponent(g);
 
-        // Dessine les entit�s de l'animation
+        // Dessine les entités de l'animation
         leMondeDuJeu.paint(g);
     }
 }

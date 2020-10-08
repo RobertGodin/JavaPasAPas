@@ -1,32 +1,30 @@
-/**
- * Exemple1.java
- * Ce programme saisit deux entiers et en affiche la somme
- */
+/** Exemple1.java Ce programme saisit deux entiers et en affiche la somme */
 import javax.swing.JOptionPane; // Importe la classe javax.swing.JOptionPane
-public class Exemple1{
 
-    public static void main (String args[]) {
+public class Exemple1 {
 
-        // Déclaration de variables
-        String chaine1, chaine2;      // Les entiers sous forme de chaînes
-        int entier1, entier2, somme;  // Les entiers à additionner
+  public static void main(String args[]) {
 
-        // Saisir les deux chaînes de caractères qui représentent des nombres entiers
-        chaine1 = JOptionPane.showInputDialog("Entrez un premier nombre entier");
-        chaine2 = JOptionPane.showInputDialog("Entrez un second nombre entier");
+    // Déclaration de variables
+    String chaine1, chaine2; // Les entiers sous forme de chaînes
+    int entier1, entier2, somme; // Les entiers à additionner
 
-        // Convertir les chaînes en entiers
-        entier1 = Integer.parseInt(chaine1);
-        entier2 = Integer.parseInt(chaine2);
+    // Saisir les deux chaînes de caractères qui représentent des nombres entiers
+    chaine1 = JOptionPane.showInputDialog("Entrez un premier nombre entier");
+    chaine2 = JOptionPane.showInputDialog("Entrez un second nombre entier");
 
-        // Calculer la somme des deux entiers
-        somme = entier1 + entier2;
+    // Convertir les chaînes en entiers
+    entier1 = Integer.parseInt(chaine1);
+    entier2 = Integer.parseInt(chaine2);
 
-        // Afficher la somme avec JOptionPane.showMessageDialog
-        JOptionPane.showMessageDialog(null,"La somme des deux entiers est " + somme);
+    // Calculer la somme des deux entiers
+    somme = entier1 + entier2;
 
-        // Appel de System.exit(0) nécessaire à cause des appels à
-        // JOptionPane.showInputDialog et JOptionPane.showMessageDialog
-        System.exit(0);
-    }
+    // Afficher la somme avec JOptionPane.showMessageDialog
+    JOptionPane.showMessageDialog(null, "La somme des deux entiers est " + somme);
+
+    // Appel de System.exit(0) nécessaire à cause des appels à
+    // JOptionPane.showInputDialog et JOptionPane.showMessageDialog
+    System.exit(0);
+  }
 }

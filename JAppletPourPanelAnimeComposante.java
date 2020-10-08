@@ -1,7 +1,6 @@
 /*
  * JAppletPourPanelAnimeComposante.java
  * Applet qui utilise la composante PanelAnimeComposanteAnimation
- * Created on 2 juillet 2001, 18:43
  */
 
 import java.awt.*;

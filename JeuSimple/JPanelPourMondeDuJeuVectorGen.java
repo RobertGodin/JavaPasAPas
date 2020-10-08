@@ -40,15 +40,15 @@ public class JPanelPourMondeDuJeuVectorGen extends JPanel implements ActionListe
     public void paintComponent (Graphics g) {
         super.paintComponent(g);
 
-        // Dessine les entit�s de l'animation
+        // Dessine les entités de l'animation
         leMondeDuJeu.paint(g);
     }
 
     public void mousePressed(MouseEvent leMouseEvent){
       leMondeDuJeu.mousePressed(leMouseEvent);
     }
-    // Il faut absolument d�finir les autres m�thodes pour les autres
-    // �v�nements de souris même s'il ne font rien
+    // Il faut absolument définir les autres méthodes pour les autres
+    // événements de souris même s'il ne font rien
     public void mouseClicked(MouseEvent leMouseEvent){}
     public void mouseEntered(MouseEvent leMouseEvent){}
     public void mouseExited(MouseEvent leMouseEvent){}

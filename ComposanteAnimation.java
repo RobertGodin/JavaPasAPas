@@ -1,7 +1,7 @@
 /*
  * ComposanteAnimation.java
  * 
- * Created on 1 juillet 2001, 21:52
+ * 
  */
 import java.awt.*;
 import java.awt.event.*;

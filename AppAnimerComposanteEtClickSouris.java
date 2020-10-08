@@ -4,8 +4,7 @@
  * Animation d'un bonhomme bondissant
  * Utilise BonhommeQuiBouge
  * Boucle d'animation explicite
- * Interactivit� simple qui r�pond à la souris
- * Created on 18 août 2000, 10:15
+ * Intéractivité simple qui répond à la souris
  */
 import java.awt.*;
 import javax.swing.*;
@@ -50,7 +49,7 @@ public class AppAnimerComposanteEtClickSouris extends JPanel{
 
     public static void main (String args[]) {
         AppAnimerComposanteEtClickSouris lePanelAnimation =  new AppAnimerComposanteEtClickSouris();
-        JFrame leFrame = new JFrame("Animation avec interactivit� simple");
+        JFrame leFrame = new JFrame("Animation avec Intéractivité simple");
         leFrame.getContentPane().add(lePanelAnimation);
         leFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         leFrame.setSize(400,600);

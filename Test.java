@@ -1,31 +1,26 @@
 /*
  * ExempleDessinJFrame.java
  * Exemple de dessin avec paint dans JFrame
- * Created on 18 août 2000, 10:15
  */
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-/**
- *
- * @author  Godin, Robert
- * @version 
- */
+
 public class Test extends JFrame {
 
     /** Constructeur de ExempleDessinJFrame */
     public Test() {
-        super("Exemples de m�thodes de Graphics dans un JFrame");
+        super("Exemples de méthodes de Graphics dans un JFrame");
     }
-    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la création du JFrame par show()
     public void paint (Graphics g) {
-        int x = 100; // Coordonn�es x,y du coin sup�rieur gauche du bonhomme
+        int x = 100; // Coordonnées x,y du coin supérieur gauche du bonhomme
         int y = 50;
         int largeur = 100; // Largeur et hauteur du bonhomme
         int hauteur = 200;
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La t�te
+        // La tête
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire

@@ -1,7 +1,7 @@
 
 import java.io.*;
 public class Plant implements Serializable{
-    private int noPlant; //num�ro de catalogue du plant
+    private int noPlant; //numéro de catalogue du plant
     private String description; //description du plant
     private double prixUnitaire; //prix unitaire du plant
 

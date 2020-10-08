@@ -1,7 +1,7 @@
 /*
  * BonhommeQuiBouge.java
  * A une position (x,y), une dimension (largeur, hauteur) et
- * une vitesse de d�placement (vitesseX,vitesseY)
+ * une vitesse de déplacement (vitesseX,vitesseY)
  */
 import java.awt.*;
 import java.net.URL;
@@ -57,7 +57,7 @@ public class BonhommeQuiBouge{
         g.fillRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
         g.setColor(Color.black);
         g.drawRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
-        // La t�te
+        // La tête
         g.setColor(new Color(255,100,0));
         g.fillOval(x,y,largeur,hauteur/2);
         g.setColor(Color.black);

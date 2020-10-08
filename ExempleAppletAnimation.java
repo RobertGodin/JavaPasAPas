@@ -1,7 +1,6 @@
 /*
  * ExempleAppletAnimation.java
  * Applet qui utilise la composante ExempleAnimation
- * Created on 15 août 2000, 15:36
  */
 
 import java.awt.*;

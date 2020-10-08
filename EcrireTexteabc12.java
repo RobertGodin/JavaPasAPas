@@ -1,4 +1,4 @@
-/* Cr�ation d'un PrintWriter à partir d'un fichier et �criture de texte avec println */
+/* création d'un PrintWriter à partir d'un fichier et �criture de texte avec println */
 
 import java.io.*;
 public class EcrireTexteabc12{
@@ -6,7 +6,7 @@ public class EcrireTexteabc12{
         FileWriter unFichier;
         PrintWriter unPrintWriter;
         try{
-            unFichier = new FileWriter("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Fichier1.txt");
+            unFichier = new FileWriter("Fichier1.txt");
             unPrintWriter = new PrintWriter(unFichier);
             unPrintWriter.println("abc");
             unPrintWriter.println(12);

@@ -5,9 +5,9 @@ public class VerifierExistenceFichier {
     public static void main (String args[]) {
         FileOutputStream unFichier;
         try{
-            File leFile = new File("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Octets.dat");
+            File leFile = new File("Octets.dat");
             if (leFile.exists()){
-                String reponse = JOptionPane.showInputDialog("Voulez-vous d�truire le contenu existant (oui ou non)?");
+                String reponse = JOptionPane.showInputDialog("Voulez-vous détruire le contenu existant (oui ou non)?");
                 if(reponse == "non"){
                     System.out.println("Le fichier demeure tel quel");
                     System.exit(0);

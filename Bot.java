@@ -2,14 +2,14 @@
 import java.awt.*;
 public class Bot extends BonhommeAbstrait {
     
-    // Il faut d�finir au moins un constructeur
+    // Il faut définir au moins un constructeur
     public Bot(int x, int y, int largeur, int hauteur) {
         super(x,y,largeur,hauteur);
     }
 
     public void paint (Graphics g) {
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La t�te
+        g.fillOval(x,y,largeur,hauteur/2); // La tête
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

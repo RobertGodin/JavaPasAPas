@@ -7,8 +7,8 @@ public class CopierFichier{
         FileInputStream unFileInputStream;
         FileOutputStream unFileOutputStream;
         try{
-            unFileInputStream = new FileInputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Fichier1.txt");
-            unFileOutputStream = new FileOutputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Fichier2.txt");
+            unFileInputStream = new FileInputStream("Fichier1.txt");
+            unFileOutputStream = new FileOutputStream("Fichier2.txt");
             while((unOctet = unFileInputStream.read()) != -1)
                 unFileOutputStream.write(unOctet);
             unFileInputStream.close();

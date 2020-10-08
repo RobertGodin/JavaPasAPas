@@ -1,8 +1,8 @@
 
 /*
- * Exemple d'interaction avec la souris. Lorsque le bouton est enfonc�, 
+ * Exemple d'interaction avec la souris. Lorsque le bouton est enfoncé, 
  * le programme dessine un autre bonhomme à la position courante de la souris
- * (coin inf�rieur gauche du rectangle englobant).
+ * (coin inférieur gauche du rectangle englobant).
  */
 
 import java.awt.*;
@@ -14,11 +14,11 @@ public class ClickSouris extends JFrame {
     private int y = 0;
     
     public ClickSouris() {
-        super("Exemple d'utilisation d'une m�thode statique paintBonhomme");
-        // Ajoute un objet �couteur des �v�nements de souris du JFrame
+        super("Exemple d'utilisation d'une méthode statique paintBonhomme");
+        // Ajoute un objet écouteur des événements de souris du JFrame
         addMouseListener (
             new MouseAdapter(){
-                // Cette m�thode indique comment r�pondre à l'�v�nement correspondant
+                // Cette méthode indique comment répondre à l'événement correspondant
                 // à enfoncer le bouton de la souris
                 public void mousePressed(MouseEvent e){
                     x = e.getX();
@@ -30,9 +30,9 @@ public class ClickSouris extends JFrame {
     }
    
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'�chelle dans un rectangle englobant de param�tres x,y,largeur,hauteur
+    //Bonhomme à l'�chelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La t�te
+        g.fillOval(x,y,largeur,hauteur/2); // La tête
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

@@ -1,8 +1,7 @@
 /*
  * ExempleMethodeStatique.java
- * Exemple d'utilisation d'une m�thode statique pour l'abstraction proc�durale
- * Encapsulation du dessin dans une m�thode statique pintBonhomme
- * Created on 18 août 2000, 10:15
+ * Exemple d'utilisation d'une méthode statique pour l'abstraction proc�durale
+ * Encapsulation du dessin dans une méthode statique pintBonhomme
  */
 
 import java.awt.*;
@@ -11,7 +10,7 @@ import java.awt.event.*;
 public class ExempleMethodeStatique extends JFrame {
 
     public ExempleMethodeStatique() {
-        super("Exemple d'utilisation d'une m�thode statique paintBonhomme");
+        super("Exemple d'utilisation d'une méthode statique paintBonhomme");
     }
     
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
@@ -22,7 +21,7 @@ public class ExempleMethodeStatique extends JFrame {
         g.fillRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
         g.setColor(Color.black);
         g.drawRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
-        // La t�te
+        // La tête
         g.setColor(new Color(255,100,0));
         g.fillOval(x,y,largeur,hauteur/2);
         g.setColor(Color.black);
@@ -49,7 +48,7 @@ public class ExempleMethodeStatique extends JFrame {
         g.drawRect(x+(largeur*7/8),milieuy-(hauteur/16),largeur/8,(hauteur/3)+(hauteur/16));
     }
     
-    // paint() est appelée indirectement lors de la cr�ation du JFrame pas show()
+    // paint() est appelée indirectement lors de la création du JFrame pas show()
     public void paint (Graphics g) {
         paintBonhomme(g,100,50,100,200);
         paintBonhomme(g,200,100,50,100);

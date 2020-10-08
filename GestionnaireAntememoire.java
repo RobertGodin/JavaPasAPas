@@ -1,10 +1,10 @@
 
 import java.io.*;
 public class GestionnaireAntememoire {
-    //Le gestionnaire d'ant�m�moire r�alise les mêmes Opérations de lecture et
-    //d'�criture de bloc que la couche pr�c�dente (classe Disque) en utilisant une ant�m�moire
+    //Le gestionnaire d'ant�mémoire r�alise les mêmes Opérations de lecture et
+    //d'�criture de bloc que la couche pr�c�dente (classe Disque) en utilisant une ant�mémoire
     //disque pour am�liorer la performance des entrées/sorties.
-    //La strat�gie de remplacement utilis�e est : moins fr�quemment utilis� (LFU).
+    //La strat�gie de remplacement utilisée est : moins fr�quemment utilisé (LFU).
 
     static final int nbTampon = 3;
     Disque leDisque;
@@ -16,7 +16,7 @@ public class GestionnaireAntememoire {
     byte tampon [][];
 
     public GestionnaireAntememoire() {
-        //Constructeur qui initilise les structures de donn�es de l'ant�m�moire
+        //Constructeur qui initilise les structures de données de l'ant�mémoire
         leDisque = new Disque();
         noBlocDansTampon = new int[nbTampon];
         sale = new boolean[nbTampon];
@@ -28,15 +28,15 @@ public class GestionnaireAntememoire {
     }
 
     public void fermerAntememoire() {
-        // La fonction fermerAnt�m�moire doit �vacuer les tampons sales. Cette op�ration doit �tre
-        //  appelée à la fin du programme pour assurer que les blocs modifi�s sont propag�s sur disque.
+        // La fonction fermerAnt�mémoire doit �vacuer les tampons sales. Cette op�ration doit �tre
+        //  appelée à la fin du programme pour assurer que les blocs modifiés sont propag�s sur disque.
         for(int i=0; i<nbTampon; i++)
         this.�vacuerTampon(i);
         leDisque.fermer();
     }
 
     public void lireBlocAntememoire(int noBloc, byte tamponApplication[])
-    //La fonction lireBlocAnt�m�moire lit le contenu du bloc dont le num�ro est
+    //La fonction lireBlocAnt�mémoire lit le contenu du bloc dont le numéro est
     // noBloc dans tamponApplication.
 
     //Exceptions à pr�voir :
@@ -48,7 +48,7 @@ public class GestionnaireAntememoire {
         if (noBloc <0 || noBloc >= Disque.nbBloc) {
             throw new NoBlocIllegalException(noBloc);
         }
-        // Chercher num�roBloc dans le r�pertoire (simple fouille s�quentielle)
+        // Chercher numéroBloc dans le r�pertoire (simple fouille s�quentielle)
         int positionAntememoire;
         for (positionAntememoire = 0; positionAntememoire<nbTampon ; positionAntememoire++){
             if (noBloc == noBlocDansTampon[positionAntememoire]){
@@ -56,7 +56,7 @@ public class GestionnaireAntememoire {
             }
         }
         if (positionAntememoire<nbTampon){  //SI pr�sent
-            //transf�rer le tampon de l'ant�-m�moire dans tamponApplication
+            //transf�rer le tampon de l'ant�-mémoire dans tamponApplication
             for(int i=0; i<Disque.tailleBloc ; i++){
                 tamponApplication[i] = tampon[positionAntememoire][i];
             }
@@ -69,10 +69,10 @@ public class GestionnaireAntememoire {
                     break;
                 }
             }
-            if (indiceLibre < nbTampon){//SI il y a un tampon libre dans l'ant�-m�moire
+            if (indiceLibre < nbTampon){//SI il y a un tampon libre dans l'ant�-mémoire
                 //transf�rer le bloc noBloc dans le tampon libre
                 leDisque.lireBloc(noBloc, tampon[indiceLibre]);
-                //mettre à jour le r�pertoire d'ant�-m�moire
+                //mettre à jour le r�pertoire d'ant�-mémoire
                 noBlocDansTampon[indiceLibre]=noBloc;
                 sale[indiceLibre]= false;
                 fr�quence[indiceLibre] = 0;
@@ -92,7 +92,7 @@ public class GestionnaireAntememoire {
                 }
                 this.�vacuerTampon(indiceVictime);
                 leDisque.lireBloc(noBloc, tampon[indiceVictime]);
-                //mettre à jour le r�pertoire d'ant�-m�moire
+                //mettre à jour le r�pertoire d'ant�-mémoire
                 noBlocDansTampon[indiceVictime]=noBloc;
                 sale[indiceVictime]= false;
                 fr�quence[indiceVictime]=0;
@@ -105,7 +105,7 @@ public class GestionnaireAntememoire {
 
     public void �crireBlocAntememoire(int noBloc, byte tamponApplication[])
     throws NoBlocIllegalException{
-        //La fonction �crireBlocAnt�m�moire �crit le contenu de tamponApplication dans le bloc dont le num�ro est noBloc.
+        //La fonction �crireBlocAnt�mémoire �crit le contenu de tamponApplication dans le bloc dont le numéro est noBloc.
 
         if (noBloc <0 || noBloc >= Disque.nbBloc) {
             throw new NoBlocIllegalException(noBloc);
@@ -132,13 +132,13 @@ public class GestionnaireAntememoire {
                     break;
                 }
             }
-            if (indiceLibre < nbTampon){//SI il y a un tampon libre dans l'ant�-m�moire
+            if (indiceLibre < nbTampon){//SI il y a un tampon libre dans l'ant�-mémoire
                 //transf�rer tamponApplication dans le tampon libre
                 for(int i=0; i<Disque.tailleBloc ; i++){
                     tampon[indiceLibre][i] = tamponApplication[i];
                 }
                 sale[indiceLibre] = true;
-                //mettre à jour le r�pertoire d'ant�-m�moire
+                //mettre à jour le r�pertoire d'ant�-mémoire
                 noBlocDansTampon[indiceLibre] = noBloc;
                 fr�quence[indiceLibre] = 0;
             }
@@ -156,7 +156,7 @@ public class GestionnaireAntememoire {
                 for(int i=0; i<Disque.tailleBloc ; i++){
                     tampon[indiceVictime][i] = tamponApplication[i];
                 }
-                //mettre à jour le r�pertoire d'ant�-m�moire
+                //mettre à jour le r�pertoire d'ant�-mémoire
                 noBlocDansTampon[indiceVictime]=noBloc;
                 sale[indiceVictime]= true;
                 fr�quence[indiceVictime] = 0;

@@ -6,7 +6,7 @@ public class LireEntier{
         try{
             unFichier = 
                 new DataInputStream(
-                    new FileInputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/UnEntier.dat"));
+                    new FileInputStream("UnEntier.dat"));
             int unEntier = unFichier.readInt();
             unFichier.close();
             System.out.println("Valeur d�cimale de l'entier : "+unEntier);

@@ -1,12 +1,12 @@
 import java.awt.*;
 public class BotRebondissant {
-    // Variables d'objet qui décrivent l'état d'un objet BotRebondissant
-    private int x,y;              // Coordonnées x du Bot
+    // Variables d'objet qui dÃ©crivent l'Ã©tat d'un objet BotRebondissant
+    private int x,y;              // CoordonnÃ©es x du Bot
     private int largeur,hauteur;  // Taille du Bot
-    private int vitesseX;         // Vitesse de déplacement dans l'axe x 
-    private int vitesseY;         // Vitesse de déplacement dans l'axe y
+    private int vitesseX;         // Vitesse de dÃ©placement dans l'axe x 
+    private int vitesseY;         // Vitesse de dÃ©placement dans l'axe y
     
-    // Constructeur pour initialiser l'état du BotRebondissant
+    // Constructeur pour initialiser l'Ã©tat du BotRebondissant
     public BotRebondissant(
       int x, int y, int largeur, int hauteur,
       int vitesseX,int vitesseY) {
@@ -15,20 +15,20 @@ public class BotRebondissant {
         this.vitesseX = vitesseX; this.vitesseY = vitesseY;
     }
 
-    // Déplacement pour la prochaine itération
+    // dÃ©placement pour la prochaine itÃ©ration
     public void deplacer(int largeurFenetre, int hauteurFenetre){
       if (x+largeur>=largeurFenetre | x < 0) // Si atteint le bord selon x
         vitesseX = -vitesseX; // Inverser la direction selon x
-      x = x + vitesseX; // Déplacement selon x     
+      x = x + vitesseX; // dÃ©placement selon x     
       if (y+hauteur>=hauteurFenetre | y < 0) // Si atteint le bord selon y
         vitesseY = -vitesseY; // Inverser la direction selon y
-      y = y + vitesseY; // Déplacement selon y           
+      y = y + vitesseY; // dÃ©placement selon y           
     }
 
     // Dessin du Bot
     public void paint (Graphics g) {
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tÃªte
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

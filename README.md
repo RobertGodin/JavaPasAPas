@@ -2,8 +2,10 @@
 
 # JavaPasAPas
 
-  Site Web du livre :    Godin et Lemire (2020). Java Pas à Pas. Publié sur GitHub.
+Site Web du livre :    Godin et Lemire (2020). Java Pas à Pas. Publié sur GitHub.
 
+Le code Java utilise l'encodade de caractères UTF-8. La norme Google est utilisée pour
+le style.
 
 ## Installation de Java (vidéo)
 

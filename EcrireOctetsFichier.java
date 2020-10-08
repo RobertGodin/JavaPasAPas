@@ -1,10 +1,10 @@
-/* Cr�ation d'un fichier et �criture d'un suite d'octets dans le fichier */
+/* création d'un fichier et �criture d'un suite d'octets dans le fichier */
 import java.io.*;
 public class EcrireOctetsFichier{
     public static void main (String args[]) {
         FileOutputStream unFichier; 
         try{
-            unFichier = new FileOutputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Fichier1.txt");
+            unFichier = new FileOutputStream("Fichier1.txt");
             
             unFichier.write(0X61);
             unFichier.write(0X62);

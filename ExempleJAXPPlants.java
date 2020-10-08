@@ -1,6 +1,6 @@
 /**
- * Cr�ation d'un arbre DOM avec JAXP
- * Parcours de l'arbre pour extraire les donn�es et les ins�rer
+ * création d'un arbre DOM avec JAXP
+ * Parcours de l'arbre pour extraire les données et les ins�rer
  * dans le vecteurs d'objets Plant
  */
 
@@ -17,16 +17,16 @@ import java.util.*;
 public class ExempleJAXPPlants {
 
     public static void main(String[] args) throws Exception {
-        // Cr�ation d'un DocumentBuilderFactory et configuration des param�tres
+        // création d'un DocumentBuilderFactory et configuration des paramètres
         DocumentBuilderFactory unDocBuildFact = DocumentBuilderFactory.newInstance();
         unDocBuildFact.setValidating(true);
         unDocBuildFact.setIgnoringElementContentWhitespace(true);
 
-        // Cr�ation d'un DocumentBuilder
+        // création d'un DocumentBuilder
         DocumentBuilder unDocumentBuilder = unDocBuildFact.newDocumentBuilder();
 
         // Parsage du document
-        File leFile = new File("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Plants.xml");
+        File leFile = new File("Plants.xml");
         Document unDocument = unDocumentBuilder.parse(leFile);
         Vector vecteurDePlants = new Vector();
         Node unElementCatalogue = unDocument.getDocumentElement(); // Cherche l'�l�ment racine <catalogue>

@@ -1,9 +1,8 @@
 /*
  * ExempleAnimation.java
  * Animation simple qui bouge le bonhomme de gauche à droite
- * Exemple de composante pour l'animation r�alis�e avec un JPanel
- * Un Timer est utilis� pour r�aliser la boucle d'animation
- * Created on 18 août 2000, 10:15
+ * Exemple de composante pour l'animation réalisée avec un JPanel
+ * Un Timer est utilisé pour réaliser la boucle d'animation
  */
 
 import java.awt.*;

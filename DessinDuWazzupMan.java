@@ -2,20 +2,16 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-/**
- *
- * @author  Godin, Robert
- * @version 
- */
+
 public class DessinDuWazzupMan extends JFrame {
 
     /** Constructeur de ExempleDessinJFrame */
     public DessinDuWazzupMan() {
         super("Creation de Fred");
     }
-    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la création du JFrame par show()
     public void paint (Graphics g) {
-        int x = 100; // Coordonn�es x,y du coin sup�rieur gauche du bonhomme
+        int x = 100; // Coordonnées x,y du coin supérieur gauche du bonhomme
         int y = 50;
         int largeur = 100; // Largeur et hauteur du bonhomme
         int hauteur = 200;

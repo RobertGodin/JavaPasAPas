@@ -12,12 +12,12 @@ public class ExerciceTroisBonhommes extends JFrame {
     public ExerciceTroisBonhommes() {
         super("Dessiner trois bonhommes");
     }
-    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la création du JFrame par show()
     public void paint (Graphics g) {
         int a = 2;
         int b = 3;
         g.setColor(Color.green);
-        g.fillOval(100,100,200,200); // La t�te
+        g.fillOval(100,100,200,200); // La tête
 
         g.setColor(Color.black);
         g.fillRect(150,150,20,20); // L'oeil gauche
@@ -28,7 +28,7 @@ public class ExerciceTroisBonhommes extends JFrame {
         g.fillRect(100,300,200,200); // Le corps
                 
         g.setColor(Color.green);
-        g.fillOval(100/a,100/a,200/a,200/a); // La t�te
+        g.fillOval(100/a,100/a,200/a,200/a); // La tête
 
         g.setColor(Color.black);
         g.fillRect(150/a,150/a,20/a,20/a); // L'oeil gauche
@@ -39,7 +39,7 @@ public class ExerciceTroisBonhommes extends JFrame {
         g.fillRect(100/a,300/a,200/a,200/a); // Le corps
                 
         g.setColor(Color.green);
-        g.fillOval(100/b,100/b,200/b,200/b); // La t�te
+        g.fillOval(100/b,100/b,200/b,200/b); // La tête
 
         g.setColor(Color.black);
         g.fillRect(150/b,150/b,20/b,20/b); // L'oeil gauche

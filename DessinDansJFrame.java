@@ -10,13 +10,13 @@ public class DessinDansJFrame extends JFrame {
 
     /** Constructeur de ExempleDessinJFrame */
     public DessinDansJFrame() {
-        super("Exemples de m�thodes de Graphics dans un JFrame");
+        super("Exemples de méthodes de Graphics dans un JFrame");
     }
-    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la création du JFrame par show()
     public void paint (Graphics g) {
         
         g.setColor(Color.green);
-        g.fillOval(100,100,200,200); // La t�te
+        g.fillOval(100,100,200,200); // La tête
 
         g.setColor(Color.black);
         g.fillRect(150,150,20,20); // L'oeil gauche

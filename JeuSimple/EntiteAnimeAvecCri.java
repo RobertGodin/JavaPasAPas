@@ -2,7 +2,7 @@ package JeuSimple;
 import java.net.URL;
 import java.applet.*;
 public abstract class EntiteAnimeAvecCri extends EntiteAnime{
-  protected AudioClip unCri; //Cri de l'entit�
+  protected AudioClip unCri; //Cri de l'Entité
 
   public EntiteAnimeAvecCri (
       int x, int y, int largeur, int hauteur,

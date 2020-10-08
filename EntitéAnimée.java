@@ -2,15 +2,15 @@
 import java.awt.*;
 import java.net.URL;
 import java.applet.*;
-public class Entit�Anim�e{
+public class EntitéAnimée{
 
     protected int x,y,largeur,hauteur,vitesseX, vitesseY;
     protected boolean visible;
     protected AudioClip unSon;
-    protected int �tatCourant = 0;
+    protected int étatCourant = 0;
     protected int nombreEtats = 3;
 
-    public Entit�Anim�e(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY,
+    public EntitéAnimée(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY,
                     boolean visible, String fichierAudio, int nombreEtats) {
         this.x = x;
         this.y = y;
@@ -22,7 +22,7 @@ public class Entit�Anim�e{
         this.nombreEtats = nombreEtats;
         // Chargement du clip audio. L'URL part de la racine qui est le r�pertoire
         // contenant le fichier .class
-        URL url = Entit�Anim�e.class.getResource(fichierAudio);
+        URL url = EntitéAnimée.class.getResource(fichierAudio);
         // Cast du contenu en AudioClip
         try{unSon = (AudioClip)url.getContent();}
         catch(Exception exception){System.err.println(exception.toString());}
@@ -40,7 +40,7 @@ public class Entit�Anim�e{
     public boolean getVisible(){return visible;}
     
     public void changer(){
-        // Passer à l'�tat suivant dans le processus d'animation
+        // Passer à l'état suivant dans le processus d'animation
         if (x+largeur+vitesseX > 500 || x < 0){
             vitesseX = -vitesseX;
             // Le bonhomme fait un son lorsqu'il frappe la fin du monde !
@@ -53,7 +53,7 @@ public class Entit�Anim�e{
         }
         y=y+vitesseY;
         // Etat suivant d'affichage
-        �tatCourant = (�tatCourant + 1)%nombreEtats;
+        étatCourant = (étatCourant + 1)%nombreEtats;
     }
     public void crier (){
         unSon.play();
@@ -62,7 +62,7 @@ public class Entit�Anim�e{
         return ((unX >= x) && (unX <= x + largeur) && (unY >= y) && (unY <= y + hauteur));
     }
     public void paint (Graphics g) {
-        // M�thode abstraite
+        // méthode abstraite
     }
     public void paintSiVisible (Graphics g) {
         if(visible){paint(g);}

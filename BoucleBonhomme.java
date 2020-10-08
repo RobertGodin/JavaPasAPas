@@ -1,6 +1,6 @@
 /*
  * BoucleBonhomme.java
- * Exemple de boucle qui affiche une s�rie de bonhommes
+ * Exemple de boucle qui affiche une série de bonhommes
  */
 import java.awt.*;
 import javax.swing.*;
@@ -9,10 +9,10 @@ public class BoucleBonhomme extends JFrame {
     
     /** Constructeur de ExempleObjetBonhomme */
     public BoucleBonhomme() {
-        super("Affichage d'une s�rie de bonhommes");
+        super("Affichage d'une série de bonhommes");
     }   
     
-    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la création du JFrame par show()
     public void paint (Graphics g) {
         Bonhomme unBonhomme = new Bonhomme(0,50,100,200);
         for(int x=0; x<=200; x = x + 5){

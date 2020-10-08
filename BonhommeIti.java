@@ -22,7 +22,7 @@ public class BonhommeIti{
     public void paint (Graphics g) {
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La t�te
+        // La tête
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire

@@ -7,10 +7,10 @@ public class BotSCEntiteRebondissante extends EntiteRebondissante {
         super(x,y,largeur,hauteur,vitesseX,vitesseY);
     }
 
-    // Corps de la méthode abstraite héritée de la super-classe
+    // Corps de la mÃ©thode abstraite hÃ©ritÃ©e de la super-classe
     public void paint (Graphics g) {
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tÃªte
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

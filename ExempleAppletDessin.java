@@ -1,27 +1,22 @@
 /*
  * ExempleAppletDessin.java
- * Dessins avec m�thodes de la classe Graphics dans le contexte d'un applet
- * Created on 15 août 2000, 15:36
+ * Dessins avec méthodes de la classe Graphics dans le contexte d'un applet
  */
 
 import java.awt.*;
 import javax.swing.JApplet;
 import java.awt.Graphics;
-/**
- *
- * @author  Godin, Robert
- * @version 
- */
+
 public class ExempleAppletDessin extends JApplet {
 
     public void paint (Graphics g) {
-        int x = 100; // Coordonn�es x,y du coin sup�rieur gauche du bonhomme
+        int x = 100; // Coordonnées x,y du coin supérieur gauche du bonhomme
         int y = 20;
         int largeur = 100; // Largeur et hauteur du bonhomme
         int hauteur = 200;
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La t�te
+        // La tête
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire

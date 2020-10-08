@@ -1,7 +1,6 @@
 /*
  * ExAppletDessinBonhomme1.java
- * Dessins avec m�thodes de la classe Graphics dans le contexte d'un applet
- * Created on 15 août 2000, 15:36
+ * Dessins avec méthodes de la classe Graphics dans le contexte d'un applet
  */
 
 import java.awt.*;
@@ -10,7 +9,7 @@ import java.awt.Graphics;
 public class ExAppletDessinBonhomme1 extends JApplet {
 
     public void paint (Graphics g) {
-        int x = 100; // Coordonn�es x,y du coin sup�rieur gauche du bonhomme
+        int x = 100; // Coordonnées x,y du coin supérieur gauche du bonhomme
         int y = 20;
         int largeur = 100; // Largeur et hauteur du bonhomme
         int hauteur = 200;
@@ -21,7 +20,7 @@ public class ExAppletDessinBonhomme1 extends JApplet {
         g.fillRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
         g.setColor(Color.black);
         g.drawRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
-        // La t�te
+        // La tête
         g.setColor(new Color(255,100,0));
         g.fillOval(x,y,largeur,hauteur/2);
         g.setColor(Color.black);

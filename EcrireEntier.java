@@ -1,4 +1,4 @@
-/* Cr�ation d'un DataOutputStream à partir d'un fichier et �criture d'un entier dans le fichier */
+/* création d'un DataOutputStream à partir d'un fichier et �criture d'un entier dans le fichier */
 package LivreJava;
 import java.io.*;
 public class EcrireEntier{
@@ -7,7 +7,7 @@ public class EcrireEntier{
         try{
             unFichier = 
                 new DataOutputStream(
-                    new FileOutputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/UnEntier.dat"));
+                    new FileOutputStream("UnEntier.dat"));
             int unEntier = 1629696561;//(97*2^24)+(35*2^16)+(50<<2^8)+49 = "a#21" en String;
             unFichier.writeInt(unEntier);
             unFichier.close();

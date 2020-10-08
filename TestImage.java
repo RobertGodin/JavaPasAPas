@@ -14,7 +14,7 @@ public class TestImage extends JApplet {
         image = getImage(getDocumentBase(),"coq/coq1.gif");
 //        imageIcon = new ImageIcon("coq/coq1.gif");
     }
-    // paint() est appelée indirectement lors de la cr�ation du JFrame par show()
+    // paint() est appelée indirectement lors de la création du JFrame par show()
     public void paint (Graphics g) {
         
         g.setColor(new Color(255,100,0));

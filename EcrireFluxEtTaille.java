@@ -1,12 +1,12 @@
-/* Illustration de la cr�ation d'un fichier d'objets s�riel
+/* Illustration de la création d'un fichier d'objets sériel
  * Lit le fichier plants.txt, stocke le contenu dans un vecteur d'objets Plant et
- * cr�e ensuite le fichier d'objets fluxPlants.dat par accès s�riel*/
+ * crée ensuite le fichier d'objets fluxPlants.dat par accès sériel*/
 
 import java.io.*;
 import java.util.*;
 public class EcrireFluxEtTaille{
 
-        // La m�thode lit les donn�es de Plants.txt et les retournent dans un vecteur d'objets 
+        // La méthode lit les données de Plants.txt et les retournent dans un vecteur d'objets 
         // de la classe Plant
         // Reprend essentiellement le code de ExempleStreamTokenizer
     public static Vector lirePlantsFichierTexte()throws Exception{
@@ -14,8 +14,8 @@ public class EcrireFluxEtTaille{
         FileReader unFichier = new FileReader("C:/forte4j/Development/LivreJava/Plants.txt");
         StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
-        // Les 5 lignes suivantes ne sont pas nécessaires car les param�tres
-        // donn�s sont les valeurs de d�faut
+        // Les 5 lignes suivantes ne sont pas nécessaires car les paramètres
+        // donn�s sont les valeurs de défaut
         unStreamTokenizer.quoteChar((int)'"');
         unStreamTokenizer.whitespaceChars((int)'\r',(int)'\r');
         unStreamTokenizer.whitespaceChars((int)'\n',(int)'\n');
@@ -46,7 +46,7 @@ public class EcrireFluxEtTaille{
             } else
         {System.out.println("Le format du fichier est incorrect : prix attendu"); System.exit(1);}
 
-            //Cr�ation de l'objet Plant
+            //création de l'objet Plant
             Plant unPlant = new Plant(noPlant, description, prixUnitaire);
             System.out.println(noPlant + " " + description + " " + prixUnitaire);
             vecteurDePlants.addElement(unPlant);
@@ -55,8 +55,8 @@ public class EcrireFluxEtTaille{
         return vecteurDePlants;
     }
     
-    // La m�thode suivante �crit les objets de vecteurDePlants les uns à la suite
-    // des autres dans le fichier FluxPlants.dat par accès s�riel
+    // La méthode suivante �crit les objets de vecteurDePlants les uns à la suite
+    // des autres dans le fichier FluxPlants.dat par accès sériel
     public static void �crireFichierFluxPlants (Vector vecteurDePlants) throws Exception{
         ObjectOutputStream fichierFluxPlants =
         new ObjectOutputStream (

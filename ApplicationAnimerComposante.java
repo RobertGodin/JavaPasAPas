@@ -4,7 +4,6 @@
  * Animation d'un bonhomme bondissant
  * Utilise BonhommeQuiBouge
  * Boucle d'animation explicite
- * Created on 18 août 2000, 10:15
  */
 
 import java.awt.*;

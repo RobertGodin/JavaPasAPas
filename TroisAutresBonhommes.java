@@ -10,11 +10,11 @@ import java.awt.event.*;
 public class TroisAutresBonhommes extends JFrame {
 
     public TroisAutresBonhommes() {
-        super("Exemple d'utilisation d'une m�thode statique paintBonhomme");
+        super("Exemple d'utilisation d'une méthode statique paintBonhomme");
     }
    
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'�chelle dans un rectangle englobant de param�tres x,y,largeur,hauteur
+    //Bonhomme à l'�chelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
         int milieux = x + (largeur/2);
         int milieuy = y + (hauteur/2);
         // Le corps
@@ -22,7 +22,7 @@ public class TroisAutresBonhommes extends JFrame {
         g.fillRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
         g.setColor(Color.black);
         g.drawRect(x+(largeur/8),milieuy-(hauteur/16),largeur*3/4,(hauteur/2)+(hauteur/16));
-        // La t�te
+        // La tête
         g.setColor(new Color(255,100,0));
         g.fillOval(x,y,largeur,hauteur/2);
         g.setColor(Color.black);

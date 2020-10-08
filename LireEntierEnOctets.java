@@ -5,7 +5,7 @@ public class LireEntierEnOctets{
     public static void main (String args[]) {
         FileInputStream unFichier;
         try{
-            unFichier = new FileInputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Octets.dat");
+            unFichier = new FileInputStream("Octets.dat");
           
             byte[] tampon = new byte[4];
             unFichier.read(tampon); //Lecture des 4 octets

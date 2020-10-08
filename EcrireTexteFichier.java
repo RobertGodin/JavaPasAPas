@@ -1,4 +1,4 @@
-/* Cr�ation d'un fichier et �criture d'un suite d'octets dans le fichier */
+/* création d'un fichier et �criture d'un suite d'octets dans le fichier */
 import java.io.*;
 public class EcrireTexteFichier{
     public static void main (String args[]) {

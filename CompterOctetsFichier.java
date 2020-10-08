@@ -7,7 +7,7 @@ public class CompterOctetsFichier{
         int compteurOctet;
         FileInputStream unFichier; 
         try{
-            unFichier = new FileInputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Fichier1.txt");
+            unFichier = new FileInputStream("Fichier1.txt");
             compteurOctet = 0;
             while((unOctet = unFichier.read()) != -1)
                 compteurOctet++;

@@ -4,7 +4,7 @@ public class EcrireEntierEnOctets{
     public static void main (String args[]) {
         FileOutputStream unFichier;
         try{
-            unFichier = new FileOutputStream("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/Octets.dat");
+            unFichier = new FileOutputStream("Octets.dat");
             
             int unEntier = 1629696561;//(97*2^24)+(35*2^16)+(50<<2^8)+49 = "a#21" en String;
             // Convertir unEntier en un tableau de 4 octets

@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-originalfile=$1
-java -jar $DIR/google-java-format-1.9-all-deps.jar --replace $originalfile
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+java -jar $DIR/google-java-format-1.9-all-deps.jar --replace $@

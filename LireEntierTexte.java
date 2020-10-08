@@ -6,7 +6,7 @@ public class LireEntierTexte{
         FileReader unFichier;
         try{
             char[] tableauChar = new char[10];
-            unFichier = new FileReader("C:/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/UnEntier.txt");
+            unFichier = new FileReader("UnEntier.txt");
             unFichier.read(tableauChar,0,10);
             int unEntier = Integer.parseInt(new String(tableauChar,0,10));
             unFichier.close();
