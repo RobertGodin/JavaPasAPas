@@ -20,7 +20,7 @@ public class VerifierExistenceFichier {
             byte[] tampon = new byte[4];
             for (int i = 3; i>=0;i--){
                 tampon[i] = (byte)(unEntier & 0XFF); //Extrait l'octet le moins significatif
-                unEntier >>>=8; //D�calage de 8 bits (remplissage à 0)
+                unEntier >>>=8; //Décalage de 8 bits (remplissage à 0)
             }
             unFichier.write(tampon);
             unFichier.close();

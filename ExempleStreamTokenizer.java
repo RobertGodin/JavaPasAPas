@@ -1,5 +1,5 @@
 /* Illustration du StreamTokenizer
- * Lit le fichier plants.txt, affiche à l'�cran chacun des jetons (noPlant,description,prixUnitaire) et
+ * Lit le fichier plants.txt, affiche à l'écran chacun des jetons (noPlant,description,prixUnitaire) et
  * stocke le contenu dans un vecteur d'objets Plant */
 
 import java.io.*;
@@ -11,7 +11,7 @@ public class ExempleStreamTokenizer{
             StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
             // Les 5 lignes suivantes ne sont pas nécessaires car les paramètres
-            // donn�s sont les valeurs de défaut
+            // donnés sont les valeurs de défaut
             unStreamTokenizer.quoteChar((int)'"');
             unStreamTokenizer.whitespaceChars((int)'\r',(int)'\r');
             unStreamTokenizer.whitespaceChars((int)'\n',(int)'\n');
@@ -31,7 +31,7 @@ public class ExempleStreamTokenizer{
                 {System.out.println("Le format du fichier est incorrect : noPlant attendu"); System.exit(1);}
                 //Lecture de la description    
                 unStreamTokenizer.nextToken();
-                if(unStreamTokenizer.ttype == (int)'"'){//Est-ce bien une cha�ne encadr�e par " ?
+                if(unStreamTokenizer.ttype == (int)'"'){//Est-ce bien une chaîne encadr�e par " ?
                     description = unStreamTokenizer.sval;
                 } else
                 {System.out.println("Le format du fichier est incorrect : description attendue"); System.exit(1);}

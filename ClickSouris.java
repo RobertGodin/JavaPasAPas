@@ -30,7 +30,7 @@ public class ClickSouris extends JFrame {
     }
    
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'�chelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
         g.setColor(Color.green);
         g.fillOval(x,y,largeur,hauteur/2); // La tête
 

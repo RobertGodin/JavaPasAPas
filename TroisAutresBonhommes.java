@@ -14,7 +14,7 @@ public class TroisAutresBonhommes extends JFrame {
     }
    
     public static void paintBonhomme (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'�chelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
         int milieux = x + (largeur/2);
         int milieuy = y + (hauteur/2);
         // Le corps

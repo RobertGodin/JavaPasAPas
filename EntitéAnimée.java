@@ -20,7 +20,7 @@ public class EntitéAnimée{
         this.vitesseY = vitesseY;
         this.visible = visible;
         this.nombreEtats = nombreEtats;
-        // Chargement du clip audio. L'URL part de la racine qui est le r�pertoire
+        // Chargement du clip audio. L'URL part de la racine qui est le répertoire
         // contenant le fichier .class
         URL url = EntitéAnimée.class.getResource(fichierAudio);
         // Cast du contenu en AudioClip
@@ -44,7 +44,7 @@ public class EntitéAnimée{
         if (x+largeur+vitesseX > 500 || x < 0){
             vitesseX = -vitesseX;
             // Le bonhomme fait un son lorsqu'il frappe la fin du monde !
-            // On arr�te le son pr�c�dent au cas o� il ne serait pas termin�
+            // On arrête le son précédent au cas o� il ne serait pas terminé
         }
         x=x+vitesseX;
         if (y+hauteur+vitesseY > 500 || y < 0){

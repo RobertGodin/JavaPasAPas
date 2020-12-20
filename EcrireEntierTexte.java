@@ -1,5 +1,5 @@
-/* création d'un FileWriter à partir d'un fichier et �criture d'un entier dans le fichier 
-sous forme d'une cha�ne de caractères */
+/* création d'un FileWriter à partir d'un fichier et écriture d'un entier dans le fichier 
+sous forme d'une chaîne de caractères */
 import java.io.*;
 public class EcrireEntierTexte{
     public static void main (String args[]) {

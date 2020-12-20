@@ -14,7 +14,7 @@ public class PlusieursBonhommes extends JFrame {
     }
    
     public static void paintBonhommeKeny (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'�chelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
         int milieux = x + (largeur/2);
         int milieuy = y + (hauteur/2);
         // Le corps
@@ -50,7 +50,7 @@ public class PlusieursBonhommes extends JFrame {
     }
 
             public static void paintBonhommeBot (Graphics g, int x, int y, int largeur, int hauteur) {
-    //Bonhomme à l'�chelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    //Bonhomme à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
         g.setColor(Color.green);
         g.fillOval(x,y,largeur,hauteur/2); // La tête
 

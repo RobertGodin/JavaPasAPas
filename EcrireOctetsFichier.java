@@ -1,4 +1,4 @@
-/* création d'un fichier et �criture d'un suite d'octets dans le fichier */
+/* création d'un fichier et écriture d'un suite d'octets dans le fichier */
 import java.io.*;
 public class EcrireOctetsFichier{
     public static void main (String args[]) {

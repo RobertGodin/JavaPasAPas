@@ -1,4 +1,4 @@
-/* Creation d'un fichier et �criture d'un entier sous forme d'une suite d'octets dans le fichier */
+/* Creation d'un fichier et écriture d'un entier sous forme d'une suite d'octets dans le fichier */
 import java.io.*;
 public class EcrireEntierEnOctets{
     public static void main (String args[]) {
@@ -11,7 +11,7 @@ public class EcrireEntierEnOctets{
             byte[] tampon = new byte[4];
             for (int i = 3; i>=0;i--){
                 tampon[i] = (byte)(unEntier & 0XFF); //Extrait l'octet le moins significatif
-                unEntier >>>=8; //D�calage de 8 bits (remplissage à 0)
+                unEntier >>>=8; //Décalage de 8 bits (remplissage à 0)
             }
             unFichier.write(tampon);
             unFichier.close();

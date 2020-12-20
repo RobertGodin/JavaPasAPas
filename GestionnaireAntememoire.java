@@ -2,17 +2,17 @@
 import java.io.*;
 public class GestionnaireAntememoire {
     //Le gestionnaire d'ant�mémoire r�alise les mêmes Opérations de lecture et
-    //d'�criture de bloc que la couche pr�c�dente (classe Disque) en utilisant une ant�mémoire
+    //d'écriture de bloc que la couche précédente (classe Disque) en utilisant une ant�mémoire
     //disque pour am�liorer la performance des entrées/sorties.
     //La strat�gie de remplacement utilisée est : moins fr�quemment utilisé (LFU).
 
     static final int nbTampon = 3;
     Disque leDisque;
-    // R�alisation d'un r�pertoire simple à l'aide d'un tableau noBloc
+    // R�alisation d'un répertoire simple à l'aide d'un tableau noBloc
     // qui contient le noBloc du bloc dans le tampon
     int noBlocDansTampon[];
     boolean sale[];
-    int fr�quence[];
+    int fréquence[];
     byte tampon [][];
 
     public GestionnaireAntememoire() {
@@ -21,7 +21,7 @@ public class GestionnaireAntememoire {
         noBlocDansTampon = new int[nbTampon];
         sale = new boolean[nbTampon];
         tampon = new byte[nbTampon][Disque.tailleBloc];
-        fr�quence = new int[nbTampon];
+        fréquence = new int[nbTampon];
         for(int i=0; i<nbTampon; i++){
             noBlocDansTampon[i] = -1;
         }
@@ -40,7 +40,7 @@ public class GestionnaireAntememoire {
     // noBloc dans tamponApplication.
 
     //Exceptions à pr�voir :
-    //1: le param�tre noBloc est à l'ext�rieur de l'intervalle [0..nbBloc-1]
+    //1: le paramètre noBloc est à l'ext�rieur de l'intervalle [0..nbBloc-1]
     //2: autre exception
 
     throws IOException, NoBlocIllegalException
@@ -48,7 +48,7 @@ public class GestionnaireAntememoire {
         if (noBloc <0 || noBloc >= Disque.nbBloc) {
             throw new NoBlocIllegalException(noBloc);
         }
-        // Chercher numéroBloc dans le r�pertoire (simple fouille s�quentielle)
+        // Chercher numéroBloc dans le répertoire (simple fouille s�quentielle)
         int positionAntememoire;
         for (positionAntememoire = 0; positionAntememoire<nbTampon ; positionAntememoire++){
             if (noBloc == noBlocDansTampon[positionAntememoire]){
@@ -60,7 +60,7 @@ public class GestionnaireAntememoire {
             for(int i=0; i<Disque.tailleBloc ; i++){
                 tamponApplication[i] = tampon[positionAntememoire][i];
             }
-            ++fr�quence[positionAntememoire];
+            ++fréquence[positionAntememoire];
         }
         else{
             int indiceLibre;
@@ -72,10 +72,10 @@ public class GestionnaireAntememoire {
             if (indiceLibre < nbTampon){//SI il y a un tampon libre dans l'ant�-mémoire
                 //transf�rer le bloc noBloc dans le tampon libre
                 leDisque.lireBloc(noBloc, tampon[indiceLibre]);
-                //mettre à jour le r�pertoire d'ant�-mémoire
+                //mettre à jour le répertoire d'ant�-mémoire
                 noBlocDansTampon[indiceLibre]=noBloc;
                 sale[indiceLibre]= false;
-                fr�quence[indiceLibre] = 0;
+                fréquence[indiceLibre] = 0;
                 for(int i=0; i<Disque.tailleBloc ; i++){
                     tamponApplication[i] = tampon[indiceLibre][i];
                 }
@@ -83,19 +83,19 @@ public class GestionnaireAntememoire {
             else{
                 //sélectionner le tamponVictime à �vacuer selon LFU
                 int indiceVictime = 1;
-                int fr�quenceMinimum = fr�quence[1];
+                int fréquenceMinimum = fréquence[1];
                 for(int i =0; i < nbTampon; i++){
-                    if (fr�quence[i]<fr�quenceMinimum){
-                        fr�quenceMinimum = fr�quence[i];
+                    if (fréquence[i]<fréquenceMinimum){
+                        fréquenceMinimum = fréquence[i];
                         indiceVictime = i;
                     }
                 }
                 this.�vacuerTampon(indiceVictime);
                 leDisque.lireBloc(noBloc, tampon[indiceVictime]);
-                //mettre à jour le r�pertoire d'ant�-mémoire
+                //mettre à jour le répertoire d'ant�-mémoire
                 noBlocDansTampon[indiceVictime]=noBloc;
                 sale[indiceVictime]= false;
-                fr�quence[indiceVictime]=0;
+                fréquence[indiceVictime]=0;
                 for(int i=0; i<Disque.tailleBloc ; i++){
                     tamponApplication[i] = tampon[indiceVictime][i];
                 }
@@ -103,14 +103,14 @@ public class GestionnaireAntememoire {
         }
     }
 
-    public void �crireBlocAntememoire(int noBloc, byte tamponApplication[])
+    public void écrireBlocAntememoire(int noBloc, byte tamponApplication[])
     throws NoBlocIllegalException{
-        //La fonction �crireBlocAnt�mémoire �crit le contenu de tamponApplication dans le bloc dont le numéro est noBloc.
+        //La fonction écrireBlocAnt�mémoire écrit le contenu de tamponApplication dans le bloc dont le numéro est noBloc.
 
         if (noBloc <0 || noBloc >= Disque.nbBloc) {
             throw new NoBlocIllegalException(noBloc);
         }
-        // Chercher noBloc dans le r�pertoire (simple fouille s�quentielle)
+        // Chercher noBloc dans le répertoire (simple fouille s�quentielle)
         int positionAntememoire;
         for (positionAntememoire = 0; positionAntememoire<nbTampon ; positionAntememoire++){
             if (noBloc == noBlocDansTampon[positionAntememoire]){
@@ -123,7 +123,7 @@ public class GestionnaireAntememoire {
                 tampon[positionAntememoire][i] = tamponApplication[i];
             }
             sale[positionAntememoire] = true;
-            ++fr�quence[positionAntememoire];
+            ++fréquence[positionAntememoire];
         }
         else{
             int indiceLibre;
@@ -138,17 +138,17 @@ public class GestionnaireAntememoire {
                     tampon[indiceLibre][i] = tamponApplication[i];
                 }
                 sale[indiceLibre] = true;
-                //mettre à jour le r�pertoire d'ant�-mémoire
+                //mettre à jour le répertoire d'ant�-mémoire
                 noBlocDansTampon[indiceLibre] = noBloc;
-                fr�quence[indiceLibre] = 0;
+                fréquence[indiceLibre] = 0;
             }
             else{
                 //sélectionner le tamponVictime à �vacuer selon LFU
                 int indiceVictime = 1;
-                int fr�quenceMinimum = fr�quence[1];
+                int fréquenceMinimum = fréquence[1];
                 for(int i =0; i < nbTampon; i++){
-                    if (fr�quence[i]<fr�quenceMinimum){
-                        fr�quenceMinimum = fr�quence[i];
+                    if (fréquence[i]<fréquenceMinimum){
+                        fréquenceMinimum = fréquence[i];
                         indiceVictime = i;
                     }
                 }
@@ -156,10 +156,10 @@ public class GestionnaireAntememoire {
                 for(int i=0; i<Disque.tailleBloc ; i++){
                     tampon[indiceVictime][i] = tamponApplication[i];
                 }
-                //mettre à jour le r�pertoire d'ant�-mémoire
+                //mettre à jour le répertoire d'ant�-mémoire
                 noBlocDansTampon[indiceVictime]=noBloc;
                 sale[indiceVictime]= true;
-                fr�quence[indiceVictime] = 0;
+                fréquence[indiceVictime] = 0;
             }
         }
     }
@@ -171,7 +171,7 @@ public class GestionnaireAntememoire {
         //2: autre exception
 
         if (sale[indiceTampon]){
-            leDisque.�crireBloc(noBlocDansTampon[indiceTampon],tampon[indiceTampon]);
+            leDisque.écrireBloc(noBlocDansTampon[indiceTampon],tampon[indiceTampon]);
             sale[indiceTampon] = false;
         }
     }
@@ -194,7 +194,7 @@ public class GestionnaireAntememoire {
         System.out.println("Contenu antememoire:");
         for(int i = 0; i<nbTampon; i++){
             contenuString = new String(tampon[i],0);
-            System.out.println(i+":"+contenuString+"|"+noBlocDansTampon[i]+"|"+fr�quence[i]+"|"+sale[i]);
+            System.out.println(i+":"+contenuString+"|"+noBlocDansTampon[i]+"|"+fréquence[i]+"|"+sale[i]);
         }
     }
 }

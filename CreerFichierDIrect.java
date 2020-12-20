@@ -15,7 +15,7 @@ public class CreerFichierDIrect{
         StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
         // Les 5 lignes suivantes ne sont pas nécessaires car les paramètres
-        // donn�s sont les valeurs de défaut
+        // donnés sont les valeurs de défaut
         unStreamTokenizer.quoteChar((int)'"');
         unStreamTokenizer.whitespaceChars((int)'\r',(int)'\r');
         unStreamTokenizer.whitespaceChars((int)'\n',(int)'\n');
@@ -35,7 +35,7 @@ public class CreerFichierDIrect{
         {System.out.println("Le format du fichier est incorrect : noPlant attendu"); System.exit(1);}
             //Lecture de la description
             unStreamTokenizer.nextToken();
-            if(unStreamTokenizer.ttype == (int)'"'){//Est-ce bien une cha�ne encadr�e par " ?
+            if(unStreamTokenizer.ttype == (int)'"'){//Est-ce bien une chaîne encadr�e par " ?
                 description = unStreamTokenizer.sval;
             } else
         {System.out.println("Le format du fichier est incorrect : description attendue"); System.exit(1);}
@@ -55,7 +55,7 @@ public class CreerFichierDIrect{
         return vecteurDePlants;
     }
     
-    // La méthode suivante �crit les objets de vecteurDePlants les uns à la suite
+    // La méthode suivante écrit les objets de vecteurDePlants les uns à la suite
     // des autres dans le fichier FluxPlants.dat par accès sériel
     public static void ecrireFichierFluxPlants (Vector vecteurDePlants) throws Exception{
         RandomAccessFile fichierDirectPlants =
@@ -64,8 +64,8 @@ public class CreerFichierDIrect{
         int numeroEnregistrementRelatif = 0;
         while (enumerationPlants.hasMoreElements()){
             // créer nouvel enregitrement
-            // Le seek �tablit la position courante
-            // NB Les quatre premiers octets du fichier contiennent le nombre d'enregistrements cr��s
+            // Le seek établit la position courante
+            // NB Les quatre premiers octets du fichier contiennent le nombre d'enregistrements créés
             fichierDirectPlants.seek(numeroEnregistrementRelatif*Plant.tailleMaxEnregistrement()+4);
             ((Plant)enumerationPlants.nextElement()).ecrireEnregistrementTailleMax(fichierDirectPlants);
             numeroEnregistrementRelatif++;

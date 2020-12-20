@@ -8,7 +8,7 @@ public class AppletAnimerComposante
   protected Graphics tamponGraphics;
   protected Thread leThreadAnimation;
   protected Dimension d;
-  //D�clarer la composante
+  //Déclarer la composante
   protected ComposanteAnimation uneComposanteAnimation;
 
   public void init() {
@@ -24,9 +24,9 @@ public class AppletAnimerComposante
     tamponGraphics.clearRect(0,0,d.width,d.height);
     //Changer l'état du monde pour le prochain clich�
     uneComposanteAnimation.changerMonde();
-    //Prendre un clich� du monde
+    //Prendre un clichédu monde
     uneComposanteAnimation.paint(tamponGraphics);
-    // copier tamponImage sur l'�cran
+    // copier tamponImage sur l'écran
     g.drawImage(tamponImage, 0, 0, this);
   }
 

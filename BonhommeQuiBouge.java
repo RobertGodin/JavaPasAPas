@@ -20,7 +20,7 @@ public class BonhommeQuiBouge{
         this.largeur = largeur;
         this.vitesseX = vitesseX;
         this.vitesseY = vitesseY;
-        // Chargement du clip audio. L'URL part de la racine qui est le r�pertoire
+        // Chargement du clip audio. L'URL part de la racine qui est le répertoire
         // contenant le fichier .class
         URL url = BonhommeQuiBouge.class.getResource("Son1.wav");
         // Cast du contenu en AudioClip
@@ -36,7 +36,7 @@ public class BonhommeQuiBouge{
         if (x+largeur+vitesseX > 400 || x < 0){
             vitesseX = -vitesseX;
             // Le bonhomme fait un son lorsqu'il frappe la fin du monde !
-            // On arr�te le son pr�c�dent au cas o� il ne serait pas termin�
+            // On arrête le son précédent au cas o� il ne serait pas terminé
             unSon.stop();
             unSon.play();
         }

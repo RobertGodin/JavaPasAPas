@@ -21,7 +21,7 @@ public class MiniSGFApp {
         String contenuString;
 
         while(true) {
-            String chaineChoix = JOptionPane.showInputDialog("Menu:(1)lireBloc,(2)�crireBloc,(3)afficher,(4)exit: ");
+            String chaineChoix = JOptionPane.showInputDialog("Menu:(1)lireBloc,(2)écrireBloc,(3)afficher,(4)exit: ");
             choix = Integer.parseInt(chaineChoix);
             switch(choix){
                 case 1: // lire un bloc
@@ -37,12 +37,12 @@ public class MiniSGFApp {
                 "Contenu du bloc #" + noBloc + " :" + contenuString);
                 break;
 
-                case 2: // �crire un bloc
-                chaineNoBloc = JOptionPane.showInputDialog("Entrez le noBloc à �crire : ");
+                case 2: // écrire un bloc
+                chaineNoBloc = JOptionPane.showInputDialog("Entrez le noBloc à écrire : ");
                 noBloc = Integer.parseInt(chaineNoBloc);
                 String chaineContenu = JOptionPane.showInputDialog("Entrez le contenu du bloc : ");
                 tamponApplication = chaineContenu.getBytes();
-                leGestionnaireAntememoire.�crireBlocAntememoire(noBloc, tamponApplication);
+                leGestionnaireAntememoire.écrireBlocAntememoire(noBloc, tamponApplication);
                 JOptionPane.showMessageDialog(null,"Bloc #"+noBloc+":"+chaineContenu);
                 break;
 

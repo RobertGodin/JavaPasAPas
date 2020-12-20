@@ -15,7 +15,7 @@ public class EcrireFluxEtTaille{
         StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
         // Les 5 lignes suivantes ne sont pas nécessaires car les paramètres
-        // donn�s sont les valeurs de défaut
+        // donnés sont les valeurs de défaut
         unStreamTokenizer.quoteChar((int)'"');
         unStreamTokenizer.whitespaceChars((int)'\r',(int)'\r');
         unStreamTokenizer.whitespaceChars((int)'\n',(int)'\n');
@@ -35,7 +35,7 @@ public class EcrireFluxEtTaille{
         {System.out.println("Le format du fichier est incorrect : noPlant attendu"); System.exit(1);}
             //Lecture de la description
             unStreamTokenizer.nextToken();
-            if(unStreamTokenizer.ttype == (int)'"'){//Est-ce bien une cha�ne encadr�e par " ?
+            if(unStreamTokenizer.ttype == (int)'"'){//Est-ce bien une chaîne encadr�e par " ?
                 description = unStreamTokenizer.sval;
             } else
         {System.out.println("Le format du fichier est incorrect : description attendue"); System.exit(1);}
@@ -55,9 +55,9 @@ public class EcrireFluxEtTaille{
         return vecteurDePlants;
     }
     
-    // La méthode suivante �crit les objets de vecteurDePlants les uns à la suite
+    // La méthode suivante écrit les objets de vecteurDePlants les uns à la suite
     // des autres dans le fichier FluxPlants.dat par accès sériel
-    public static void �crireFichierFluxPlants (Vector vecteurDePlants) throws Exception{
+    public static void écrireFichierFluxPlants (Vector vecteurDePlants) throws Exception{
         ObjectOutputStream fichierFluxPlants =
         new ObjectOutputStream (
         new FileOutputStream("C:/forte4j/Development/LivreJava/FluxPlants.dat"));
@@ -79,6 +79,6 @@ public class EcrireFluxEtTaille{
 
     public static void main (String args[]) throws Exception{
         Vector vecteurDePlants = lirePlantsFichierTexte();
-        �crireFichierFluxPlants(vecteurDePlants);
+        écrireFichierFluxPlants(vecteurDePlants);
     }
 }

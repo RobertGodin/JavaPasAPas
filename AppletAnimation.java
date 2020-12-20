@@ -9,7 +9,7 @@ public class AppletAnimation
   protected Graphics tamponGraphics;
   protected Thread leThreadAnimation;
   protected Dimension d;
-  //D�clarer objets du monde
+  //Déclarer objets du monde
   protected BonhommeQuiBouge unBonhomme;
 
   public void init() {
@@ -26,7 +26,7 @@ public class AppletAnimation
     tamponGraphics.clearRect(0,0,d.width,d.height);
     unBonhomme.deplacer();
     unBonhomme.paint(tamponGraphics);
-    // copier tamponImage sur l'�cran
+    // copier tamponImage sur l'écran
     g.drawImage(tamponImage, 0, 0, this);
   }
 

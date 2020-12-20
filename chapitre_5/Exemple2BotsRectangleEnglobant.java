@@ -19,9 +19,10 @@ public class Exemple2BotsRectangleEnglobant extends JFrame {
         int largeur = 200;
         int hauteur = 400;
         
-        // Bonhomme à l'échelle dans un rectangle englobant défini par x,y,largeur,hauteur
+        // Bonhomme Ã  l'Ã©chelle dans un rectangle englobant 
+        // dÃ©fini par x,y,largeur,hauteur
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tÃªte
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche
@@ -31,15 +32,15 @@ public class Exemple2BotsRectangleEnglobant extends JFrame {
         g.setColor(Color.red);
         g.fillRect(x,y+hauteur/2,largeur,hauteur/2); // Le corps
 
-        // Rectangle englobant du deuxième Bot
+        // Rectangle englobant du deuxiÃ¨me Bot
         x = 25;
         y = 50;
         largeur = 100;
         hauteur = 200;
 
-        // Bonhomme à l'échelle dans un rectangle englobant défini par x,y,largeur,hauteur
+        // Bonhomme Ã  l'Ã©chelle dans un rectangle englobant dÃ©fini par x,y,largeur,hauteur
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tÃªte
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

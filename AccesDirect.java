@@ -100,7 +100,7 @@ public class AccesDirect{
                 "\ndescription :" + unPlant.getDescription() +
                 "\nprixUnitaire :" + unPlant.getPrixUnitaire());
 
-                // Incr�menter le nombre d'enregistrements alloués
+                // Incrémenter le nombre d'enregistrements alloués
                 nombreAlloue++;
                 fichierDirectPlants.seek(0);
                 fichierDirectPlants.writeInt(nombreAlloue);

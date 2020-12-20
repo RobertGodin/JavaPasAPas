@@ -8,7 +8,7 @@ public class ExemplesString {
     String string4 = new String("abcdef");
 
     // Tous les lit�raux identiques (� la compilation) sont traduits
-    // par une r�f�rence au m�me objet
+    // par une r�f�rence au même objet
     System.out.println(string3 == "abcdef"); // true
     System.out.println("abc" + "def" == "abcdef"); // true
 
@@ -24,7 +24,7 @@ public class ExemplesString {
     System.out.println((string1 + string2).intern() == "abcdef"); // true
     System.out.println(string4.intern() == "abcdef"); // true
 
-    // La méthode equals() permet de comparer le contenu de l'objet plut�t que la r�f�rence
+    // La méthode equals() permet de comparer le contenu de l'objet plutôt que la r�f�rence
     System.out.println((string1 + string2).equals("abcdef")); // true
     System.out.println(string4.equals("abcdef")); // true
   }

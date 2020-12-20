@@ -12,7 +12,7 @@ public class AnimerDoubleTamponObjetBonhomme extends JFrame {
     Image tamponImage;
     Bonhomme unBonhomme;
     public AnimerDoubleTamponObjetBonhomme() {
-        super("Animation par �double tamponnage� avec objet Bonhomme");
+        super("Animation par double tamponnage avec objet Bonhomme");
     }
    
     public void paint (Graphics g) {
