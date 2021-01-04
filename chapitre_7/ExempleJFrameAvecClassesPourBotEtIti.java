@@ -1,3 +1,4 @@
+
 // Plusieurs Bot et Iti qui bougent
 // Utilise les classes BotRebondissant et ItiRebondissant du package Bonhommes
 import java.awt.*;
@@ -46,7 +47,7 @@ public class ExempleJFrameAvecClassesPourBotEtIti extends JFrame {
             bot1.effacer(tamponGraphics); bot2.effacer(tamponGraphics); 
             iti1.effacer(tamponGraphics); iti2.effacer(tamponGraphics);
 
-            // Déplace les Bot et Iti
+            // DÃ©place les Bot et Iti
             bot1.deplacer(LARGEURFENETRE, HAUTEURFENETRE); 
             bot2.deplacer(LARGEURFENETRE, HAUTEURFENETRE); 
             iti1.deplacer(LARGEURFENETRE, HAUTEURFENETRE); 
