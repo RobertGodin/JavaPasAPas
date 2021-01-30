@@ -1,31 +1,24 @@
-package JeuSimple;
-
+// JPanel qui anime un objet de MondeAnime
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements ActionListener {
+public class JPanelAvecTimerAnimeMondeAnime extends JPanel implements ActionListener {
 
   public static final int INTERVALLEENTRESCENES = 50; // En ms
 
   // Le chrono génère un événement à chaque intervalle
   private Timer chrono;
   // Le monde à animer
-  private MondeDuJeu leMondeDuJeu;
+  private MondeAnime leMondeAnime;
 
   // Taille du JPanel
-  public static final int LARGEURJPANEL = MondeDuJeu.LARGEURMONDE;
-  public static final int HAUTEURJPANEL = MondeDuJeu.HAUTEURMONDE;
+  public static final int LARGEURJPANEL = MondeAnime.LARGEURMONDE;
+  public static final int HAUTEURJPANEL = MondeAnime.HAUTEURMONDE;
 
   // Conctructeur initialise le monde à animer
-  public JPanelPourMondeDuJeuSimpleAvecAdapator() {
-    leMondeDuJeu = new MondeDuJeu();
-    addMouseListener(
-        new MouseAdapter() {
-          public void mousePressed(MouseEvent e) {
-            leMondeDuJeu.mousePressed(e);
-          }
-        });
+  public JPanelAvecTimerAnimeMondeAnime() {
+    leMondeAnime = new MondeAnime();
   }
 
   public void start() {
@@ -37,8 +30,8 @@ public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements Ac
   // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
   public void actionPerformed(ActionEvent e) {
     repaint();
-    // Produire la prochaine scène du monde à animer
-    leMondeDuJeu.prochaineScene();
+    // Produire la prochaine scàne du monde à animer
+    leMondeAnime.prochaineScene();
   }
 
   // paintComponent() est appelée indirectement par repaint()
@@ -47,6 +40,6 @@ public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements Ac
     super.paintComponent(g);
 
     // Dessine les entités de l'animation
-    leMondeDuJeu.paint(g);
+    leMondeAnime.paint(g);
   }
 }
