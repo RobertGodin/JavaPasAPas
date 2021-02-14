@@ -5,7 +5,7 @@
 import java.io.*;
 import java.util.*;
 
-public class CreerFichierDIrect {
+public class CreerFichierDirect {
 
   // La méthode lit les données de Plants.txt et les retournent dans un vecteur d'objets
   // de la classe Plant

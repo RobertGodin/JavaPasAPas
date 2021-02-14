@@ -1,4 +1,4 @@
-/* Illustration de la lecture d'un objet complexe par d�-s�rialisation
+/* Illustration de la lecture d'un objet complexe par dé-sérialisation
  * Lit un vecteur de plants du VecteurPlants.dat et en affiche le contenu */
 
 import java.io.*;

@@ -1,4 +1,4 @@
-/* Illustration de l'écriture d'un objet complexe dans un fichier par s�rialisation
+/* Illustration de l'écriture d'un objet complexe dans un fichier par sérialisation
  * Lit le fichier plants.txt, stocke le contenu dans un vecteur d'objets Plant et
  * écrit ensuite le vecteur dans le fichier VecteurPlants.dat*/
 
@@ -38,7 +38,7 @@ public class EcrireVecteurPlants {
       }
       // Lecture de la description
       unStreamTokenizer.nextToken();
-      if (unStreamTokenizer.ttype == (int) '"') { // Est-ce bien une chaîne encadr�e par " ?
+      if (unStreamTokenizer.ttype == (int) '"') { // Est-ce bien une chaîne encadrée par " ?
         description = unStreamTokenizer.sval;
       } else {
         System.out.println("Le format du fichier est incorrect : description attendue");

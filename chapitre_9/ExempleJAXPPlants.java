@@ -27,9 +27,9 @@ public class ExempleJAXPPlants {
     Document unDocument = unDocumentBuilder.parse(leFile);
     Vector vecteurDePlants = new Vector();
     Node unElementCatalogue =
-        unDocument.getDocumentElement(); // Cherche l'�l�ment racine <catalogue>
+        unDocument.getDocumentElement(); // Cherche l'élément racine <catalogue>
 
-    // It�rer sur les noeuds <Plant> qui sont les enfants de <Catalogue>
+    // Itérer sur les noeuds <Plant> qui sont les enfants de <Catalogue>
     NodeList listeNodePlants = unElementCatalogue.getChildNodes();
     int tailleListe = listeNodePlants.getLength();
     for (int i = 0; i < tailleListe; i++) {
