@@ -22,8 +22,8 @@ public class ComposanteAnimation2 {
         this.contenant = contenant;
         
         vecteurentités = new Vector();
-        vecteurentités.addElement(new KeynAnime(100,50,100,200,3,3,true,"Son1.wav",1));
-        vecteurentités.addElement(new BtoAnime(10,100,20,40,3,3,true,"Son2.wav",1));
+        vecteurentités.addElement(new KenyAnime(100,50,100,200,3,3,true,"Son1.wav",1));
+        vecteurentités.addElement(new BotAnime(10,100,20,40,3,3,true,"Son2.wav",1));
         vecteurentités.addElement(new ItiVolant(200,50,100,200,3,0,true,"Son3.wav",3));
         
         // Charger les images du coq
