@@ -1,17 +1,17 @@
-
-public class ExemplePorteeVariables 
-{
+public class ExemplePorteeVariables {
   public int x;
   public static int y;
   public int z;
   public static int w;
-  public ExemplePorteeVariables()
-  { x = 1;
+
+  public ExemplePorteeVariables() {
+    x = 1;
     y = 2;
     z = 3;
     w = 4;
   }
-  public void m1(int x){
+
+  public void m1(int x) {
     int y = 12;
     System.out.println("Valeur du paramètre x dans la méthode m1() =" + x);
     System.out.println("Valeur de la variable locale y dans la méthode m1() =" + y);
@@ -21,7 +21,7 @@ public class ExemplePorteeVariables
     System.out.println("Valeur de la variable de classe w dans la méthode m1() =" + w);
   }
 
-  public void m2(int x){
+  public void m2(int x) {
     int y = 22;
     System.out.println("Valeur du paramètre x dans la méthode m2() =" + x);
     System.out.println("Valeur dela variable locale y dans la méthode m2() =" + y);
@@ -31,15 +31,12 @@ public class ExemplePorteeVariables
     System.out.println("Valeur de la variable de classe w dans la méthode m2() =" + w);
   }
 
-  public static void main (String args[]) {
+  public static void main(String args[]) {
     System.out.println("Création de l'objet1 :");
-    ExemplePorteeVariables objet1 =  new ExemplePorteeVariables();
+    ExemplePorteeVariables objet1 = new ExemplePorteeVariables();
     objet1.m1(30);
     objet1.m2(40);
     System.out.println("Création de l'objet2 :");
-    ExemplePorteeVariables objet2 =  new ExemplePorteeVariables();
-    
+    ExemplePorteeVariables objet2 = new ExemplePorteeVariables();
   }
-
-  
 }

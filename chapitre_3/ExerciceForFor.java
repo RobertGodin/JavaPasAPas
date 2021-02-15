@@ -1,5 +1,4 @@
 /** ExerciceForFor.java */
-
 public class ExerciceForFor {
   public static void main(String args[]) {
     for (int compteur1 = 1; compteur1 <= 9; compteur1 = compteur1 + 1) {

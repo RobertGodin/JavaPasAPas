@@ -10,7 +10,7 @@ public class ExempleDessin2DDansJFrame extends JFrame {
     this.setVisible(true);
   }
 
-  // La méthode paint() est appelée automatiquement lors de la création 
+  // La méthode paint() est appelée automatiquement lors de la création
   // du JFrame
   // La méthode paint() fait un dessin d'un bonhomme
   public void paint(Graphics g) {

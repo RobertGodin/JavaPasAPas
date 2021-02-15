@@ -6,45 +6,48 @@
  */
 
 import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
-public class ExempleAnimation extends JPanel implements ActionListener{
-    
-    private Bonhomme unBonhomme;
-    private Timer chrono;
-    /** Constructeur de ExempleObjetBonhomme */
-    public ExempleAnimation() {
-        unBonhomme = new Bonhomme(0,100,200,400);
-     }
-    
-    public void start(){
-        if (chrono == null){
-            chrono = new Timer(50,this);
-            chrono.start();
-        }
-    }
-    // Le chrono appelle actionPerformed p�riodiquement (boucle d'animation)
-    public void actionPerformed( ActionEvent e){
-        repaint();
-        unBonhomme.setX(unBonhomme.getX()+5);
-        if (unBonhomme.getX() >= 200){chrono.stop();}
-    }
-    
-    // paintComponent() est appelée indirectement par repaint()
-    // N.B. Swing utilise le double buffering
-    
-    public void paintComponent (Graphics g) {
-        super.paintComponent(g);
-        unBonhomme.paint(g);
-    }
+import javax.swing.*;
 
-    public static void main (String args[]) {
-        ExempleAnimation lePanelAnimation =  new ExempleAnimation();
-        JFrame leFrame = new JFrame("Animation simple avec objet et composantes Swing");
-        leFrame.getContentPane().add(lePanelAnimation);
-        leFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        leFrame.setSize(400,600);
-        leFrame.setVisible(true);
-        lePanelAnimation.start();
+public class ExempleAnimation extends JPanel implements ActionListener {
+
+  private Bonhomme unBonhomme;
+  private Timer chrono;
+  /** Constructeur de ExempleObjetBonhomme */
+  public ExempleAnimation() {
+    unBonhomme = new Bonhomme(0, 100, 200, 400);
+  }
+
+  public void start() {
+    if (chrono == null) {
+      chrono = new Timer(50, this);
+      chrono.start();
     }
+  }
+  // Le chrono appelle actionPerformed p�riodiquement (boucle d'animation)
+  public void actionPerformed(ActionEvent e) {
+    repaint();
+    unBonhomme.setX(unBonhomme.getX() + 5);
+    if (unBonhomme.getX() >= 200) {
+      chrono.stop();
+    }
+  }
+
+  // paintComponent() est appelée indirectement par repaint()
+  // N.B. Swing utilise le double buffering
+
+  public void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    unBonhomme.paint(g);
+  }
+
+  public static void main(String args[]) {
+    ExempleAnimation lePanelAnimation = new ExempleAnimation();
+    JFrame leFrame = new JFrame("Animation simple avec objet et composantes Swing");
+    leFrame.getContentPane().add(lePanelAnimation);
+    leFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    leFrame.setSize(400, 600);
+    leFrame.setVisible(true);
+    lePanelAnimation.start();
+  }
 }

@@ -18,7 +18,7 @@ public class ExempleBotRectangleEnglobant extends JFrame {
     int largeur = 200;
     int hauteur = 400;
 
-    // Bonhomme à l'échelle dans un rectangle englobant défini 
+    // Bonhomme à l'échelle dans un rectangle englobant défini
     // par x,y,largeur,hauteur
     g.setColor(Color.green);
     g.fillOval(x, y, largeur, hauteur / 2); // La tête

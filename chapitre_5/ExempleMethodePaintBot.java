@@ -11,7 +11,7 @@ public class ExempleMethodePaintBot extends JFrame {
   }
 
   // Méthode qui dessine un Bot dans un objet Graphics g
-  // à l'échelle dans un rectangle englobant de paramètres 
+  // à l'échelle dans un rectangle englobant de paramètres
   // x,y,largeur,hauteur
   public static void paintBot(Graphics g, int x, int y, int largeur, int hauteur) {
     g.setColor(Color.green);

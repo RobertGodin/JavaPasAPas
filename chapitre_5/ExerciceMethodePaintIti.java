@@ -11,10 +11,10 @@ public class ExerciceMethodePaintIti extends JFrame {
   }
 
   // Méthode qui dessine un Iti dans un objet Graphics g
-  // à l'échelle dans un rectangle englobant de paramètres 
+  // à l'échelle dans un rectangle englobant de paramètres
   // x,y,largeur,hauteur
   public static void paintIti(Graphics g, int x, int y, int largeur, int hauteur) {
-    // Coordonnées du milieu du rectangle englobant pour faciliter 
+    // Coordonnées du milieu du rectangle englobant pour faciliter
     // les calculs
     int milieux = x + largeur / 2;
     int milieuy = y + hauteur / 2;
