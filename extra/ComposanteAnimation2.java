@@ -47,7 +47,7 @@ public class ComposanteAnimation2 {
     }
     public void mousePressed(MouseEvent e){
         for(Iterator unIterator = vecteurentités.iterator(); unIterator.hasNext();){
-            EntiteAnimee uneEntitéAnimée = (EntitéAnimée)unIterator.next();
+            EntiteAnimee uneEntitéAnimée = (EntiteAnimee)unIterator.next();
             if (uneEntitéAnimée.touche(e.getX(),e.getY())) {
                 uneEntitéAnimée.setVisible(false);
                 uneEntitéAnimée.crier();
