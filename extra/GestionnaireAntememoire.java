@@ -3,12 +3,12 @@ import java.io.*;
 public class GestionnaireAntememoire {
     //Le gestionnaire d'ant�mémoire r�alise les mêmes Opérations de lecture et
     //d'écriture de bloc que la couche précédente (classe Disque) en utilisant une ant�mémoire
-    //disque pour am�liorer la performance des entrées/sorties.
-    //La strat�gie de remplacement utilisée est : moins fr�quemment utilisé (LFU).
+    //disque pour améliorer la performance des entrées/sorties.
+    //La stratégie de remplacement utilisée est : moins fréquemment utilisé (LFU).
 
     static final int nbTampon = 3;
     Disque leDisque;
-    // R�alisation d'un répertoire simple à l'aide d'un tableau noBloc
+    // Réalisation d'un répertoire simple à l'aide d'un tableau noBloc
     // qui contient le noBloc du bloc dans le tampon
     int noBlocDansTampon[];
     boolean sale[];
@@ -16,7 +16,7 @@ public class GestionnaireAntememoire {
     byte tampon [][];
 
     public GestionnaireAntememoire() {
-        //Constructeur qui initilise les structures de données de l'ant�mémoire
+        //Constructeur qui initilise les structures de données de l'antémémoire
         leDisque = new Disque();
         noBlocDansTampon = new int[nbTampon];
         sale = new boolean[nbTampon];
@@ -31,7 +31,7 @@ public class GestionnaireAntememoire {
         // La fonction fermerAnt�mémoire doit �vacuer les tampons sales. Cette op�ration doit �tre
         //  appelée à la fin du programme pour assurer que les blocs modifiés sont propag�s sur disque.
         for(int i=0; i<nbTampon; i++)
-        this.�vacuerTampon(i);
+        this.évacuerTampon(i);
         leDisque.fermer();
     }
 
@@ -81,7 +81,7 @@ public class GestionnaireAntememoire {
                 }
             }
             else{
-                //sélectionner le tamponVictime à �vacuer selon LFU
+                //sélectionner le tamponVictime à évacuer selon LFU
                 int indiceVictime = 1;
                 int fréquenceMinimum = fréquence[1];
                 for(int i =0; i < nbTampon; i++){
@@ -90,7 +90,7 @@ public class GestionnaireAntememoire {
                         indiceVictime = i;
                     }
                 }
-                this.�vacuerTampon(indiceVictime);
+                this.évacuerTampon(indiceVictime);
                 leDisque.lireBloc(noBloc, tampon[indiceVictime]);
                 //mettre à jour le répertoire d'ant�-mémoire
                 noBlocDansTampon[indiceVictime]=noBloc;
@@ -138,12 +138,12 @@ public class GestionnaireAntememoire {
                     tampon[indiceLibre][i] = tamponApplication[i];
                 }
                 sale[indiceLibre] = true;
-                //mettre à jour le répertoire d'ant�-mémoire
+                //mettre à jour le répertoire d'anté-mémoire
                 noBlocDansTampon[indiceLibre] = noBloc;
                 fréquence[indiceLibre] = 0;
             }
             else{
-                //sélectionner le tamponVictime à �vacuer selon LFU
+                //sélectionner le tamponVictime à évacuer selon LFU
                 int indiceVictime = 1;
                 int fréquenceMinimum = fréquence[1];
                 for(int i =0; i < nbTampon; i++){
@@ -152,7 +152,7 @@ public class GestionnaireAntememoire {
                         indiceVictime = i;
                     }
                 }
-                this.�vacuerTampon(indiceVictime);
+                this.évacuerTampon(indiceVictime);
                 for(int i=0; i<Disque.tailleBloc ; i++){
                     tampon[indiceVictime][i] = tamponApplication[i];
                 }
@@ -163,10 +163,10 @@ public class GestionnaireAntememoire {
             }
         }
     }
-    public void �vacuerTampon(int indiceTampon){
-        //La fonction �vacuerTampon force l'�vacuation du tampon noTampon.
+    public void évacuerTampon(int indiceTampon){
+        //La fonction évacuerTampon force l'évacuation du tampon noTampon.
 
-        //Exceptions à pr�voir :
+        //Exceptions à prévoir :
         //1: le noTampon n'est pas dans l'intervalle [0..nbTampon-1]
         //2: autre exception
 

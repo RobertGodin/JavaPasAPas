@@ -1,8 +1,7 @@
-// La classe Disque implémente la couche d'accès au disque par bloc (1) du MSGF.
-// La couche d'accès au disque par bloc simule les services de bas niveau d'une unité de disque
-// simple permettant la lecture et l'écriture d'un bloc à la fois.
+// La classe Disque implÃ©mente la couche d'accÃ¨s au disque par bloc (1) du MSGF.
+// La couche d'accÃ¨s au disque par bloc simule les services de bas niveau d'une unitÃ© de disque
+// simple permettant la lecture et l'Ã©criture d'un bloc Ã  la fois.
 
-package LivreJava;
 import java.io.*;
 
 public class Disque {
@@ -11,8 +10,8 @@ public class Disque {
   public static final int nbBloc = 10;
 
   public Disque() {
-  // Le constructeur ouvre le fichier disque.dat qui sert à simuler le disque. Dans le cas
-  // où il n'existe pas, le fichier est créé et initialisé.
+  // Le constructeur ouvre le fichier disque.dat qui sert ï¿½ simuler le disque. Dans le cas
+  // oï¿½ il n'existe pas, le fichier est crï¿½ï¿½ et initialisï¿½.
     File leFile = new File("disque.dat");
     if (leFile.exists()){// Fichier existe ?
       try {
@@ -33,16 +32,16 @@ public class Disque {
       for (int i=0; i<tailleBloc; i++){
         tableauDeZero[i] = 0;
       }
-      // Pour éviter une exception lors de la lecture d'un bloc dont le noBloc est
-      //dans l'intervalle [0..nbBloc-1], il faut écrire le bloc à l'adresse nbBloc-1.
-      //Ceci alloue l'espace jusqu'au bloc nbBloc-1. Ceci permet d'éviter d'avoir une
-      // exception lorsqu'une lecture est tentée pour un bloc non écrit.
-      // Pour simplifier le débogage, nous initialisons tous les blocs avec des '0' mais
-      // ceci n'est pas nécessaire. Il suffit d'effectuer l'écriture du bloc nbBloc-1.
-      // N.B. ADA alloue aussi l'espace de cette manière pour les fichiers à
-      // accès direct (Package Direct_IO).
+      // Pour Ã©viter une exception lors de la lecture d'un bloc dont le noBloc est
+      //dans l'intervalle [0..nbBloc-1], il faut Ã©crire le bloc ï¿½ l'adresse nbBloc-1.
+      //Ceci alloue l'espace jusqu'au bloc nbBloc-1. Ceci permet d'ï¿½viter d'avoir une
+      // exception lorsqu'une lecture est tentÃ©e pour un bloc non ï¿½crit.
+      // Pour simplifier le dÃ©bogage, nous initialisons tous les blocs avec des '0' mais
+      // ceci n'est pas nÃ©cessaire. Il suffit d'effectuer l'Ã©criture du bloc nbBloc-1.
+      // N.B. ADA alloue aussi l'espace de cette maniÃ¨re pour les fichiers ï¿½
+      // accÃ¨s direct (Package Direct_IO).
       for (int i=0; i<nbBloc; i++){
-        this.écrireBloc(i,tableauDeZero);
+        this.Ã©crireBloc(i,tableauDeZero);
       }
     }
   }
@@ -57,14 +56,14 @@ public class Disque {
   }
 
   public void lireBloc(int noBloc, byte tamponApplication[])
-  // La fonction lireBloc lit le contenu du bloc dont le numéro est noBloc dans
+  // La fonction lireBloc lit le contenu du bloc dont le numï¿½ro est noBloc dans
   // tamponApplication. Pour les besoins du travail, on suppose que chaque bloc
-  //a une taille déterminée par une constante globale tailleBloc et, par conséquent,
-  // tamponApplication a la même taille. Le paramètre noBloc devra se situer dans
-  // l'intervalle [0..nbBloc-1] où nbBloc est une constante globale.
+  //a une taille dï¿½terminï¿½e par une constante globale tailleBloc et, par consï¿½quent,
+  // tamponApplication a la mï¿½me taille. Le paramï¿½tre noBloc devra se situer dans
+  // l'intervalle [0..nbBloc-1] oï¿½ nbBloc est une constante globale.
 
-  //Exceptions à prévoir :
-  //1: le paramètre noBloc est à l'extérieur de l'intervalle [0..nbBloc-1]
+  //Exceptions ï¿½ prï¿½voir :
+  //1: le paramï¿½tre noBloc est ï¿½ l'extï¿½rieur de l'intervalle [0..nbBloc-1]
   //2: autre exception
 
   throws NoBlocIllegalException, IOException{
@@ -75,16 +74,16 @@ public class Disque {
     file.readFully(tamponApplication);
   }
 
-  public void écrireBloc(int noBloc, byte tamponApplication[]){
-  //La fonction écrireBloc écrit le contenu de tamponApplication dans le bloc
-  //dont le numéro est noBloc.
+  public void Ã©crireBloc(int noBloc, byte tamponApplication[]){
+  //La fonction Ã©crireBloc ï¿½crit le contenu de tamponApplication dans le bloc
+  //dont le numï¿½ro est noBloc.
 
-  //Exceptions à prévoir :
-  //1: le paramètre noBloc est à l'extérieur de l'intervalle [0..nbBloc-1]
+  //Exceptions ï¿½ prï¿½voir :
+  //1: le paramï¿½tre noBloc est ï¿½ l'extï¿½rieur de l'intervalle [0..nbBloc-1]
   //2: autre exception
 
     if (noBloc <0 || noBloc >= nbBloc) {
-      System.out.println("Erreur : ecrireBloc dans Disque, noBloc illégal");
+      System.out.println("Erreur : ecrireBloc dans Disque, noBloc illï¿½gal");
     }
     try {
       file.seek(noBloc* tailleBloc);

@@ -1,4 +1,3 @@
-package LivreJava;
 import java.awt.*;
 public class BonhommeAbstrait{
     protected int x,y,largeur,hauteur; // Protected permet aux sous-classes d'utiliser ces variables

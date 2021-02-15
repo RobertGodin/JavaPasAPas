@@ -1,5 +1,5 @@
 // Animation par double tampon
-// Le Bot et le Iti qui rebondissent dans la même animation
+// Le Bot et le Iti qui rebondissent dans la mï¿½me animation
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -28,11 +28,11 @@ public class ExerciceJFrameAvecBotEtItiRebondissants extends JFrame {
         this.setVisible(true);
     }
    
-    // Méthode qui dessine un Bot dans un objet Graphics g
-    // à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    // MÃ©thode qui dessine un Bot dans un objet Graphics g
+    // Ã  l'Ã©chelle dans un rectangle englobant de paramÃ¨tres x,y,largeur,hauteur
     public void paintBot (Graphics g, int x, int y, int largeur, int hauteur) {
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tÃªte
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche
@@ -43,15 +43,15 @@ public class ExerciceJFrameAvecBotEtItiRebondissants extends JFrame {
         g.fillRect(x,y+hauteur/2,largeur,hauteur/2); // Le corps
     }
 
-    // Méthode qui dessine un Iti dans un objet Graphics g
-    // à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
-    // Méthode qui dessine un Iti dans un objet Graphics g
-    // à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    // mÃ©thode qui dessine un Iti dans un objet Graphics g
+    // Ã  l'Ã©chelle dans un rectangle englobant de paramÃ¨tres x,y,largeur,hauteur
+    // mÃ©thode qui dessine un Iti dans un objet Graphics g
+    // Ã  l'Ã©chelle dans un rectangle englobant de paramÃ¨tres x,y,largeur,hauteur
     public static void paintIti (Graphics g, int x, int y, int largeur, int hauteur) {
-        // Coordonnées du milieu du rectangle englobant pour faciliter les calculs
+        // Coordonnï¿½es du milieu du rectangle englobant pour faciliter les calculs
         int milieux = x + largeur/2;
         int milieuy = y + hauteur/2;
-        // La tête
+        // La tï¿½te
         g.setColor(Color.pink);
         g.fillOval(x+largeur/3,y,largeur/3,hauteur/4);
         // Le sourire
@@ -74,13 +74,13 @@ public class ExerciceJFrameAvecBotEtItiRebondissants extends JFrame {
         tamponImage = createImage(LARGEURFENETRE,HAUTEURFENETRE);
         tamponGraphics = tamponImage.getGraphics();
         
-        int x = 0; // Coordonnée x du Bot
+        int x = 0; // Coordonnï¿½e x du Bot
         int directionBot = 1; //+1 vers la droite et -1 vers la gauche
-        int vitesseBot = 5; //nombre d'unités de déplacement à chaque itération de la boucle
+        int vitesseBot = 5; //nombre d'unitï¿½s de dï¿½placement ï¿½ chaque itï¿½ration de la boucle
 
-        int y = 0; // Coordonnée y du Iti
+        int y = 0; // Coordonnï¿½e y du Iti
         int directionIti = 1; //+1 vers la droite et -1 vers la gauche
-        int vitesseIti = 5; //nombre d'unités de déplacement à chaque itération de la boucle
+        int vitesseIti = 5; //nombre d'unitï¿½s de dï¿½placement ï¿½ chaque itï¿½ration de la boucle
 
         while(true){
             // Dessine le Bot dans le tampon
@@ -102,15 +102,15 @@ public class ExerciceJFrameAvecBotEtItiRebondissants extends JFrame {
             // Efface le Iti
             tamponGraphics.clearRect(LARGEURFENETRE-3*LARGEURITI,y,LARGEURITI,HAUTEURITI);
 
-            // Déplace le Bot
+            // Dï¿½place le Bot
             if (x+LARGEURBOT>=LARGEURFENETRE | x < 0) // Si atteint le bord
               directionBot = -directionBot; // Inverser la direction
-            x = x + vitesseBot*directionBot; // Déplacement du Bot    
+            x = x + vitesseBot*directionBot; // Dï¿½placement du Bot    
 
-            // Déplace le Iti
+            // Dï¿½place le Iti
             if (y+HAUTEURITI>=HAUTEURFENETRE | y < 0) // Si atteint le bord
               directionIti = -directionIti; // Inverser la direction
-            y = y + vitesseIti*directionIti; // Déplacement du Iti       
+            y = y + vitesseIti*directionIti; // Dï¿½placement du Iti       
             
         }
     }

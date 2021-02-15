@@ -20,3 +20,5 @@ https://www.youtube.com/watch?v=1ttHH5MlNug
 
 Tous les fichiers sont organisés par chapitre, selon l'organisation du livre. Il est possible de compiler toutes les classes d'un même dossier sans faire appel aux autres dossiers. Un petit nombre de fichiers apparaissent dans plus d'un dossier.
 
+
+Notez que le fichier ExempleVariablesLocalesErreur.java ne compile pas, intentionnellement.

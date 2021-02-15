@@ -19,12 +19,12 @@ public class ExerciceIf2{
         if (entier1 > entier3)
             JOptionPane.showMessageDialog(null,"Le premier nombre est le plus grand, soit " +entier1);
         else
-            JOptionPane.showMessageDialog(null,"Le troisième nombre est le plus grand, soit " +entier3);
+            JOptionPane.showMessageDialog(null,"Le troisiÃ¨me nombre est le plus grand, soit " +entier3);
     else
         if (entier2 > entier3)
-            JOptionPane.showMessageDialog(null,"Le deuxième nombre est le plus grand, c'est-à-dire " +entier2);
+            JOptionPane.showMessageDialog(null,"Le deuxiÃ¨me nombre est le plus grand, c'est-ï¿½-dire " +entier2);
         else
-            JOptionPane.showMessageDialog(null,"Le troisième nombre est le plus grand, c'est-à-dire " +entier3);
+            JOptionPane.showMessageDialog(null,"Le troisiï¿½me nombre est le plus grand, c'est-ï¿½-dire " +entier3);
     System.exit(0);
     }
 }

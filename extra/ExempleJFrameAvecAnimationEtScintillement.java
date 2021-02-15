@@ -1,4 +1,4 @@
-// Tentative d'animation par itération d'affichage et effacement
+// Tentative d'animation par itï¿½ration d'affichage et effacement
 // Effet de scintillement
 import java.awt.*;
 import javax.swing.*;
@@ -20,11 +20,11 @@ public class ExempleJFrameAvecAnimationEtScintillement extends JFrame {
         this.setVisible(true);
     }
    
-    // Méthode qui dessine un Bot dans un objet Graphics g
-    // à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
+    // MÃ©thode qui dessine un Bot dans un objet Graphics g
+    // Ã  l'Ã©chelle dans un rectangle englobant de paramÃ¨tres x,y,largeur,hauteur
     public void paintBot (Graphics g, int x, int y, int largeur, int hauteur) {
         g.setColor(Color.green);
-        g.fillOval(x,y,largeur,hauteur/2); // La tête
+        g.fillOval(x,y,largeur,hauteur/2); // La tÃªte
 
         g.setColor(Color.black);
         g.fillRect(x+largeur/4,y+hauteur/8,largeur/10,hauteur/20); // L'oeil gauche

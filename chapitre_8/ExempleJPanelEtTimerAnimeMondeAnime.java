@@ -7,12 +7,12 @@ public class ExempleJPanelEtTimerAnimeMondeAnime extends JPanel implements Actio
 
     public static int intervalleEntreScenes = 50; // En ms
 
-    // Le chrono génère un événement à chaque intervalle
+    // Le chrono gÃ©nÃ¨re un Ã©vÃ©nement Ã  chaque intervalle
     private Timer chrono;
-    // Entités du monde à animer
+    // EntitÃ©s du monde Ã  animer
     private MondeAnime leMondeAnime;
     
-    // Conctructeur initialise les entités à animer
+    // Conctructeur initialise les entitÃ©s Ã  animer
     public ExempleJPanelEtTimerAnimeMondeAnime() {
       leMondeAnime = new MondeAnime();
      }
@@ -23,19 +23,19 @@ public class ExempleJPanelEtTimerAnimeMondeAnime extends JPanel implements Actio
             chrono.start();
         }
     }
-    // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
+    // Le chrono appelle actionPerformed pï¿½riodiquement (boucle d'animation)
     public void actionPerformed( ActionEvent e){
         repaint();
-        // Produire la prochaine scène
+        // Produire la prochaine scï¿½ne
         leMondeAnime.prochaineScene(); 
     }
     
-    // paintComponent() est appelée indirectement par repaint()
+    // paintComponent() est appelÃ©e indirectement par repaint()
     // N.B. Swing utilise le double tampon : pas besoin d'effacer !  
     public void paintComponent (Graphics g) {
         super.paintComponent(g);
 
-        // Dessine les entités de l'animation
+        // Dessine les entitÃ©s de l'animation
         leMondeAnime.paint(g);
     }
 }

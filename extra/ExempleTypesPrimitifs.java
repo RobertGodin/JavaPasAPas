@@ -8,13 +8,13 @@ public class ExempleTypesPrimitifs{
     public static void main (String args[]) {
 
       boolean unBoolean = true;
-      JOptionPane.showMessageDialog(null,"La valeur de unBoolean après « boolean unBoolean = true; » est " + unBoolean);
+      JOptionPane.showMessageDialog(null,"La valeur de unBoolean aprÃ¨s boolean unBoolean = true; est " + unBoolean);
       
       char unChar = 'A';
-      JOptionPane.showMessageDialog(null,"La valeur de unChar après « char unChar = 'A'; » est " + unChar);
+      JOptionPane.showMessageDialog(null,"La valeur de unChar aprÃ¨s char unChar = 'A'; est " + unChar);
 
       unChar = '\'';
-      JOptionPane.showMessageDialog(null,"La valeur de unChar après « unChar = '\''; » est " + unChar);
+      JOptionPane.showMessageDialog(null,"La valeur de unChar aprÃ¨s unChar = '\''; est " + unChar);
       
       System.exit(0);
     }

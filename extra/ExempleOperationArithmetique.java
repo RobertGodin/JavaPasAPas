@@ -1,17 +1,17 @@
 /*
  * ExempleOperationArithmetique.java
- * Ce programme saisit deux entiers et affiche le résultat d'opérations arithmétiques de base
+ * Ce programme saisit deux entiers et affiche le rï¿½sultat d'opï¿½rations arithmï¿½tiques de base
  */
 import javax.swing.JOptionPane; // Importe la classe javax.swing.JOptionPane
 public class ExempleOperationArithmetique{
 
     public static void main (String args[]) {
 
-        // Saisir les deux chaînes de caractères qui représentent des nombres entiers
+        // Saisir les deux chaÃ®nes de caractÃ¨res qui reprï¿½sentent des nombres entiers
         String chaine1 = JOptionPane.showInputDialog("Entrez un premier nombre entier");
         String chaine2 = JOptionPane.showInputDialog("Entrez un second nombre entier");
 
-        // Convertir les chaînes en entiers
+        // Convertir les chaÃ®nes en entiers
         int entier1 = Integer.parseInt(chaine1);
         int entier2 = Integer.parseInt(chaine2);
 
