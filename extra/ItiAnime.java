@@ -1,8 +1,8 @@
 
 import java.awt.*;
-public class ItiAnimé extends EntitéAnimée {
+public class ItiAnime extends EntiteAnimee {
 
-    public ItiAnimé(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
+    public ItiAnime(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
                     boolean visible, String fichierAudio) {
         super(x,y,largeur,hauteur,vitesseX,vitesseY,visible,fichierAudio,1);
     }

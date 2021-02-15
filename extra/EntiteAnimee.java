@@ -2,7 +2,7 @@
 import java.awt.*;
 import java.net.URL;
 import java.applet.*;
-public class EntitéAnimée{
+public class EntiteAnimee{
 
     protected int x,y,largeur,hauteur,vitesseX, vitesseY;
     protected boolean visible;
@@ -10,7 +10,7 @@ public class EntitéAnimée{
     protected int étatCourant = 0;
     protected int nombreEtats = 3;
 
-    public EntitéAnimée(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY,
+    public EntiteAnimee(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY,
                     boolean visible, String fichierAudio, int nombreEtats) {
         this.x = x;
         this.y = y;
@@ -22,7 +22,7 @@ public class EntitéAnimée{
         this.nombreEtats = nombreEtats;
         // Chargement du clip audio. L'URL part de la racine qui est le répertoire
         // contenant le fichier .class
-        URL url = EntitéAnimée.class.getResource(fichierAudio);
+        URL url = EntiteAnimee.class.getResource(fichierAudio);
         // Cast du contenu en AudioClip
         try{unSon = (AudioClip)url.getContent();}
         catch(Exception exception){System.err.println(exception.toString());}
@@ -40,11 +40,9 @@ public class EntitéAnimée{
     public boolean getVisible(){return visible;}
     
     public void changer(){
-        // Passer à l'état suivant dans le processus d'animation
         if (x+largeur+vitesseX > 500 || x < 0){
             vitesseX = -vitesseX;
             // Le bonhomme fait un son lorsqu'il frappe la fin du monde !
-            // On arrête le son précédent au cas o� il ne serait pas terminé
         }
         x=x+vitesseX;
         if (y+hauteur+vitesseY > 500 || y < 0){

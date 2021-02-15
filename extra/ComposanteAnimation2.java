@@ -22,8 +22,8 @@ public class ComposanteAnimation2 {
         this.contenant = contenant;
         
         vecteurentités = new Vector();
-        vecteurentités.addElement(new KenyAnimé(100,50,100,200,3,3,true,"Son1.wav",1));
-        vecteurentités.addElement(new BotAnimé(10,100,20,40,3,3,true,"Son2.wav",1));
+        vecteurentités.addElement(new KeynAnime(100,50,100,200,3,3,true,"Son1.wav",1));
+        vecteurentités.addElement(new BtoAnime(10,100,20,40,3,3,true,"Son2.wav",1));
         vecteurentités.addElement(new ItiVolant(200,50,100,200,3,0,true,"Son3.wav",3));
         
         // Charger les images du coq
@@ -37,17 +37,17 @@ public class ComposanteAnimation2 {
     }
     public void changerMonde(){
         for(Iterator unIterator = vecteurentités.iterator(); unIterator.hasNext();){
-            ((EntitéAnimée)unIterator.next()).changer();
+            ((EntiteAnimee)unIterator.next()).changer();
         }
     }
     public void paint(Graphics g){
         for(Iterator unIterator = vecteurentités.iterator(); unIterator.hasNext();){
-            ((EntitéAnimée)unIterator.next()).paintSiVisible(g);
+            ((EntiteAnimee)unIterator.next()).paintSiVisible(g);
         }
     }
     public void mousePressed(MouseEvent e){
         for(Iterator unIterator = vecteurentités.iterator(); unIterator.hasNext();){
-            EntitéAnimée uneEntitéAnimée = (EntitéAnimée)unIterator.next();
+            EntiteAnimee uneEntitéAnimée = (EntitéAnimée)unIterator.next();
             if (uneEntitéAnimée.touche(e.getX(),e.getY())) {
                 uneEntitéAnimée.setVisible(false);
                 uneEntitéAnimée.crier();

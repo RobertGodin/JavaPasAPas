@@ -1,7 +1,7 @@
 
 import java.awt.*;
 import javax.swing.*;
-public class CoqVolant extends EntitéAnimée {
+public class CoqVolant extends EntiteAnimee {
 
     protected ImageIcon imagesAnimation[];
     protected MediaTracker unMediaTracker;

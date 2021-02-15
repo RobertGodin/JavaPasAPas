@@ -1,8 +1,8 @@
 
 import java.awt.*;
-public class KenyAnimé extends EntitéAnimée {
+public class KenyAnime extends EntiteAnimee {
 
-    public KenyAnimé(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
+    public KenyAnime(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
                     boolean visible, String fichierAudio,int nombreEtats) {
         super(x,y,largeur,hauteur,vitesseX,vitesseY,visible,fichierAudio,1);
     }

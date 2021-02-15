@@ -1,6 +1,6 @@
 
 import java.awt.*;
-public class ItiVolant extends EntitéAnimée {
+public class ItiVolant extends EntiteAnimee {
     public ItiVolant(int x, int y, int largeur, int hauteur, int vitesseX, int vitesseY, 
                     boolean visible, String fichierAudio, int nombreEtats) {
         super(x,y,largeur,hauteur,vitesseX,vitesseY,visible,fichierAudio,3);
