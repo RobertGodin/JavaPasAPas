@@ -1,3 +1,6 @@
+// Le nom du paquetage ne respecte pas l'usage commun.
+package Bonhommes;
+
 import java.awt.*;
 
 public class ItiRebondissant {
