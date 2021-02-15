@@ -2,10 +2,12 @@
 
 # JavaPasAPas
 
-Site Web du livre :  Godin et Lemire (2020). Java Pas à Pas. Publié sur GitHub.
+Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub.
 
-Le code Java utilise l'encodade de caractères UTF-8. La norme Google est utilisée pour
+Le code Java utilise l'encodade de caractères [UTF-8](https://en.wikipedia.org/wiki/UTF-8). La norme Google est utilisée pour
 le style.
+
+Sur certains systèmes, il peut être nécessaire de spécifier à Java l'encodage des caractères (`javac  -encoding UTF-8 *.java`).
 
 ## Installation de Java (vidéo)
 
