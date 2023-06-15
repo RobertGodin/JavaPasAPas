@@ -11,7 +11,7 @@ public class VerifierExistenceFichier {
       if (leFile.exists()) {
         String reponse =
             JOptionPane.showInputDialog("Voulez-vous détruire le contenu existant (oui ou non)?");
-        if (reponse == "non") {
+        if (reponse.equals("non")) {
           System.out.println("Le fichier demeure tel quel");
           System.exit(0);
         }
