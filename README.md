@@ -42,6 +42,10 @@ Sous macOS ou Linux, compilez un chapitre avec :
 ./gradlew buildChapitre_3   # Pour le chapitre 3
 ./gradlew buildChapitre_4   # Pour le chapitre 4
 ./gradlew buildChapitre_5   # Pour le chapitre 5
+./gradlew buildChapitre_6   # Pour le chapitre 6
+./gradlew buildChapitre_7   # Pour le chapitre 7
+./gradlew buildChapitre_8   # Pour le chapitre 8
+./gradlew buildChapitre_9   # Pour le chapitre 9
 ```
 
 
@@ -63,6 +67,13 @@ java -cp build/classes/chapitre_X NomDeLaClasse
 Par exemple, pour exécuter `ExempleBloc` du chapitre 3 :
 ```bash
 java -cp build/classes/chapitre_3 ExempleBloc
+```
+
+Pour le chapitre 9, il peut être utile de copier les fichiers afin que les programmes
+puissent s'exécuter correctement:
+
+```
+./gradlew copyNonJavaFilesChapitre9
 ```
 
 ### Liste des classes exécutables (avec `main`)
@@ -126,6 +137,47 @@ java -cp build/classes/chapitre_3 ExempleBloc
 - ExerciceJFrameAvecPingPongBotsEtItis
 - ExerciceJFrameAvecBotRebondissant
 - ExempleJFrameAvecAnimationRatee
+
+
+**Chapitre 6**
+- ExempleJFrameAvecSuperClassePourBotEtIti
+- ExempleJFrameAvecClassesPourBotEtIti
+
+**Chapitre 7**
+- ExempleJFrameIncluantJPanelAnimeMondeAnime
+- JFrameIncluantJPanelAvecBoucleAnimeMondeAnime
+
+**Chapitre 8**
+- VerifierExistenceFichier
+- CompterOctetsFichier
+- EcrireEntierTextePrintWriter
+- EcrireEntierEnOctets
+- LireEntierEnOctets
+- EcrireTexteabc12
+- ExempleJFrameIncluantJPanelAvecAnimationParTimer
+- AccesDirect
+- CreerFichierDirect
+- CopierFichier
+- LireVecteurPlants
+- ExempleStreamTokenizer
+- CreerFichierFileChooser
+- EcrireVecteurPlants
+- LireFluxPlants
+- EcrireEntier
+- LireFichierFileChooser
+- EcrireEntierTexte
+- ExempleJAXPPlants
+- EcrireFluxPlants
+
+**Chapitre 9**
+- ExempleJAXPDom
+- TestJAXP
+- CreerRepertoire
+- LireEntier
+- EcrireFluxEtTaille
+- EcrireOctetsFichier
+- LireEntierTexte
+
 
 ### Exemples de commandes d'exécution
 

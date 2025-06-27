@@ -24,6 +24,31 @@ sourceSets {
             srcDirs = ['chapitre_5']
         }
     }
+    chapitre_6 {
+        java {
+            srcDirs = ['chapitre_6']
+        }
+    }
+    chapitre_7 {
+        java {
+            srcDirs = ['chapitre_7']
+        }
+    }
+    chapitre_8 {
+        java {
+            srcDirs = ['chapitre_8']
+        }
+    }
+    chapitre_9 {
+        java {
+            srcDirs = ['chapitre_9']
+        }
+    }
+    extra {
+        java {
+            srcDirs = ['extra']
+        }
+    }
 }
 // Ensure UTF-8 encoding
 tasks.withType(JavaCompile) {
@@ -67,6 +92,7 @@ tasks.register('listMainClasses') {
     }
 }
 
+
 tasks.register('buildChapitre_2', JavaCompile) {
     group = 'build'
     description = 'Compile only chapitre_2.'
@@ -101,4 +127,59 @@ tasks.register('buildChapitre_5', JavaCompile) {
     classpath = sourceSets.chapitre_5.compileClasspath
     destinationDirectory = file("${buildDir}/classes/chapitre_5")
     options.encoding = 'UTF-8'
+}
+
+tasks.register('buildChapitre_6', JavaCompile) {
+    group = 'build'
+    description = 'Compile only chapitre_6.'
+    source = sourceSets.chapitre_6.java
+    classpath = sourceSets.chapitre_6.compileClasspath
+    destinationDirectory = file("${buildDir}/classes/chapitre_6")
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('buildChapitre_7', JavaCompile) {
+    group = 'build'
+    description = 'Compile only chapitre_7.'
+    source = sourceSets.chapitre_7.java
+    classpath = sourceSets.chapitre_7.compileClasspath
+    destinationDirectory = file("${buildDir}/classes/chapitre_7")
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('buildChapitre_8', JavaCompile) {
+    group = 'build'
+    description = 'Compile only chapitre_8.'
+    source = sourceSets.chapitre_8.java
+    classpath = sourceSets.chapitre_8.compileClasspath
+    destinationDirectory = file("${buildDir}/classes/chapitre_8")
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('buildChapitre_9', JavaCompile) {
+    group = 'build'
+    description = 'Compile only chapitre_9.'
+    source = sourceSets.chapitre_9.java
+    classpath = sourceSets.chapitre_9.compileClasspath
+    destinationDirectory = file("${buildDir}/classes/chapitre_9")
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('copyNonJavaFilesChapitre9') {
+    group = 'build'
+    description = 'Copy all non-Java files from chapitre_9 to the root directory.'
+
+    doLast {
+        def sourceDir = file('chapitre_9')
+        def targetDir = file('.')
+
+        sourceDir.eachFile { file ->
+            if (!file.name.endsWith('.java')) {
+                copy {
+                    from file
+                    into targetDir
+                }
+            }
+        }
+    }
 }
