@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class ExerciceJFrameAvecPingPongBotsEtItis extends JFrame {
 
-  // Constantes pour la taille de la fenetre et du Bot
+  // Constantes pour la taille de la fenêtre et du Bot
   private static final int LARGEURFENETRE = 400;
   private static final int HAUTEURFENETRE = 400;
 
@@ -111,7 +111,7 @@ public class ExerciceJFrameAvecPingPongBotsEtItis extends JFrame {
       paintBot(tamponGraphics, xBot2, yBot2, largeurBot2, hauteurBot2);
       paintIti(tamponGraphics, xIti1, yIti1, largeurIti1, hauteurIti1);
       paintIti(tamponGraphics, xIti2, yIti2, largeurIti2, hauteurIti2);
-      // Copie le tampon dans le contexte graphique de la fenetre
+      // Copie le tampon dans le contexte graphique de la fenêtre
       g.drawImage(tamponImage, 0, 0, this);
       try {
         Thread.sleep(50);

@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class ExempleJFrameAvecAnimationRatee extends JFrame {
 
-  // Constantes pour la taille de la fenetre et du Bot
+  // Constantes pour la taille de la fenêtre et du Bot
   private static final int LARGEURFENETRE = 400;
   private static final int HAUTEURFENETRE = 600;
   private static final int LARGEURBOT = LARGEURFENETRE / 4;

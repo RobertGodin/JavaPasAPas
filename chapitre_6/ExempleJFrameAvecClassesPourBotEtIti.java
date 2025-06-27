@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class ExempleJFrameAvecClassesPourBotEtIti extends JFrame {
 
-  // Constantes pour la taille de la fenetre et du Bot
+  // Constantes pour la taille de la fenêtre et du Bot
   private static final int LARGEURFENETRE = 400;
   private static final int HAUTEURFENETRE = 400;
 
@@ -37,7 +37,7 @@ public class ExempleJFrameAvecClassesPourBotEtIti extends JFrame {
       iti1.paint(tamponGraphics);
       iti2.paint(tamponGraphics);
 
-      // Copie le tampon dans le contexte graphique de la fenetre
+      // Copie le tampon dans le contexte graphique de la fenêtre
       g.drawImage(tamponImage, 0, 0, this);
       try {
         Thread.sleep(50);

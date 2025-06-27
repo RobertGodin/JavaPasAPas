@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class ExerciceJFrameAvecItiRebondissant extends JFrame {
 
-  // Constantes pour la taille de la fenetre et du Iti
+  // Constantes pour la taille de la fenêtre et du Iti
   private static final int LARGEURFENETRE = 400;
   private static final int HAUTEURFENETRE = 400;
   private static final int LARGEURITI = LARGEURFENETRE / 5;
@@ -58,7 +58,7 @@ public class ExerciceJFrameAvecItiRebondissant extends JFrame {
     while (true) {
       // Dessine le Iti dans le tampon
       paintIti(tamponGraphics, LARGEURFENETRE - 3 * LARGEURITI, y, LARGEURITI, HAUTEURITI);
-      // Copie le tampon dans le contexte graphique de la fenetre
+      // Copie le tampon dans le contexte graphique de la fenêtre
       g.drawImage(tamponImage, 0, 0, this);
       try {
         Thread.sleep(50);

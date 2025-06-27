@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class ExempleConstantesFinal extends JFrame
-    implements MouseListener { // Constantes pour la taille de la fenetre
+    implements MouseListener { // Constantes pour la taille de la fenêtre
   private static final int LARGEURFENETRE = 400;
   private static final int HAUTEURFENETRE = 600;
 

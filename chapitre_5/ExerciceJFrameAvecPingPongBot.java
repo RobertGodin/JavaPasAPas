@@ -58,7 +58,7 @@ public class ExerciceJFrameAvecPingPongBot extends JFrame {
     while (true) {
       // Dessine le Bot dans le tampon
       paintBot(tamponGraphics, xBot, yBot, LARGEURBOT, HAUTEURBOT);
-      // Copie le tampon dans le contexte graphique de la fenetre
+      // Copie le tampon dans le contexte graphique de la fenêtre
       g.drawImage(tamponImage, 0, 0, this);
       try {
         Thread.sleep(50);

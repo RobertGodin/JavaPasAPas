@@ -52,7 +52,7 @@ public class ExempleJFrameAnimationDoubleTampon extends JFrame {
     for (int x = 0; x <= LARGEURFENETRE - LARGEURBOT; x = x + 5) {
       // Dessine le Bot dans le tampon
       paintBot(tamponGraphics, x, HAUTEURFENETRE - 2 * HAUTEURBOT, LARGEURBOT, HAUTEURBOT);
-      // Copie le tampon dans le contexte graphique de la fenetre
+      // Copie le tampon dans le contexte graphique de la fenêtre
       g.drawImage(tamponImage, 0, 0, this);
       try {
         Thread.sleep(50);
