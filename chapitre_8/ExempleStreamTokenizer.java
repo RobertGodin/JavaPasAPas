@@ -34,7 +34,7 @@ public class ExempleStreamTokenizer {
         }
         // Lecture de la description
         unStreamTokenizer.nextToken();
-        if (unStreamTokenizer.ttype == (int) '"') { // Est-ce bien une chaîne encadr�e par " ?
+        if (unStreamTokenizer.ttype == (int) '"') { // Est-ce bien une chaîne encadrée par " ?
           description = unStreamTokenizer.sval;
         } else {
           System.out.println("Le format du fichier est incorrect : description attendue");

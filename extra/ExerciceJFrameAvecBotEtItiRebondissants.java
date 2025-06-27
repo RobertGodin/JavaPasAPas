@@ -1,5 +1,5 @@
 // Animation par double tampon
-// Le Bot et le Iti qui rebondissent dans la m�me animation
+// Le Bot et le Iti qui rebondissent dans la même animation
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -55,10 +55,10 @@ public class ExerciceJFrameAvecBotEtItiRebondissants extends JFrame {
   // méthode qui dessine un Iti dans un objet Graphics g
   // à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
   public static void paintIti(Graphics g, int x, int y, int largeur, int hauteur) {
-    // Coordonn�es du milieu du rectangle englobant pour faciliter les calculs
+    // Coordonnées du milieu du rectangle englobant pour faciliter les calculs
     int milieux = x + largeur / 2;
     int milieuy = y + hauteur / 2;
-    // La t�te
+    // La tête
     g.setColor(Color.pink);
     g.fillOval(x + largeur / 3, y, largeur / 3, hauteur / 4);
     // Le sourire
@@ -81,13 +81,13 @@ public class ExerciceJFrameAvecBotEtItiRebondissants extends JFrame {
     tamponImage = createImage(LARGEURFENETRE, HAUTEURFENETRE);
     tamponGraphics = tamponImage.getGraphics();
 
-    int x = 0; // Coordonn�e x du Bot
+    int x = 0; // Coordonnée x du Bot
     int directionBot = 1; // +1 vers la droite et -1 vers la gauche
-    int vitesseBot = 5; // nombre d'unit�s de d�placement � chaque it�ration de la boucle
+    int vitesseBot = 5; // nombre d'unités de déplacement à chaque itération de la boucle
 
-    int y = 0; // Coordonn�e y du Iti
+    int y = 0; // Coordonnée y du Iti
     int directionIti = 1; // +1 vers la droite et -1 vers la gauche
-    int vitesseIti = 5; // nombre d'unit�s de d�placement � chaque it�ration de la boucle
+    int vitesseIti = 5; // nombre d'unités de déplacement à chaque itération de la boucle
 
     while (true) {
       // Dessine le Bot dans le tampon
@@ -108,15 +108,15 @@ public class ExerciceJFrameAvecBotEtItiRebondissants extends JFrame {
       // Efface le Iti
       tamponGraphics.clearRect(LARGEURFENETRE - 3 * LARGEURITI, y, LARGEURITI, HAUTEURITI);
 
-      // D�place le Bot
+      // Déplace le Bot
       if (x + LARGEURBOT >= LARGEURFENETRE | x < 0) // Si atteint le bord
       directionBot = -directionBot; // Inverser la direction
-      x = x + vitesseBot * directionBot; // D�placement du Bot
+      x = x + vitesseBot * directionBot; // Déplacement du Bot
 
-      // D�place le Iti
+      // Déplace le Iti
       if (y + HAUTEURITI >= HAUTEURFENETRE | y < 0) // Si atteint le bord
       directionIti = -directionIti; // Inverser la direction
-      y = y + vitesseIti * directionIti; // D�placement du Iti
+      y = y + vitesseIti * directionIti; // Déplacement du Iti
     }
   }
 

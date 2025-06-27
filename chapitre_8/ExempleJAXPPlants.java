@@ -1,6 +1,6 @@
 /**
- * création d'un arbre DOM avec JAXP Parcours de l'arbre pour extraire les données et les ins�rer
- * dans le vecteurs d'objets Plant
+ * création d'un arbre DOM avec JAXP Parcours de l'arbre pour extraire les données et les insérer
+ * dans le vecteur d'objets Plant
  */
 
 // Packages de JAXP

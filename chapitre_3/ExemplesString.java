@@ -7,20 +7,20 @@ public class ExemplesString {
     String string3 = "abcdef";
     String string4 = new String("abcdef");
 
-    // Tous les litéraux identiques (� la compilation) sont traduits
+    // Tous les littéraux identiques (à la compilation) sont traduits
     // par une référence au même objet
     System.out.println(string3 == "abcdef"); // true
     System.out.println("abc" + "def" == "abcdef"); // true
 
-    // Par contre, si le litéral est calculé à l'exécution, ce n'est pas le cas
+    // Par contre, si le littéral est calculé à l'exécution, ce n'est pas le cas
     System.out.println(string1 + string2 == "abcdef"); // false
 
     // Le constructeur String produit toujours un objet différent de l'objet
-    // correspondant au litéral
+    // correspondant au littéral
     System.out.println(string4 == "abcdef"); // false
 
     // La méthode intern() de la classe String permet de convertir
-    // la référence à l'objet correspondant au litéral
+    // la référence à l'objet correspondant au littéral
     System.out.println((string1 + string2).intern() == "abcdef"); // true
     System.out.println(string4.intern() == "abcdef"); // true
 

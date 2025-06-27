@@ -28,7 +28,7 @@ public abstract class EntiteRebondissante {
     y = y + vitesseY; // Déplacement selon y
   }
 
-  // Méthode abstraite : corps doit être précisé dans la sous-classe concr�te
+  // Méthode abstraite : corps doit être précisé dans la sous-classe concrète
   public abstract void paint(Graphics g);
 
   // Effacer le rectangle dans tamponGraphics

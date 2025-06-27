@@ -1,4 +1,4 @@
-/* Lit un fichier octet par octet et affiche la valeur d�cimale de chaque octet, une par ligne */
+/* Lit un fichier octet par octet et affiche la valeur décimale de chaque octet, une par ligne */
 import java.io.*;
 
 public class LireFichierOctet {

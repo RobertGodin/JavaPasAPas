@@ -16,7 +16,7 @@ public class JPanelAvecTimerAnimeMondeAnime extends JPanel implements ActionList
   public static final int LARGEURJPANEL = MondeAnime.LARGEURMONDE;
   public static final int HAUTEURJPANEL = MondeAnime.HAUTEURMONDE;
 
-  // Conctructeur initialise le monde à animer
+  // Constructeur initialise le monde à animer
   public JPanelAvecTimerAnimeMondeAnime() {
     leMondeAnime = new MondeAnime();
   }
@@ -30,7 +30,7 @@ public class JPanelAvecTimerAnimeMondeAnime extends JPanel implements ActionList
   // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
   public void actionPerformed(ActionEvent e) {
     repaint();
-    // Produire la prochaine scàne du monde à animer
+    // Produire la prochaine scène du monde à animer
     leMondeAnime.prochaineScene();
   }
 

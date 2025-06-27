@@ -1,5 +1,5 @@
 /*
- * Exercice : dessiner plusieurs bonhommes avec trois classes ind�pendantes
+ * Exercice : dessiner plusieurs bonhommes avec trois classes indépendantes
  */
 
 import java.awt.*;
@@ -9,7 +9,7 @@ import javax.swing.*;
 public class PlusieursObjetsBonhommes extends JFrame {
 
   public PlusieursObjetsBonhommes() {
-    super("Exemple avec trois classes ind�pendantes");
+    super("Exemple avec trois classes indépendantes");
   }
 
   public void paint(Graphics g) {

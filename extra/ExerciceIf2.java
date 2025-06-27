@@ -24,10 +24,10 @@ public class ExerciceIf2 {
             null, "Le troisième nombre est le plus grand, soit " + entier3);
     else if (entier2 > entier3)
       JOptionPane.showMessageDialog(
-          null, "Le deuxième nombre est le plus grand, c'est-�-dire " + entier2);
+          null, "Le deuxième nombre est le plus grand, c'est-à-dire " + entier2);
     else
       JOptionPane.showMessageDialog(
-          null, "Le troisi�me nombre est le plus grand, c'est-�-dire " + entier3);
+          null, "Le troisième nombre est le plus grand, c'est-à-dire " + entier3);
     System.exit(0);
   }
 }

@@ -1,4 +1,4 @@
-// Tentative d'animation par it�ration d'affichage et effacement
+// Tentative d'animation par itération d'affichage et effacement
 // Effet de scintillement
 import java.awt.*;
 import java.awt.event.*;

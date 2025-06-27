@@ -23,7 +23,7 @@ public class EntiteAnimeAvecCriEtSequenceImages extends EntiteAnimeAvecCriEtGest
     super(x, y, largeur, hauteur, vitesseX, vitesseY, visible, fichierAudio, nombreEtats);
 
     // Charge les images de l'animation
-    // On suppose que les fichiers .gif se trouvent dans un dossier nomm� nomDossier
+    // On suppose que les fichiers .gif se trouvent dans un dossier nommé nomDossier
     // dans le répertoire du code compilé et que les noms de fichiers gif sont
     // de la forme nomDossiern.gif, n = 1 .. nombreEtats
     this.imagesAnimation = new Image[nombreEtats];

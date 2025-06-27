@@ -9,7 +9,7 @@ import javax.swing.*;
 public class PlusieursObjetsSousClasses extends JFrame {
 
   public PlusieursObjetsSousClasses() {
-    super("Exemple avec trois classes ind�pendantes");
+    super("Exemple avec trois classes indépendantes");
   }
 
   public void paint(Graphics g) {

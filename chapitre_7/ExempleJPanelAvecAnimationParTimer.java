@@ -19,7 +19,7 @@ public class ExempleJPanelAvecAnimationParTimer extends JPanel implements Action
   public static final int LARGEURJPANEL = 400;
   public static final int HAUTEURJPANEL = 400;
 
-  // Conctructeur initialise les entit�s � animer
+  // Constructeur initialise les entités à animer
   public ExempleJPanelAvecAnimationParTimer() {
     bot1 = new BotSCEntiteRebondissante(0, 100, 100, 150, 5, 0);
     bot2 = new BotSCEntiteRebondissante(100, 100, 75, 100, -10, 5);

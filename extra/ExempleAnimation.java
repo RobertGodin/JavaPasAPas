@@ -24,7 +24,7 @@ public class ExempleAnimation extends JPanel implements ActionListener {
       chrono.start();
     }
   }
-  // Le chrono appelle actionPerformed p�riodiquement (boucle d'animation)
+  // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
   public void actionPerformed(ActionEvent e) {
     repaint();
     unBonhomme.setX(unBonhomme.getX() + 5);

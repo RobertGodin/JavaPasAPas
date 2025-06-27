@@ -1,6 +1,6 @@
 /*
  * ExempleOperationArithmetique.java
- * Ce programme saisit deux entiers et affiche le r�sultat d'op�rations arithm�tiques de base
+ * Ce programme saisit deux entiers et affiche le résultat d'opérations arithmétiques de base
  */
 import javax.swing.JOptionPane; // Importe la classe javax.swing.JOptionPane
 
@@ -8,7 +8,7 @@ public class ExempleOperationArithmetique {
 
   public static void main(String args[]) {
 
-    // Saisir les deux chaînes de caractères qui repr�sentent des nombres entiers
+    // Saisir les deux chaînes de caractères qui représentent des nombres entiers
     String chaine1 = JOptionPane.showInputDialog("Entrez un premier nombre entier");
     String chaine2 = JOptionPane.showInputDialog("Entrez un second nombre entier");
 

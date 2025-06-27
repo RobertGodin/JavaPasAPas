@@ -7,7 +7,7 @@ public class JPanelAvecBoucleAnimeMondeAnime extends JPanel {
 
   public static final int INTERVALLEENTRESCENES = 50; // En ms
 
-  // Le chrono génère un évènement à chaque intervalle
+  // Le chrono génère un événement à chaque intervalle
   //    private Timer chrono;
   // Le monde à animer
   private MondeAnime leMondeAnime;
@@ -16,7 +16,7 @@ public class JPanelAvecBoucleAnimeMondeAnime extends JPanel {
   public static final int LARGEURJPANEL = MondeAnime.LARGEURMONDE;
   public static final int HAUTEURJPANEL = MondeAnime.HAUTEURMONDE;
 
-  // Conctructeur initialise le monde à animer
+  // Constructeur initialise le monde à animer
   public JPanelAvecBoucleAnimeMondeAnime() {
     leMondeAnime = new MondeAnime();
   }

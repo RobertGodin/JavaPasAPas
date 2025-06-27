@@ -20,7 +20,7 @@ public class AppletAnimerComposante extends java.applet.Applet implements Runnab
 
   public void update(Graphics g) {
     tamponGraphics.clearRect(0, 0, d.width, d.height);
-    // Changer l'état du monde pour le prochain clich�
+    // Changer l'état du monde pour le prochain cliché
     uneComposanteAnimation.changerMonde();
     // Prendre un clichédu monde
     uneComposanteAnimation.paint(tamponGraphics);

@@ -24,7 +24,7 @@ public class ExerciceJFrameAvecPingPongBotsEtItis extends JFrame {
   // à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
   public void paintBot(Graphics g, int x, int y, int largeur, int hauteur) {
     g.setColor(Color.green);
-    g.fillOval(x, y, largeur, hauteur / 2); // La t�te
+    g.fillOval(x, y, largeur, hauteur / 2); // La tête
 
     g.setColor(Color.black);
     g.fillRect(x + largeur / 4, y + hauteur / 8, largeur / 10, hauteur / 20); // L'oeil gauche

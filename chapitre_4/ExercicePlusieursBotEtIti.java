@@ -36,7 +36,7 @@ public class ExercicePlusieursBotEtIti extends JFrame {
   // Méthode qui dessine un Iti dans un objet Graphics g
   // à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
   public static void paintIti(Graphics g, int x, int y, int largeur, int hauteur) {
-    // Coordonn�es du milieu du rectangle englobant pour faciliter les calculs
+    // Coordonnées du milieu du rectangle englobant pour faciliter les calculs
     int milieux = x + largeur / 2;
     int milieuy = y + hauteur / 2;
     // La tête

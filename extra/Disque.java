@@ -10,8 +10,8 @@ public class Disque {
   public static final int nbBloc = 10;
 
   public Disque() {
-    // Le constructeur ouvre le fichier disque.dat qui sert � simuler le disque. Dans le cas
-    // o� il n'existe pas, le fichier est cr�� et initialis�.
+    // Le constructeur ouvre le fichier disque.dat qui sert à simuler le disque. Dans le cas
+    // où il n'existe pas, le fichier est créé et initialisé.
     File leFile = new File("disque.dat");
     if (leFile.exists()) { // Fichier existe ?
       try {
@@ -30,12 +30,12 @@ public class Disque {
         tableauDeZero[i] = 0;
       }
       // Pour éviter une exception lors de la lecture d'un bloc dont le noBloc est
-      // dans l'intervalle [0..nbBloc-1], il faut écrire le bloc � l'adresse nbBloc-1.
-      // Ceci alloue l'espace jusqu'au bloc nbBloc-1. Ceci permet d'�viter d'avoir une
-      // exception lorsqu'une lecture est tentée pour un bloc non �crit.
+      // dans l'intervalle [0..nbBloc-1], il faut écrire le bloc à l'adresse nbBloc-1.
+      // Ceci alloue l'espace jusqu'au bloc nbBloc-1. Ceci permet d'éviter d'avoir une
+      // exception lorsqu'une lecture est tentée pour un bloc non écrit.
       // Pour simplifier le débogage, nous initialisons tous les blocs avec des '0' mais
       // ceci n'est pas nécessaire. Il suffit d'effectuer l'écriture du bloc nbBloc-1.
-      // N.B. ADA alloue aussi l'espace de cette manière pour les fichiers �
+      // N.B. ADA alloue aussi l'espace de cette manière pour les fichiers à
       // accès direct (Package Direct_IO).
       for (int i = 0; i < nbBloc; i++) {
         this.écrireBloc(i, tableauDeZero);
@@ -52,14 +52,14 @@ public class Disque {
   }
 
   public void lireBloc(int noBloc, byte tamponApplication[])
-      // La fonction lireBloc lit le contenu du bloc dont le num�ro est noBloc dans
+      // La fonction lireBloc lit le contenu du bloc dont le numéro est noBloc dans
       // tamponApplication. Pour les besoins du travail, on suppose que chaque bloc
-      // a une taille d�termin�e par une constante globale tailleBloc et, par cons�quent,
-      // tamponApplication a la m�me taille. Le param�tre noBloc devra se situer dans
-      // l'intervalle [0..nbBloc-1] o� nbBloc est une constante globale.
+      // a une taille déterminée par une constante globale tailleBloc et, par conséquent,
+      // tamponApplication a la même taille. Le paramètre noBloc devra se situer dans
+      // l'intervalle [0..nbBloc-1] où nbBloc est une constante globale.
 
-      // Exceptions � pr�voir :
-      // 1: le param�tre noBloc est � l'ext�rieur de l'intervalle [0..nbBloc-1]
+      // Exceptions à prévoir :
+      // 1: le paramètre noBloc est à l'extérieur de l'intervalle [0..nbBloc-1]
       // 2: autre exception
 
       throws NoBlocIllegalException, IOException {
@@ -71,15 +71,15 @@ public class Disque {
   }
 
   public void écrireBloc(int noBloc, byte tamponApplication[]) {
-    // La fonction écrireBloc �crit le contenu de tamponApplication dans le bloc
-    // dont le num�ro est noBloc.
+    // La fonction écrireBloc écrit le contenu de tamponApplication dans le bloc
+    // dont le numéro est noBloc.
 
-    // Exceptions � pr�voir :
-    // 1: le param�tre noBloc est � l'ext�rieur de l'intervalle [0..nbBloc-1]
+    // Exceptions à prévoir :
+    // 1: le paramètre noBloc est à l'extérieur de l'intervalle [0..nbBloc-1]
     // 2: autre exception
 
     if (noBloc < 0 || noBloc >= nbBloc) {
-      System.out.println("Erreur : ecrireBloc dans Disque, noBloc ill�gal");
+      System.out.println("Erreur : ecrireBloc dans Disque, noBloc illégal");
     }
     try {
       file.seek(noBloc * tailleBloc);

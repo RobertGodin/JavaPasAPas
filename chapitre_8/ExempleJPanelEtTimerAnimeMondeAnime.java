@@ -23,10 +23,10 @@ public class ExempleJPanelEtTimerAnimeMondeAnime extends JPanel implements Actio
       chrono.start();
     }
   }
-  // Le chrono appelle actionPerformed p�riodiquement (boucle d'animation)
+  // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
   public void actionPerformed(ActionEvent e) {
     repaint();
-    // Produire la prochaine sc�ne
+    // Produire la prochaine scène
     leMondeAnime.prochaineScene();
   }
 

@@ -26,10 +26,10 @@ public class ExerciceJFrameItiRebondissant extends JFrame {
   // Méthode qui dessine un Iti dans un objet Graphics g
   // à l'échelle dans un rectangle englobant de paramètres x,y,largeur,hauteur
   public static void paintIti(Graphics g, int x, int y, int largeur, int hauteur) {
-    // Coordonn�es du milieu du rectangle englobant pour faciliter les calculs
+    // Coordonnées du milieu du rectangle englobant pour faciliter les calculs
     int milieux = x + largeur / 2;
     int milieuy = y + hauteur / 2;
-    // La t�te
+    // La tête
     g.setColor(Color.pink);
     g.fillOval(x + largeur / 3, y, largeur / 3, hauteur / 4);
     // Le sourire
@@ -53,7 +53,7 @@ public class ExerciceJFrameItiRebondissant extends JFrame {
     tamponGraphics = tamponImage.getGraphics();
     int x = 0; // Coordonnée x du Bot
     int directionBot = 1; // +1 vers la droite et -1 vers la gauche
-    int vitesseBot = 5; // nombre d'unités de déplacement � chaque it�ration de la boucle
+    int vitesseBot = 5; // nombre d'unités de déplacement à chaque itération de la boucle
     while (true) {
       // Dessine le Iti dans le tampon
       paintBot(tamponGraphics, x, HAUTEURFENETRE - 2 * HAUTEURBOT, LARGEURBOT, HAUTEURBOT);
@@ -66,10 +66,10 @@ public class ExerciceJFrameItiRebondissant extends JFrame {
       }
       // Efface le Bot
       tamponGraphics.clearRect(x, HAUTEURFENETRE - 2 * HAUTEURBOT, LARGEURBOT, HAUTEURBOT);
-      // D�place le Bot
+      // Déplace le Bot
       if (x + LARGEURBOT >= LARGEURFENETRE | x < 0) // Si atteint le bord
       directionBot = -directionBot; // Inverser la direction
-      x = x + vitesseBot * directionBot; // D�placement du Bot
+      x = x + vitesseBot * directionBot; // Déplacement du Bot
     }
   }
   // Méthode qui dessine un Bot dans un objet Graphics g

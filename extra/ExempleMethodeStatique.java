@@ -1,6 +1,6 @@
 /*
  * ExempleMethodeStatique.java
- * Exemple d'utilisation d'une méthode statique pour l'abstraction proc�durale
+ * Exemple d'utilisation d'une méthode statique pour l'abstraction procédurale
  * Encapsulation du dessin dans une méthode statique pintBonhomme
  */
 
