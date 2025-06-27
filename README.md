@@ -1,4 +1,5 @@
 # JavaPasAPas
+[![Build all chapters](https://github.com/RobertGodin/JavaPasAPas/actions/workflows/build-all-chapters.yml/badge.svg)](https://github.com/RobertGodin/JavaPasAPas/actions/workflows/build-all-chapters.yml)
 
 Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub.
 
