@@ -6,6 +6,9 @@ Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub
 <p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
 <div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
 
+
+[Vous pouvez télécharger tout le code votre machine sous la forme d'un fichier zip](https://github.com/RobertGodin/JavaPasAPas/archive/refs/heads/main.zip).
+
 ## Conventions
 
 - La norme Google est utilisée pour le style.
@@ -21,7 +24,8 @@ Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub
 
 [![Watch the video](https://img.youtube.com/vi/1ttHH5MlNug/maxresdefault.jpg)](https://youtu.be/1ttHH5MlNug)
 
-- Aller sur le site https://adoptopenjdk.net/. La version a peu d’importance;  choisir la dernière version disponible.
+- Aller sur le site [adoptium](https://adoptium.net/fr/). Choisir la dernière version Java disponible.
+- Il est préférable de laissez le programme d'installation configurer les variables PATH et JAVA_HOME.
 - Une fois le fichier d’installation enregistré, démarrer l’installation et suivre les différentes étapes d’installation.
 - Une fois le logiciel installé, la machine virtuelle Java (java.exe) et ses outils de compilation (javac.exe) auront été installés.
 
@@ -148,3 +152,6 @@ java -cp build/classes/chapitre_5 ExerciceJFrameAvecPingPongBot
 
 
 
+## Éditeur
+
+Nous vous recommandons [Visual Studio Code](https://code.visualstudio.com) comme environnement de travail.
