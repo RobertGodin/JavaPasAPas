@@ -165,21 +165,13 @@ tasks.register('buildChapitre_9', JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-tasks.register('copyNonJavaFilesChapitre9') {
+
+
+tasks.register('copyNonJavaFilesChapitre9', Copy) {
     group = 'build'
-    description = 'Copy all non-Java files from chapitre_9 to the root directory.'
-
-    doLast {
-        def sourceDir = file('chapitre_9')
-        def targetDir = file('.')
-
-        sourceDir.eachFile { file ->
-            if (!file.name.endsWith('.java')) {
-                copy {
-                    from file
-                    into targetDir
-                }
-            }
-        }
+    description = 'Copie tous les fichiers non-Java de chapitre_9 vers le répertoire racine.'
+    from('chapitre_9') {
+        exclude '**/*.java'
     }
+    into '.'
 }
