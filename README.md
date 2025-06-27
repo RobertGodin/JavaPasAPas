@@ -8,6 +8,9 @@ Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub
 <p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
 <div><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"><img src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" width="250px" style="margin-left:auto; margin-right:auto;"></a></div>
 
+
+[Vous pouvez télécharger tout le code votre machine sous la forme d'un fichier zip](https://github.com/RobertGodin/JavaPasAPas/archive/refs/heads/main.zip).
+
 ## Conventions
 
 - La norme Google est utilisée pour le style.
