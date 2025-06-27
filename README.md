@@ -1,5 +1,3 @@
-
-
 # JavaPasAPas
 
 Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub.
@@ -26,5 +24,127 @@ Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub
 - Aller sur le site https://adoptopenjdk.net/. La version a peu d’importance;  choisir la dernière version disponible.
 - Une fois le fichier d’installation enregistré, démarrer l’installation et suivre les différentes étapes d’installation.
 - Une fois le logiciel installé, la machine virtuelle Java (java.exe) et ses outils de compilation (javac.exe) auront été installés.
+
+## Exécution des programmes Java chapitre par chapitre avec Gradle (optionnel)
+
+Pour compiler et exécuter les programmes des premiers chapitres :
+
+### Compilation
+
+Sous macOS ou Linux, compilez un chapitre avec :
+
+```bash
+./gradlew buildChapitre_2   # Pour le chapitre 2
+./gradlew buildChapitre_3   # Pour le chapitre 3
+./gradlew buildChapitre_4   # Pour le chapitre 4
+./gradlew buildChapitre_5   # Pour le chapitre 5
+```
+
+
+
+Sous Windows, utilisez `gradlew.bat` au lieu de `./gradlew` :
+
+```bat
+gradlew.bat buildChapitre_2
+```
+
+
+### Exécution
+
+Après compilation, exécutez un programme avec :
+
+```bash
+java -cp build/classes/chapitre_X NomDeLaClasse
+```
+Par exemple, pour exécuter `ExempleBloc` du chapitre 3 :
+```bash
+java -cp build/classes/chapitre_3 ExempleBloc
+```
+
+### Liste des classes exécutables (avec `main`)
+
+**Chapitre 2**
+- Exemple1
+- Exercice1
+- ExempleScanner
+- ExemplePrintln
+- Exercice2
+- Exemple2
+
+**Chapitre 3**
+- ExerciceWhile2
+- Afficher12345
+- ExerciceForFor
+- ExempleWhile
+- ExempleForSimple
+- ExempleEtCourtcircuite
+- ExempleForSentinelle
+- ExerciceWhile3
+- ExemplesMath
+- ExerciceIf1
+- ExempleIf
+- ExempleCreationObjetString
+- ExerciceIfMax2
+- ExempleIfIfElse
+- ExempleZero
+- ExempleBloc
+- ExempleElseAmbigu
+- ExerciceIfMax3
+- ExempleEmoji
+- ExemplesStringVide
+- ExerciceWhileIf
+- ExempleLogique
+- ExerciceWhileSentinelle
+- ExerciceWhile1
+- ExempleStringNonInitialise
+- ExemplesString
+
+**Chapitre 4**
+- ExerciceDessinIti
+- ExempleBotRectangleEnglobant
+- ExempleDessin2DDansJFrame
+- Exemple2BotsRectangleEnglobant
+- ExempleVariablesLocales
+- Exercice2Bots
+- ExempleEvenementSouris2Fenetres
+- ExercicePlusieursBotEtIti
+- ExempleMethodePaintBot
+- ExempleMethodeDobjetPaintBot
+- ExerciceMethodePaintIti
+- ExempleConstantesFinal
+- ExempleVariableDobjet
+- ExempleEvenementSouris
+
+**Chapitre 5**
+- ExerciceJFrameAvecItiRebondissant
+- ExempleJFrameAnimationDoubleTampon
+- ExerciceJFrameAvecPingPongBot
+- ExerciceJFrameAvecPingPongBotsEtItis
+- ExerciceJFrameAvecBotRebondissant
+- ExempleJFrameAvecAnimationRatee
+
+### Exemples de commandes d'exécution
+
+```bash
+# Chapitre 2
+java -cp build/classes/chapitre_2 Exemple1
+java -cp build/classes/chapitre_2 Exercice2
+
+# Chapitre 3
+java -cp build/classes/chapitre_3 ExempleBloc
+java -cp build/classes/chapitre_3 ExerciceIf1
+java -cp build/classes/chapitre_3 Afficher12345
+
+# Chapitre 4
+java -cp build/classes/chapitre_4 ExempleBotRectangleEnglobant
+java -cp build/classes/chapitre_4 ExerciceDessinIti
+
+# Chapitre 5
+java -cp build/classes/chapitre_5 ExempleJFrameAvecAnimationRatee
+java -cp build/classes/chapitre_5 ExerciceJFrameAvecPingPongBot
+```
+
+> Remplacez le nom de la classe par celle que vous souhaitez exécuter dans le chapitre concerné.
+
 
 

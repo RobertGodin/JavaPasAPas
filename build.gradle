@@ -1,0 +1,104 @@
+plugins {
+    id 'java'
+}
+
+sourceSets {
+    chapitre_2 {
+        java {
+            srcDirs = ['chapitre_2']
+        }
+    }
+    chapitre_3 {
+        java {
+            srcDirs = ['chapitre_3']
+        }
+    }
+    chapitre_4 {
+        java {
+            srcDirs = ['chapitre_4']
+            exclude '**/ExempleVariablesLocalesErreur.java'
+        }
+    }
+    chapitre_5 {
+        java {
+            srcDirs = ['chapitre_5']
+        }
+    }
+}
+// Ensure UTF-8 encoding
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// Dependencies (if needed)
+dependencies {
+    // Add dependencies here if required
+}
+
+tasks.register('runMain', JavaExec) {
+    group = 'application'
+    description = 'Run a specific main class from any chapter.'
+    doFirst {
+        if (!project.hasProperty('mainClass')) {
+            throw new GradleException("Please specify the main class using -PmainClass=<className>")
+        }
+        mainClass.set(project.mainClass)
+    }
+}
+
+tasks.register('listMainClasses') {
+    group = 'application'
+    description = 'List all Java classes with a main method.'
+
+    doLast {
+        def mainClasses = []
+        sourceSets.each { sourceSet ->
+            sourceSet.allSource.matching {
+                include '**/*.java'
+            }.each { file ->
+                def content = file.text
+                if (content.contains('public static void main(')) {
+                    mainClasses << file.path.replace('/', '.').replace('.java', '')
+                }
+            }
+        }
+        println 'Main classes detected:'
+        mainClasses.each { println it }
+    }
+}
+
+tasks.register('buildChapitre_2', JavaCompile) {
+    group = 'build'
+    description = 'Compile only chapitre_2.'
+    source = sourceSets.chapitre_2.java
+    classpath = sourceSets.chapitre_2.compileClasspath
+    destinationDirectory = file("${buildDir}/classes/chapitre_2")
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('buildChapitre_3', JavaCompile) {
+    group = 'build'
+    description = 'Compile only chapitre_3.'
+    source = sourceSets.chapitre_3.java
+    classpath = sourceSets.chapitre_3.compileClasspath
+    destinationDirectory = file("${buildDir}/classes/chapitre_3")
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('buildChapitre_4', JavaCompile) {
+    group = 'build'
+    description = 'Compile only chapitre_4.'
+    source = sourceSets.chapitre_4.java
+    classpath = sourceSets.chapitre_4.compileClasspath
+    destinationDirectory = file("${buildDir}/classes/chapitre_4")
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('buildChapitre_5', JavaCompile) {
+    group = 'build'
+    description = 'Compile only chapitre_5.'
+    source = sourceSets.chapitre_5.java
+    classpath = sourceSets.chapitre_5.compileClasspath
+    destinationDirectory = file("${buildDir}/classes/chapitre_5")
+    options.encoding = 'UTF-8'
+}
