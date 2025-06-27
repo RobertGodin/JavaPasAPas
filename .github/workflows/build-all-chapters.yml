@@ -1,0 +1,39 @@
+name: Build all chapters
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build chapitre_2
+        run: ./gradlew buildChapitre_2
+      - name: Build chapitre_3
+        run: ./gradlew buildChapitre_3
+      - name: Build chapitre_4
+        run: ./gradlew buildChapitre_4
+      - name: Build chapitre_5
+        run: ./gradlew buildChapitre_5
+      - name: Build chapitre_6
+        run: ./gradlew buildChapitre_6
+      - name: Build chapitre_7
+        run: ./gradlew buildChapitre_7
+      - name: Build chapitre_8
+        run: ./gradlew buildChapitre_8
+      - name: Build chapitre_9
+        run: ./gradlew buildChapitre_9
+      - name: copy chapitre_10
+        run: ./gradlew copyNonJavaFilesChapitre9
