@@ -108,18 +108,21 @@ Par exemple, pour exécuter `ExempleBloc` du chapitre 3 :
 java -cp build/classes/chapitre_3 ExempleBloc
 ```
 
-Pour le chapitre 9, il peut être utile de copier les fichiers afin que les programmes
+Pour certains exemples, il peut être utile de copier les fichiers afin que les programmes
 puissent s'exécuter correctement:
 
 macOS et Linux:
 ```
-./gradlew copyNonJavaFilesChapitre9
+./gradlew copyNonJavaFiles
 ```
 
 Windows:
 ```
-gradlew.bat copyNonJavaFilesChapitre9
+gradlew.bat copyNonJavaFiles
 ```
+
+À la suite de cette commande, vous verrez apparaître certains fichiers dans le dossier
+racine du projet.
 
 ### Liste des classes exécutables (avec `main`)
 
