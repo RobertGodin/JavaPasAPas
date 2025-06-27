@@ -36,4 +36,4 @@ jobs:
       - name: Build chapitre_9
         run: ./gradlew buildChapitre_9
       - name: copy chapitre_10
-        run: ./gradlew copyNonJavaFilesChapitre9
+        run: ./gradlew copyNonJavaFiles
