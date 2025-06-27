@@ -57,7 +57,43 @@ Sous Windows, utilisez `gradlew.bat` au lieu de `./gradlew` :
 
 ```bat
 gradlew.bat buildChapitre_2
+gradlew.bat buildChapitre_3
+gradlew.bat buildChapitre_4
+gradlew.bat buildChapitre_5
+gradlew.bat buildChapitre_6
+gradlew.bat buildChapitre_7
+gradlew.bat buildChapitre_8
+gradlew.bat buildChapitre_9
 ```
+
+Il est nécessaire de compiler les classes qu'une seule fois.
+
+#### Instructions détailles pour les utilisateurs de Windows
+
+Voici un guide détaillé pour les utilisateurs de Windows.
+
+##### Téléchargement et extraction des fichiers
+1. Ouvrir un navigateur web et accéder à l’adresse https://github.com/RobertGodin/JavaPasAPas/archive/refs/heads/main.zip.
+2. Télécharger le fichier ZIP en sélectionnant l’option de téléchargement.
+3. Une fois le téléchargement terminé, localiser le fichier, généralement situé dans le dossier Téléchargements.
+4. Effectuer un clic droit sur le fichier main.zip, sélectionner Extraire tout, puis choisir un dossier de destination, par exemple C:\Users\NomUtilisateur\JavaPasAPas. Noter ce chemin pour une utilisation ultérieure.
+5. L’extraction génère un dossier nommé JavaPasAPas-main contenant les fichiers du projet.
+
+##### Accès à la ligne de commande
+1. Ouvrir l’Explorateur de fichiers et naviguer jusqu’au dossier où les fichiers ont été extraits, par exemple C:\Users\NomUtilisateur\JavaPasAPas\JavaPasAPas-main.
+2. Effectuer un clic droit sur le dossier JavaPasAPas-main, puis sélectionner Copier l’adresse ou Copier le chemin.
+3. Appuyer sur Win + S, saisir cmd, et ouvrir l’Invite de commandes.
+4. Dans l’Invite de commandes, saisir cd suivi d’un espace, puis coller le chemin copié, par exemple cd C:\Users\NomUtilisateur\JavaPasAPas\JavaPasAPas-main. Appuyer sur Entrée pour se positionner dans ce dossier.
+5. Vérifier la position en saisissant dir. Les fichiers tels que gradlew.bat et les dossiers comme Chapitre_2 devraient apparaître.
+
+##### Vérification de Java et javac
+1. Dans l’Invite de commandes, saisir java -version et appuyer sur Entrée. Si Java est installé, une version s’affichera, par exemple java 21.0.8. 
+2. Saisir javac -version et appuyer sur Entrée. Une version devrait s’afficher, par exemple javac 21.0.8.
+3. Si les deux commandes fonctionnent, Java est correctement configuré.
+
+##### Exécution de la commande Gradle
+1. Dans l’Invite de commandes, en veillant à être dans le dossier JavaPasAPas-main, saisir gradlew.bat buildChapitre_2 et appuyer sur Entrée.
+2. Une fois la commande terminée, vérifier les messages affichés pour confirmer la réussite de la compilation.
 
 
 ### Exécution
@@ -75,8 +111,14 @@ java -cp build/classes/chapitre_3 ExempleBloc
 Pour le chapitre 9, il peut être utile de copier les fichiers afin que les programmes
 puissent s'exécuter correctement:
 
+macOS et Linux:
 ```
 ./gradlew copyNonJavaFilesChapitre9
+```
+
+Windows:
+```
+gradlew.bat copyNonJavaFilesChapitre9
 ```
 
 ### Liste des classes exécutables (avec `main`)
