@@ -1,4 +1,5 @@
 # JavaPasAPas
+[![Build all chapters](https://github.com/RobertGodin/JavaPasAPas/actions/workflows/build-all-chapters.yml/badge.svg)](https://github.com/RobertGodin/JavaPasAPas/actions/workflows/build-all-chapters.yml)
 
 Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub.
 
@@ -34,7 +35,6 @@ Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub
 Si vous avez Java 21 ou mieux, vous pouvez utiliser gradle pour compiler les fichiers Java.
 Gradle est un outil open-source d'automatisation de la construction (build automation) utilisé principalement pour les projets logiciels, notamment en Java, Kotlin, Groovy et d'autres langages. Il permet de gérer les dépendances, de compiler le code, d'exécuter des tests et de déployer des applications de manière efficace et personnalisable.
 
-Pour compiler et exécuter les programmes des premiers chapitres :
 
 ### Compilation
 
