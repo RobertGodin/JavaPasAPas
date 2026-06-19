@@ -36,21 +36,26 @@ public class Plant implements Serializable {
   }
 
   public void ecrireEnregistrementTailleMax(RandomAccessFile unFichier) throws Exception {
+    int tailleZoneDescription = tailleMaxEnregistrement() - 16; // 4 + 4 + 8 octets
     unFichier.writeInt(noPlant); // 4 octets
-    if (description.length() > 38) {
+    if (description.length() > tailleZoneDescription) {
       System.exit(1);
     }
-    unFichier.writeInt(description.length()); // 4octets
-    unFichier.writeBytes(description); // max 38 octets
+    unFichier.writeInt(description.length()); // 4 octets
+    unFichier.writeBytes(description);
+    byte[] padding = new byte[tailleZoneDescription - description.length()];
+    unFichier.write(padding); // compléter la zone description à 34 octets
     unFichier.writeDouble(prixUnitaire); // 8 octets
   }
 
   public void lireEnregistrementTailleMax(RandomAccessFile unFichier) throws Exception {
+    int tailleZoneDescription = tailleMaxEnregistrement() - 16; // 4 + 4 + 8 octets
     noPlant = unFichier.readInt();
     int tailleDescription = unFichier.readInt();
     byte[] tampon = new byte[tailleDescription];
     unFichier.readFully(tampon);
     description = new String(tampon);
+    unFichier.skipBytes(tailleZoneDescription - tailleDescription);
     prixUnitaire = unFichier.readDouble();
   }
 

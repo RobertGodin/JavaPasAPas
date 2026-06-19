@@ -10,9 +10,9 @@ public class ExempleMethodesDeString {
     System.out.println("String string2 = new String(\"cd\")");
     System.out.println("La longueur de string1 est :" + string1.length());
     System.out.println("Le caractère en position 2 de string1 est :" + string1.charAt(2));
-    System.out.println("La sous-chaine en position 2 de string1 est :" + string1.substring(2));
+    System.out.println("La sous-chaîne en position 2 de string1 est :" + string1.substring(2));
     System.out.println(
-        "La sous-chaine qui débute en position 2 et fini en 4 est :" + string1.substring(2, 5));
+        "La sous-chaîne qui débute en position 2 et finit en 4 est :" + string1.substring(2, 5));
     System.out.println(
         "La première occurrence de string2 dans string1 est à la position :"
             + string1.indexOf(string2));

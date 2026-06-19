@@ -17,7 +17,7 @@ public class ExempleVariablesLocalesErreur extends JFrame implements MouseListen
     this.setVisible(true);
   }
 
-  // Méthode d'objet de la classe ExempleEvenementSouris qui est
+  // Méthode d'objet de la classe ExempleVariablesLocalesErreur qui est
   // appelée si le bouton de souris est enfoncé
   public void mousePressed(MouseEvent leMouseEvent) {
     int x = leMouseEvent.getX(); // place la coordonnée x de la souris dans la variable x

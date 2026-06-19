@@ -20,7 +20,7 @@ public class ExempleEvenementSouris2Fenetres extends JFrame implements MouseList
     this.setVisible(true);
   }
 
-  // Méthode d'objet de la classe ExempleEvenementSouris qui est
+  // Méthode d'objet de la classe ExempleEvenementSouris2Fenetres qui est
   // appelée si le bouton de souris est enfoncé
   public void mousePressed(MouseEvent leMouseEvent) {
     x = leMouseEvent.getX(); // place la Coordonnée x de la souris dans la variable x

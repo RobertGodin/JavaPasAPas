@@ -15,9 +15,7 @@ public class AccesDirect {
     // Ouverture du fichier ou creation si n'existe pas
     int nombreAlloue; // nombre d'enregistrements actuellement alloués
     RandomAccessFile fichierDirectPlants;
-    File leFichier =
-        new File(
-            "paramètres/Users/Robert/Documents/NetBeansProjects/JavaLivre/build/classes/DirectPlants.dat");
+    File leFichier = new File("DirectPlants.dat");
     if (leFichier.exists()) { // Fichier existe ?
       fichierDirectPlants = new RandomAccessFile(leFichier, "rw");
       // Cherche le nombre d'enregistrements actuellement alloués

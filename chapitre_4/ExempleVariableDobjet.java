@@ -21,7 +21,7 @@ public class ExempleVariableDobjet extends JFrame implements MouseListener {
     this.setVisible(true);
   }
 
-  // Méthode d'objet de la classe ExempleEvenementSouris qui est
+  // Méthode d'objet de la classe ExempleVariableDobjet qui est
   // appelée si le bouton de souris est enfoncé
   public void mousePressed(MouseEvent leMouseEvent) {
     x = leMouseEvent.getX(); // place la coordonnée x de la souris dans la variable x
