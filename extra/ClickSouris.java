@@ -53,7 +53,7 @@ public class ClickSouris extends JFrame {
     paintBonhomme(g, x, y, 200, 400);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ClickSouris leFrame = new ClickSouris();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

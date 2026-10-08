@@ -16,7 +16,7 @@ public class MiniSGFApp {
     int choix;
     String chaineNoBloc;
     int input;
-    byte tamponApplication[] = new byte[Disque.tailleBloc];
+    byte[] tamponApplication = new byte[Disque.tailleBloc];
     String contenuString;
 
     while (true) {

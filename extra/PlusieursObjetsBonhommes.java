@@ -53,7 +53,7 @@ public class PlusieursObjetsBonhommes extends JFrame {
     unBonhommeIti.paint(g);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     PlusieursObjetsBonhommes leFrame = new PlusieursObjetsBonhommes();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

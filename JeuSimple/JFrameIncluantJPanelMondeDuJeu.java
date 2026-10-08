@@ -17,7 +17,7 @@ public class JFrameIncluantJPanelMondeDuJeu extends JFrame {
     leJPanelAnimation.start();
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new JFrameIncluantJPanelMondeDuJeu();
   }
 }

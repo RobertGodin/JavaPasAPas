@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Exercice1 {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     String chaine1 = JOptionPane.showInputDialog("Entrez un premier nombre entier");
     String chaine2 = JOptionPane.showInputDialog("Entrez un second nombre entier");

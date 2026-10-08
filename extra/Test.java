@@ -39,7 +39,7 @@ public class Test extends JFrame {
     g.drawLine(x + largeur, y + hauteur, milieux, y + hauteur * 3 / 4);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     Test leFrame = new Test();
     leFrame.setSize(300, 300);
     leFrame.show();

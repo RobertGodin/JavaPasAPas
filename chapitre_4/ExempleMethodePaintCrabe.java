@@ -55,7 +55,7 @@ public class ExempleMethodePaintCrabe extends JFrame {
     paintCrabe(g, 20, 280, 120, 80);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExempleMethodePaintCrabe();
   }
 }

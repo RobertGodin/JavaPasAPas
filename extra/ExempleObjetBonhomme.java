@@ -29,7 +29,7 @@ public class ExempleObjetBonhomme extends JFrame {
     unBonhomme.paint(g);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ExempleObjetBonhomme leFrame = new ExempleObjetBonhomme();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

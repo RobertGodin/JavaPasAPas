@@ -31,7 +31,7 @@ public class ExempleDessin2DDansJFrame extends JFrame {
     g.fillRect(290, 120, 30, 80); // La pince droite
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExempleDessin2DDansJFrame();
   }
 }

@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class Exercice2 {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     String chaine = JOptionPane.showInputDialog("Entrez un entier dans cette case");
     int somme = Integer.parseInt(chaine);

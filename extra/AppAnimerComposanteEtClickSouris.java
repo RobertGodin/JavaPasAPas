@@ -45,7 +45,7 @@ public class AppAnimerComposanteEtClickSouris extends JPanel {
     uneComposanteAnimation.paint(g);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     AppAnimerComposanteEtClickSouris lePanelAnimation = new AppAnimerComposanteEtClickSouris();
     JFrame leFrame = new JFrame("Animation avec Intéractivité simple");
     leFrame.getContentPane().add(lePanelAnimation);

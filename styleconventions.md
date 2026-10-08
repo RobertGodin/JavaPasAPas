@@ -58,8 +58,8 @@ collée au bloc, **aucun** espace entre les lignes, **6 pt sous** le bloc.
 Ne jamais ajouter de lignes vides ni d'espacement direct autour du code.
 
 ### 2.5 Largeur des lignes et repli
-Le cadre fait **≈ 76 caractères** (Consolas 8 pt, page de 6 po). Une ligne plus
-longue se replie et devient illisible. **Garder chaque ligne ≤ 76 caractères** :
+Le cadre fait **75 caractères** (Consolas 8 pt, page de 6 po). Une ligne plus
+longue se replie et devient illisible. **Garder chaque ligne ≤ 75 caractères** :
 - couper à un point logique : après `(`, après `,`, après `;` (boucles `for`),
   après `=`, avant un opérateur (`+`, `==`, `!=`, `&&`, `||`), avant un `.` de
   chaînage, avant `extends`/`implements`/`throws` ;
@@ -170,7 +170,7 @@ Black 32 pt (capitales) souligné d'un filet ; sous-titre en italique.
 
 ### 5.2 En-têtes courants (running heads)
 `evenAndOddHeaders` activé. Trois en-têtes : `header1` =
-`STYLEREF "heading 2"` (section, recto), `header2` = `STYLEREF "heading 1"`
+`STYLEREF 2` (section, recto), `header2` = `STYLEREF 1`
 (chapitre, verso), `header3` = **vide**.
 - **Verso** (pages paires) : titre de **chapitre**, ferré à gauche.
 - **Recto** (pages impaires) : titre de **section**, ferré à droite.
@@ -199,7 +199,7 @@ Black 32 pt (capitales) souligné d'un filet ; sous-titre en italique.
 
 ## 8. Règles pour les modifications futures
 1. **Code** → style `Code` (bloc) ou `CODE0`/Consolas (en ligne) ; jamais d'autre
-   police, jamais justifié, jamais > 76 caractères par ligne.
+   police, jamais justifié, jamais > 75 caractères par ligne.
 2. **Coloration** → uniquement les 4 couleurs du §2.6.
 3. **Aucun copier-coller** de mise en forme depuis le web : coller en **texte
    brut**, puis appliquer les styles (évite les polices et noms de police
@@ -223,8 +223,10 @@ Black 32 pt (capitales) souligné d'un filet ; sous-titre en italique.
    Word affiche alors une boîte de dialogue « mettre à jour les champs ? » qui
    **bloque** la conversion `docx2pdf` automatisée. Rafraîchir manuellement.
 2. Contrôler visuellement les **lettrines** (3 lignes) et la **page de titre**.
-3. Si un en-tête affiche « Erreur… », vérifier que le champ `STYLEREF` cible bien
-   le nom de style « heading 1 » / « heading 2 ».
+3. Si un en-tête affiche « Erreur… », vérifier que le champ utilise le **numéro
+   de niveau** : `STYLEREF 1` / `STYLEREF 2`. Les noms de style ne sont pas
+   fiables : Word en français à l'écran refuse « heading 1 », alors que
+   l'export PDF refuse « Titre 1 ».
 4. Vérifier qu'aucune **page blanche** parasite n'a été introduite par les sauts
    de section (ouvertures de chapitre).
 
@@ -259,6 +261,10 @@ en SVG moderne**, convertis en **EMF** (vectoriel) puis insérés. Style commun 
 - **Largeur des boîtes calculée à partir de la largeur de texte mesurée** (rendu +
   mesure des pixels) pour éviter tout débordement.
 - **Placement** : en ligne, **centré**, largeur ≤ ~335 pt (colonne).
+- **Variante SVG** : à défaut d'EMF, l'image peut être insérée en SVG avec une
+  image PNG de secours (`a:blip` vers le PNG + extension `asvg:svgBlip` vers le
+  SVG). Le texte du SVG est d'abord converti en tracés
+  (`rsvg-convert -f svg`), pour le même rendu partout.
 - Scripts de génération conservés (à régénérer en cas de modification).
 
 ## 11. Captures d'écran

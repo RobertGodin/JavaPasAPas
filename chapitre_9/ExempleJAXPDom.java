@@ -187,7 +187,7 @@ public class ExempleJAXPDom {
     // Step 3: parse the input file
     Document doc = null;
     try {
-      doc = db.parse("C:/forte4j/Development/LivreJava/Plants.xml");
+      doc = db.parse(new File("Plants.xml"));
     } catch (SAXException se) {
       System.err.println(se.getMessage());
       System.exit(1);

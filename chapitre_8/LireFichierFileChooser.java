@@ -9,20 +9,18 @@ public class LireFichierFileChooser extends JFrame {
     if (resultat != JFileChooser.CANCEL_OPTION) {
       File leFile = unFileChooser.getSelectedFile();
       if (leFile != null && !(leFile.getName().equals(""))) {
-        FileInputStream unFichier = new FileInputStream(leFile);
+        try (FileInputStream unFichier = new FileInputStream(leFile)) {
+          byte[] tampon = new byte[4];
+          unFichier.read(tampon); // Lecture des 4 octets
 
-        byte[] tampon = new byte[4];
-        unFichier.read(tampon); // Lecture des 4 octets
-
-        // Convertir le tableau d'octets tampon en int unEntier
-        int unEntier = 0;
-        for (int i = 0; i <= 3; i++) {
-          unEntier <<= 8;
-          unEntier += ((int) tampon[i]) & 0XFF;
+          // Convertir le tableau d'octets tampon en int unEntier
+          int unEntier = 0;
+          for (int i = 0; i <= 3; i++) {
+            unEntier <<= 8;
+            unEntier += ((int) tampon[i]) & 0XFF;
+          }
+          System.out.println("Valeur décimale de l'entier : " + unEntier);
         }
-        unFichier.close();
-        System.out.println("Valeur décimale de l'entier : " + unEntier);
-
       } else {
         System.out.println("Nom de fichier invalide");
       }
@@ -32,7 +30,7 @@ public class LireFichierFileChooser extends JFrame {
     System.exit(0);
   }
 
-  public static void main(String args[]) throws Exception {
+  public static void main(String[] args) throws Exception {
     new LireFichierFileChooser();
   }
 }

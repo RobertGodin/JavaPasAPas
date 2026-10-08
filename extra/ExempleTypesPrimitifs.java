@@ -6,7 +6,7 @@ import javax.swing.JOptionPane; // Importe la classe javax.swing.JOptionPane
 
 public class ExempleTypesPrimitifs {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     boolean unBoolean = true;
     JOptionPane.showMessageDialog(

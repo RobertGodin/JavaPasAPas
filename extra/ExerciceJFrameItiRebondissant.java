@@ -95,7 +95,7 @@ public class ExerciceJFrameItiRebondissant extends JFrame {
     g.fillRect(x, y + hauteur / 2, largeur, hauteur / 2); // Le corps
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ExerciceJFrameItiRebondissant laFenetre = new ExerciceJFrameItiRebondissant();
   }
 }

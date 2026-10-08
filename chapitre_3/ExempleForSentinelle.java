@@ -5,7 +5,7 @@
 import javax.swing.JOptionPane;
 
 public class ExempleForSentinelle {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String serie;
     int somme = 0;
     for (int entier = 1; entier != 0; ) {

@@ -52,7 +52,7 @@ public class ExempleCrabeRectangleEnglobant extends JFrame {
         x + largeur * 7 / 8, y + hauteur / 8, largeur / 8, hauteur / 2);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExempleCrabeRectangleEnglobant();
   }
 }

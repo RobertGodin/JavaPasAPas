@@ -33,7 +33,7 @@ public class AnimerDoubleTamponObjetBonhomme extends JFrame {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     AnimerDoubleTamponObjetBonhomme leFrame = new AnimerDoubleTamponObjetBonhomme();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

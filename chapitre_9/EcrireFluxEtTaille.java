@@ -3,6 +3,7 @@
  * crée ensuite le fichier d'objets fluxPlants.dat par accès sériel*/
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class EcrireFluxEtTaille {
@@ -10,9 +11,11 @@ public class EcrireFluxEtTaille {
   // La méthode lit les données de Plants.txt et les retournent dans un vecteur d'objets
   // de la classe Plant
   // Reprend essentiellement le code de ExempleStreamTokenizer
-  public static Vector lirePlantsFichierTexte() throws Exception {
+  public static ArrayList<Plant> lirePlantsFichierTexte() throws Exception {
 
-    FileReader unFichier = new FileReader("C:/forte4j/Development/LivreJava/Plants.txt");
+    ArrayList<Plant> vecteurDePlants = new ArrayList<Plant>();
+    try (FileReader unFichier =
+        new FileReader("Plants.txt", StandardCharsets.UTF_8)) {
     StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
 
     // Les 5 lignes suivantes ne sont pas nécessaires car les paramètres
@@ -23,7 +26,6 @@ public class EcrireFluxEtTaille {
     unStreamTokenizer.whitespaceChars((int) '\t', (int) '\t');
     unStreamTokenizer.whitespaceChars((int) ' ', (int) ' ');
 
-    Vector vecteurDePlants = new Vector();
     int noPlant = 0;
     String description = "";
     double prixUnitaire = 0.0;
@@ -56,36 +58,35 @@ public class EcrireFluxEtTaille {
       // création de l'objet Plant
       Plant unPlant = new Plant(noPlant, description, prixUnitaire);
       System.out.println(noPlant + " " + description + " " + prixUnitaire);
-      vecteurDePlants.addElement(unPlant);
+      vecteurDePlants.add(unPlant);
     }
-    unFichier.close();
+    }
     return vecteurDePlants;
   }
 
   // La méthode suivante écrit les objets de vecteurDePlants les uns à la suite
   // des autres dans le fichier FluxPlants.dat par accès sériel
-  public static void écrireFichierFluxPlants(Vector vecteurDePlants) throws Exception {
-    ObjectOutputStream fichierFluxPlants =
-        new ObjectOutputStream(
-            new FileOutputStream("C:/forte4j/Development/LivreJava/FluxPlants.dat"));
-    Enumeration enumerationPlants = vecteurDePlants.elements();
-    while (enumerationPlants.hasMoreElements()) {
-      // le writeObject ajoute le nouvel objet à la fin du fichier
-      ByteArrayOutputStream unBAOS = new ByteArrayOutputStream();
-      ObjectOutputStream unOOS = new ObjectOutputStream(unBAOS);
-      Plant unPlant = (Plant) enumerationPlants.nextElement();
-      unOOS.writeObject(unPlant);
-      System.out.println("Taille :" + unBAOS.size());
-      byte[] tampon = unBAOS.toByteArray();
-      System.out.write(tampon);
-      System.out.println();
-      fichierFluxPlants.writeObject(unPlant);
+  public static void écrireFichierFluxPlants(ArrayList<Plant> vecteurDePlants)
+      throws Exception {
+    try (ObjectOutputStream fichierFluxPlants =
+        new ObjectOutputStream(new FileOutputStream("FluxPlants.dat"))) {
+      for (Plant unPlant : vecteurDePlants) {
+        // Taille de l'objet sérialisé seul
+        ByteArrayOutputStream unBAOS = new ByteArrayOutputStream();
+        try (ObjectOutputStream unOOS = new ObjectOutputStream(unBAOS)) {
+          unOOS.writeObject(unPlant);
+        }
+        System.out.println("Taille :" + unBAOS.size());
+        System.out.write(unBAOS.toByteArray());
+        System.out.println();
+        // le writeObject ajoute le nouvel objet à la fin du fichier
+        fichierFluxPlants.writeObject(unPlant);
+      }
     }
-    fichierFluxPlants.close();
   }
 
-  public static void main(String args[]) throws Exception {
-    Vector vecteurDePlants = lirePlantsFichierTexte();
+  public static void main(String[] args) throws Exception {
+    ArrayList<Plant> vecteurDePlants = lirePlantsFichierTexte();
     écrireFichierFluxPlants(vecteurDePlants);
   }
 }

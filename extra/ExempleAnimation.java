@@ -41,7 +41,7 @@ public class ExempleAnimation extends JPanel implements ActionListener {
     unBonhomme.paint(g);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ExempleAnimation lePanelAnimation = new ExempleAnimation();
     JFrame leFrame = new JFrame("Animation simple avec objet et composantes Swing");
     leFrame.getContentPane().add(lePanelAnimation);

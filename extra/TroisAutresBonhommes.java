@@ -70,7 +70,7 @@ public class TroisAutresBonhommes extends JFrame {
     paintBonhomme(g, 30, 30, 10, 20);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     TroisAutresBonhommes leFrame = new TroisAutresBonhommes();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

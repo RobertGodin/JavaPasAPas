@@ -53,7 +53,7 @@ public class PlusieursObjetsSousClasses extends JFrame {
     unBonhommeIti.paint(g);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     PlusieursObjetsSousClasses leFrame = new PlusieursObjetsSousClasses();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

@@ -1,16 +1,18 @@
 /* Illustration du StreamTokenizer
- * Lit le fichier plants.txt, affiche à l'écran chacun des jetons (noPlant,description,prixUnitaire) et
- * stocke le contenu dans un vecteur d'objets Plant */
+ * Lit le fichier Plants.txt, affiche à l'écran chacun des jetons
+ * (noPlant, description, prixUnitaire) et stocke le contenu dans un
+ * vecteur (ArrayList) d'objets Plant */
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class ExempleStreamTokenizer {
-  public static void main(String args[]) {
-    try {
-      FileReader unFichier = new FileReader("Plants.txt");
+  public static void main(String[] args) {
+    ArrayList<Plant> vecteurDePlants = new ArrayList<Plant>();
+    try (FileReader unFichier =
+        new FileReader("Plants.txt", StandardCharsets.UTF_8)) {
       StreamTokenizer unStreamTokenizer = new StreamTokenizer(unFichier);
-
       // Les 5 lignes suivantes ne sont pas nécessaires car les paramètres
       // donnés sont les valeurs de défaut
       unStreamTokenizer.quoteChar((int) '"');
@@ -19,42 +21,42 @@ public class ExempleStreamTokenizer {
       unStreamTokenizer.whitespaceChars((int) '\t', (int) '\t');
       unStreamTokenizer.whitespaceChars((int) ' ', (int) ' ');
 
-      Vector vecteurDePlants = new Vector();
       int noPlant = 0;
       String description = "";
       double prixUnitaire = 0.0;
 
-      while (unStreamTokenizer.nextToken() != StreamTokenizer.TT_EOF) { // fin du fichier ?
-        // Lecture du noPlant
-        if (unStreamTokenizer.ttype == StreamTokenizer.TT_NUMBER) { // Est-ce bien un nombre ?
+      // Jusqu'à la fin du fichier
+      while (unStreamTokenizer.nextToken() != StreamTokenizer.TT_EOF) {
+        // Lecture du noPlant : est-ce bien un nombre ?
+        if (unStreamTokenizer.ttype == StreamTokenizer.TT_NUMBER) {
           noPlant = (int) unStreamTokenizer.nval; // nval est un double !
         } else {
-          System.out.println("Le format du fichier est incorrect : noPlant attendu");
+          System.out.println("Format incorrect : noPlant attendu");
           System.exit(1);
         }
-        // Lecture de la description
+        // Lecture de la description : est-ce bien une chaîne entre " ?
         unStreamTokenizer.nextToken();
-        if (unStreamTokenizer.ttype == (int) '"') { // Est-ce bien une chaîne encadrée par " ?
+        if (unStreamTokenizer.ttype == (int) '"') {
           description = unStreamTokenizer.sval;
         } else {
-          System.out.println("Le format du fichier est incorrect : description attendue");
+          System.out.println("Format incorrect : description attendue");
           System.exit(1);
         }
-        // Lecture du prixUnitaire
+        // Lecture du prixUnitaire : est-ce bien un nombre ?
         unStreamTokenizer.nextToken();
-        if (unStreamTokenizer.ttype == StreamTokenizer.TT_NUMBER) { // Est-ce bien un nombre ?
+        if (unStreamTokenizer.ttype == StreamTokenizer.TT_NUMBER) {
           prixUnitaire = unStreamTokenizer.nval;
         } else {
-          System.out.println("Le format du fichier est incorrect : prix attendu");
+          System.out.println("Format incorrect : prix attendu");
           System.exit(1);
         }
 
-        // création de l'objet Plant
+        // Création de l'objet Plant
         Plant unPlant = new Plant(noPlant, description, prixUnitaire);
-        System.out.println(noPlant + " " + description + " " + prixUnitaire);
-        vecteurDePlants.addElement(unPlant);
+        System.out.println(
+            noPlant + " " + description + " " + prixUnitaire);
+        vecteurDePlants.add(unPlant);
       }
-      unFichier.close();
     } catch (IOException e) {
       System.err.println("Exception\n" + e.toString());
     }

@@ -29,7 +29,7 @@ public class ExerciceBoucleBonhomme extends JFrame {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ExerciceBoucleBonhomme leFrame = new ExerciceBoucleBonhomme();
     leFrame.addWindowListener(
         new WindowAdapter() {

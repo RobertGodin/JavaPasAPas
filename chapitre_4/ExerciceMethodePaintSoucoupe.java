@@ -42,7 +42,7 @@ public class ExerciceMethodePaintSoucoupe extends JFrame {
     paintSoucoupe(g, 20, 280, 120, 60);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExerciceMethodePaintSoucoupe();
   }
 }

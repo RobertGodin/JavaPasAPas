@@ -1,6 +1,6 @@
 public class ExemplesStringVide {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     String string1 = "";
     String string2 = new String("");

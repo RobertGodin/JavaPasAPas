@@ -120,7 +120,7 @@ public class PlusieursBonhommes extends JFrame {
     paintBonhommeIti(g, 300, 300, 60, 120);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     PlusieursBonhommes leFrame = new PlusieursBonhommes();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

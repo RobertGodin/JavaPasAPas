@@ -1,13 +1,11 @@
-/* Lecture dans le fichier d'un entier sous forme d'une suite d'octets et conversion en int */
+/* Lecture dans le fichier d'un entier sous forme d'une suite d'octets et
+ * conversion en int */
 
 import java.io.*;
 
 public class LireEntierEnOctets {
-  public static void main(String args[]) {
-    FileInputStream unFichier;
-    try {
-      unFichier = new FileInputStream("Octets.dat");
-
+  public static void main(String[] args) {
+    try (FileInputStream unFichier = new FileInputStream("Octets.dat")) {
       byte[] tampon = new byte[4];
       unFichier.read(tampon); // Lecture des 4 octets
 
@@ -17,7 +15,6 @@ public class LireEntierEnOctets {
         unEntier <<= 8;
         unEntier += ((int) tampon[i]) & 0XFF;
       }
-      unFichier.close();
       System.out.println("Valeur décimale de l'entier : " + unEntier);
     } catch (IOException e) {
       System.err.println("Exception\n" + e.toString());

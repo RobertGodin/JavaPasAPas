@@ -3,7 +3,7 @@ import javax.swing.JOptionPane; // Importe la classe javax.swing.JOptionPane
 
 public class Exemple1 {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     // Déclaration de variables
     String chaine1, chaine2; // Les entiers sous forme de chaînes

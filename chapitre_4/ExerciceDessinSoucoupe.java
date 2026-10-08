@@ -26,7 +26,7 @@ public class ExerciceDessinSoucoupe extends JFrame {
     g.fillOval(200, 150, 30, 30);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExerciceDessinSoucoupe();
   }
 }

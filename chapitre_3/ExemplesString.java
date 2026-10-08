@@ -1,6 +1,6 @@
 public class ExemplesString {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     String string1 = "abc";
     String string2 = "def";

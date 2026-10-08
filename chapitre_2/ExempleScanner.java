@@ -6,7 +6,7 @@
 import java.util.Scanner;
 
 public class ExempleScanner {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     int entier1, entier2, somme;
     Scanner unScanner = new Scanner(System.in);

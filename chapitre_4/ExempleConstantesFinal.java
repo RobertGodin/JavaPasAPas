@@ -86,7 +86,7 @@ public class ExempleConstantesFinal extends JFrame
     g.drawString("x=" + x + " y=" + y, 10, HAUTEURFENETRE - 50);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExempleConstantesFinal();
     new ExempleConstantesFinal();
   }

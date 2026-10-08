@@ -24,7 +24,7 @@ public class DessinDuWazzupMan extends JFrame {
     g.drawLine(largeur / 2 + 14, hauteur / 2 + 14, largeur * 3 / 4, hauteur);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     DessinDuWazzupMan leFrame = new DessinDuWazzupMan();
     leFrame.addWindowListener(
         new WindowAdapter() {

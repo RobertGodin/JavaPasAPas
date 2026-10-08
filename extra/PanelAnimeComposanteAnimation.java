@@ -38,7 +38,7 @@ public class PanelAnimeComposanteAnimation extends JPanel implements ActionListe
     uneComposanteAnimation.paint(g);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     PanelAnimeComposanteAnimation lePanelAnimation = new PanelAnimeComposanteAnimation();
     JFrame leFrame = new JFrame("Animation de ComposanteAnimation avec Timer");
     leFrame.getContentPane().add(lePanelAnimation);

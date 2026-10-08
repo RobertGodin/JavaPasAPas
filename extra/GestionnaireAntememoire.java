@@ -10,10 +10,10 @@ public class GestionnaireAntememoire {
   Disque leDisque;
   // Réalisation d'un répertoire simple à l'aide d'un tableau noBloc
   // qui contient le noBloc du bloc dans le tampon
-  int noBlocDansTampon[];
-  boolean sale[];
-  int fréquence[];
-  byte tampon[][];
+  int[] noBlocDansTampon;
+  boolean[] sale;
+  int[] fréquence;
+  byte[][] tampon;
 
   public GestionnaireAntememoire() {
     // Constructeur qui initilise les structures de données de l'antémémoire
@@ -34,7 +34,7 @@ public class GestionnaireAntememoire {
     leDisque.fermer();
   }
 
-  public void lireBlocAntememoire(int noBloc, byte tamponApplication[])
+  public void lireBlocAntememoire(int noBloc, byte[] tamponApplication)
       // La fonction lireBlocAntémémoire lit le contenu du bloc dont le numéro est
       // noBloc dans tamponApplication.
 
@@ -99,7 +99,7 @@ public class GestionnaireAntememoire {
     }
   }
 
-  public void écrireBlocAntememoire(int noBloc, byte tamponApplication[])
+  public void écrireBlocAntememoire(int noBloc, byte[] tamponApplication)
       throws NoBlocIllegalException {
     // La fonction écrireBlocAntémémoire écrit le contenu de tamponApplication dans le bloc dont le
     // numéro est noBloc.
@@ -174,7 +174,7 @@ public class GestionnaireAntememoire {
 
   public void afficherDisque() {
     // Pour les essais
-    byte tamponApplication[] = new byte[Disque.tailleBloc];
+    byte[] tamponApplication = new byte[Disque.tailleBloc];
     String contenuString;
     System.out.println("Contenu du disque:");
     for (int i = 0; i < Disque.nbBloc; i++) {

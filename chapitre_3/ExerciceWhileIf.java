@@ -2,7 +2,7 @@
 import javax.swing.JOptionPane;
 
 public class ExerciceWhileIf {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String chaine = JOptionPane.showInputDialog("Entrez un nombre");
     int plusGrand = Integer.parseInt(chaine);
     for (int compteur = 1; compteur < 5; compteur = compteur + 1) {

@@ -8,8 +8,6 @@ import java.io.*;
 import java.util.*;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
-import org.xml.sax.*;
-import org.xml.sax.helpers.*;
 
 public class TestJAXP {
 
@@ -24,9 +22,8 @@ public class TestJAXP {
 
     // Parsage du document
     Document unDocument =
-        db.parse(
-            "D:/oracle/oraDev/jdev/mywork/WorkspaceLivreJava/LivreJava/classes/LivreJava/Plants.xml");
-    Vector vecteurDePlants = new Vector();
+        db.parse(new File("Plants.xml"));
+    ArrayList<Plant> vecteurDePlants = new ArrayList<Plant>();
     Element unElementCatalogue =
         unDocument.getDocumentElement(); // Cherche l'élément racine <catalogue>
 
@@ -48,7 +45,7 @@ public class TestJAXP {
 
       Plant unPlant = new Plant(noPlant, description, prixUnitaire);
       System.out.println(noPlant + " " + description + " " + prixUnitaire);
-      vecteurDePlants.addElement(unPlant);
+      vecteurDePlants.add(unPlant);
     }
   }
 }

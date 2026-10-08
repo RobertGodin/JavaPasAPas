@@ -3,16 +3,14 @@
 import java.io.*;
 
 public class CompterOctetsFichier {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int unOctet;
-    int compteurOctet;
-    FileInputStream unFichier;
-    try {
-      unFichier = new FileInputStream("Fichier1.txt");
-      compteurOctet = 0;
+    int compteurOctet = 0;
+    // Le fichier est fermé automatiquement à la fin du bloc try
+    try (FileInputStream unFichier = new FileInputStream("Fichier1.txt")) {
       while ((unOctet = unFichier.read()) != -1) compteurOctet++;
-      unFichier.close();
-      System.out.println("Nombre d'octets du fichier Fichier1.txt : " + compteurOctet);
+      System.out.println(
+          "Nombre d'octets du fichier Fichier1.txt : " + compteurOctet);
     } catch (IOException e) {
       System.err.println("Exception\n" + e.toString());
     }

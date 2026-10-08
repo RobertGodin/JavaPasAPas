@@ -39,7 +39,7 @@ public class Exercice2Crabes extends JFrame {
     g.fillRect(125, 290, 15, 40); // La pince droite
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new Exercice2Crabes();
   }
 }

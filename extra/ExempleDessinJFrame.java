@@ -40,7 +40,7 @@ public class ExempleDessinJFrame extends JFrame {
     g.drawLine(x + largeur, y + hauteur, milieux, y + hauteur * 3 / 4);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ExempleDessinJFrame leFrame = new ExempleDessinJFrame();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(300, 300);

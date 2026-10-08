@@ -176,7 +176,7 @@ public class ExerciceJFrameAvecPingPongCrabesEtSoucoupes
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExerciceJFrameAvecPingPongCrabesEtSoucoupes();
   }
 }

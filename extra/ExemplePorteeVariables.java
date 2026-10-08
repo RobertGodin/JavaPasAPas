@@ -31,7 +31,7 @@ public class ExemplePorteeVariables {
     System.out.println("Valeur de la variable de classe w dans la méthode m2() =" + w);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     System.out.println("Création de l'objet1 :");
     ExemplePorteeVariables objet1 = new ExemplePorteeVariables();
     objet1.m1(30);

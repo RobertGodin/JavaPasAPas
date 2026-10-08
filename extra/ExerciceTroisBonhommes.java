@@ -50,7 +50,7 @@ public class ExerciceTroisBonhommes extends JFrame {
     g.fillRect(100 / b, 300 / b, 200 / b, 200 / b); // Le corps
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ExerciceTroisBonhommes leFrame = new ExerciceTroisBonhommes();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

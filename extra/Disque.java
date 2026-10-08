@@ -25,7 +25,7 @@ public class Disque {
       } catch (IOException e) {
         System.out.println("Erreur d'ouverture de disque.dat\n" + e.toString());
       }
-      byte tableauDeZero[] = new byte[tailleBloc];
+      byte[] tableauDeZero = new byte[tailleBloc];
       for (int i = 0; i < tailleBloc; i++) {
         tableauDeZero[i] = 0;
       }
@@ -51,7 +51,7 @@ public class Disque {
     }
   }
 
-  public void lireBloc(int noBloc, byte tamponApplication[])
+  public void lireBloc(int noBloc, byte[] tamponApplication)
       // La fonction lireBloc lit le contenu du bloc dont le numéro est noBloc dans
       // tamponApplication. Pour les besoins du travail, on suppose que chaque bloc
       // a une taille déterminée par une constante globale tailleBloc et, par conséquent,
@@ -70,7 +70,7 @@ public class Disque {
     file.readFully(tamponApplication);
   }
 
-  public void écrireBloc(int noBloc, byte tamponApplication[]) {
+  public void écrireBloc(int noBloc, byte[] tamponApplication) {
     // La fonction écrireBloc écrit le contenu de tamponApplication dans le bloc
     // dont le numéro est noBloc.
 

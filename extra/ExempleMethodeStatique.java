@@ -71,7 +71,7 @@ public class ExempleMethodeStatique extends JFrame {
     paintBonhomme(g, 200, 100, 50, 100);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ExempleMethodeStatique leFrame = new ExempleMethodeStatique();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(300, 300);

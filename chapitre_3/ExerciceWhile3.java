@@ -2,7 +2,7 @@
 import javax.swing.JOptionPane;
 
 public class ExerciceWhile3 extends Object {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String serie;
     int entier;
     int compteur = 1;

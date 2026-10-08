@@ -2,7 +2,7 @@
 import javax.swing.JOptionPane;
 
 public class ExempleLogique {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String unString = JOptionPane.showInputDialog("Entrez un premier nombre entier");
     int unInt = Integer.parseInt(unString);
 

@@ -51,7 +51,7 @@ public class AnimerDoubleTampon extends JFrame {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     AnimerDoubleTampon leFrame = new AnimerDoubleTampon();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

@@ -1,12 +1,10 @@
-/* création d'un fichier et écriture d'un suite d'octets dans le fichier */
+/* Création d'un fichier et écriture d'une suite d'octets */
 import java.io.*;
 
 public class EcrireOctetsFichier {
-  public static void main(String args[]) {
-    FileOutputStream unFichier;
-    try {
-      unFichier = new FileOutputStream("Fichier1.txt");
-
+  public static void main(String[] args) {
+    try (FileOutputStream unFichier =
+        new FileOutputStream("Fichier1.txt")) {
       unFichier.write(0X61);
       unFichier.write(0X62);
       unFichier.write(0X63);
@@ -16,8 +14,6 @@ public class EcrireOctetsFichier {
       unFichier.write(0X32);
       unFichier.write(0X0D);
       unFichier.write(0X0A);
-
-      unFichier.close();
     } catch (IOException e) {
       System.err.println("Exception\n" + e.toString());
     }

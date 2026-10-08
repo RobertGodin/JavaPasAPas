@@ -81,7 +81,7 @@ public class ExempleEvenementSouris extends JFrame
     paintCrabe(g, x, y, 60, 40);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExempleEvenementSouris();
   }
 }

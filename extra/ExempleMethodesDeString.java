@@ -2,7 +2,7 @@
 
 public class ExempleMethodesDeString {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     String string1 = new String("abcdef");
     String string2 = new String("cd");

@@ -6,7 +6,7 @@ import javax.swing.JOptionPane; // Importe la classe javax.swing.JOptionPane
 
 public class Exemple2 {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     // Saisir les deux chaînes de caractères qui représentent des nombres entiers
     String chaine1 = JOptionPane.showInputDialog("Entrez un premier nombre entier");

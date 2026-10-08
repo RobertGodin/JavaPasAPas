@@ -36,7 +36,7 @@ public class AnimationBoucleTest extends JPanel {
     unBonhomme.setX(unBonhomme.getX() + 5);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     AnimationBoucleTest lePanelAnimation = new AnimationBoucleTest();
     JFrame leFrame = new JFrame("AnimationBoucleTest");
     leFrame.getContentPane().add(lePanelAnimation);

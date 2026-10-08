@@ -82,7 +82,7 @@ public class ExercicePlusieursCrabesEtSoucoupes extends JFrame {
     paintSoucoupe(g, 270, 280, 110, 55);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExercicePlusieursCrabesEtSoucoupes();
   }
 }

@@ -40,7 +40,7 @@ public class Ex3BonhommesAvecPaintBonhomme extends JFrame {
     paintBonhomme(g, 30, 30, 10, 20);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     Ex3BonhommesAvecPaintBonhomme leFrame = new Ex3BonhommesAvecPaintBonhomme();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

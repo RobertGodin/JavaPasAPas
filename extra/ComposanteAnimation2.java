@@ -16,7 +16,7 @@ import javax.swing.*;
 
 public class ComposanteAnimation2 {
   protected Vector vecteurentités;
-  protected ImageIcon imagesCoq[];
+  protected ImageIcon[] imagesCoq;
   protected Component contenant;
 
   public ComposanteAnimation2(Component contenant) {

@@ -2,10 +2,10 @@
 import java.io.*;
 
 public class EcrireTexteFichier {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     FileOutputStream unFichier;
     try {
-      unFichier = new FileOutputStream("C:/forte4j/Development/LivreJava/Texte.txt");
+      unFichier = new FileOutputStream("Texte.txt");
 
       unFichier.write('a');
       unFichier.write('b');

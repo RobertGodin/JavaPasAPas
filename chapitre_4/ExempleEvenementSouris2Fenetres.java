@@ -81,7 +81,7 @@ public class ExempleEvenementSouris2Fenetres extends JFrame
     g.drawString("x=" + x + " y=" + y, 10, 550);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExempleEvenementSouris2Fenetres();
     new ExempleEvenementSouris2Fenetres();
   }

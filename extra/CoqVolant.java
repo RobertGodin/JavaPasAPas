@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class CoqVolant extends EntiteAnimee {
 
-  protected ImageIcon imagesAnimation[];
+  protected ImageIcon[] imagesAnimation;
   protected MediaTracker unMediaTracker;
   protected Component contenant;
 
@@ -18,7 +18,7 @@ public class CoqVolant extends EntiteAnimee {
       String fichierAudio,
       int nombreEtats,
       Component contenant,
-      ImageIcon imagesAnimation[]) {
+      ImageIcon[] imagesAnimation) {
     super(x, y, largeur, hauteur, vitesseX, vitesseY, visible, fichierAudio, 8);
     this.contenant = contenant;
     this.imagesAnimation = imagesAnimation;

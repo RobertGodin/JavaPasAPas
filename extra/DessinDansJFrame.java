@@ -27,7 +27,7 @@ public class DessinDansJFrame extends JFrame {
     g.fillRect(100, 300, 200, 200); // Le corps
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     DessinDansJFrame leFrame = new DessinDansJFrame();
     leFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     leFrame.setSize(400, 600);

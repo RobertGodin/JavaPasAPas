@@ -5,7 +5,7 @@
 import javax.swing.JOptionPane;
 
 public class ExerciceWhileSentinelle {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String serie;
     int somme = 0;
     int entier = 1; // N'importe quelle valeur différente de 0 ferait l'affaire

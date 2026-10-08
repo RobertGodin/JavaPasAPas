@@ -1,6 +1,6 @@
 public class ExemplesMath {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     System.out.println("Math.log(1.0)=" + Math.log(1.0));
     System.out.println("Math.exp(1.0)=" + Math.exp(1.0));

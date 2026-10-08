@@ -39,7 +39,7 @@ public class ApplicationAnimerComposante extends JPanel {
     uneComposanteAnimation.paint(g);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ApplicationAnimerComposante lePanelAnimation = new ApplicationAnimerComposante();
     JFrame leFrame = new JFrame("Animation simple");
     leFrame.getContentPane().add(lePanelAnimation);

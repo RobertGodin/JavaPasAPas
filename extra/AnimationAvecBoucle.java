@@ -35,7 +35,7 @@ public class AnimationAvecBoucle extends JPanel {
     unBonhomme.setX(unBonhomme.getX() + 5);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     AnimationAvecBoucle lePanelAnimation = new AnimationAvecBoucle();
     JFrame leFrame = new JFrame("Animation simple");
     leFrame.getContentPane().add(lePanelAnimation);

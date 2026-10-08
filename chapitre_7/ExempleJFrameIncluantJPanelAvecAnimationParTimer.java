@@ -16,7 +16,7 @@ public class ExempleJFrameIncluantJPanelAvecAnimationParTimer
     leJPanelAnimation.start();
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     new ExempleJFrameIncluantJPanelAvecAnimationParTimer();
   }
 }

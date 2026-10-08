@@ -41,7 +41,7 @@ public class Animation2 extends JPanel {
     unBonhomme.deplacer();
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     Animation2 lePanelAnimation = new Animation2();
     JFrame leFrame = new JFrame("Animation simple");
     leFrame.getContentPane().add(lePanelAnimation);

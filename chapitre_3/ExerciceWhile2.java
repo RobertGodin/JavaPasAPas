@@ -2,7 +2,7 @@
 import javax.swing.JOptionPane;
 
 public class ExerciceWhile2 {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int compteur;
     compteur = 5;
     while (compteur >= -5) {
