@@ -2,15 +2,15 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class ExempleVariableDobjet extends JFrame
+public class ExempleMethodeDobjetPaintCrabe extends JFrame
     implements MouseListener {
   // Variables d'objet qui contiennent les coordonnées de la souris
   // Le premier sera dessiné à la coordonnée (0,0)
   private int x = 0; // Coordonnée x du crabe à dessiner
   private int y = 0; // Coordonnée y du crabe à dessiner
 
-  public ExempleVariableDobjet() {
-    super("Exemple de variable d'objet x et y");
+  public ExempleMethodeDobjetPaintCrabe() {
+    super("Exemple de traitement d'événements de la souris");
 
     // Le paramètre this de addMouseListener() indique que l'objet qui
     // doit réagir aux événements de souris est l'objet
@@ -22,7 +22,7 @@ public class ExempleVariableDobjet extends JFrame
     this.setVisible(true);
   }
 
-  // Méthode d'objet de la classe ExempleVariableDobjet
+  // Méthode d'objet de la classe ExempleMethodeDobjetPaintCrabe
   // qui est appelée si le bouton de souris est enfoncé
   public void mousePressed(MouseEvent leMouseEvent) {
     // Place les coordonnées de la souris dans les variables x et y
@@ -42,8 +42,8 @@ public class ExempleVariableDobjet extends JFrame
 
   public void mouseReleased(MouseEvent leMouseEvent) {}
 
-  public static void paintCrabe(
-      Graphics g, int x, int y, int largeur, int hauteur) {
+  public void paintCrabe(Graphics g, int largeur, int hauteur) {
+    // La méthode d'objet utilise directement les variables d'objet x et y
     g.setColor(Color.green);
     // Le corps
     g.fillOval(
@@ -78,12 +78,12 @@ public class ExempleVariableDobjet extends JFrame
 
   public void paint(Graphics g) {
     super.paint(g);
-    paintCrabe(g, x, y, 60, 40);
+    paintCrabe(g, 60, 40);
     g.drawString("x=" + x + " y=" + y, 10, 550);
   }
 
   public static void main(String args[]) {
-    new ExempleVariableDobjet();
-    new ExempleVariableDobjet();
+    new ExempleMethodeDobjetPaintCrabe();
+    new ExempleMethodeDobjetPaintCrabe();
   }
 }

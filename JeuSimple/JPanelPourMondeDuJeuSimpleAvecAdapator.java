@@ -4,7 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements ActionListener {
+public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel
+    implements ActionListener {
 
   public static final int INTERVALLEENTRESCENES = 50; // En ms
 
@@ -17,15 +18,27 @@ public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements Ac
   public static final int LARGEURJPANEL = MondeDuJeu.LARGEURMONDE;
   public static final int HAUTEURJPANEL = MondeDuJeu.HAUTEURMONDE;
 
-  // Conctructeur initialise le monde à animer
+  // Constructeur initialise le monde à animer
   public JPanelPourMondeDuJeuSimpleAvecAdapator() {
     leMondeDuJeu = new MondeDuJeu();
-    addMouseListener(
+    setBackground(Color.black); // Le fond noir de l'espace
+    // L'adaptateur ne redéfinit que les méthodes utiles
+    MouseAdapter unAdaptateur =
         new MouseAdapter() {
           public void mousePressed(MouseEvent e) {
             leMondeDuJeu.mousePressed(e);
           }
-        });
+
+          public void mouseMoved(MouseEvent e) {
+            leMondeDuJeu.mouseMoved(e);
+          }
+
+          public void mouseDragged(MouseEvent e) {
+            leMondeDuJeu.mouseMoved(e);
+          }
+        };
+    addMouseListener(unAdaptateur);
+    addMouseMotionListener(unAdaptateur);
   }
 
   public void start() {
@@ -34,6 +47,7 @@ public class JPanelPourMondeDuJeuSimpleAvecAdapator extends JPanel implements Ac
       chrono.start();
     }
   }
+
   // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
   public void actionPerformed(ActionEvent e) {
     repaint();

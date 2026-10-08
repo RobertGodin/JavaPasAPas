@@ -1,9 +1,10 @@
 // Animation par double tampon
+// Le crabe rebondit lorsqu'il atteint le bord de la fenêtre
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class ExempleJFrameAnimationDoubleTampon
+public class ExerciceJFrameAvecCrabeRebondissant
     extends JFrame {
 
   // Constantes pour la taille de la fenêtre et du crabe
@@ -16,8 +17,8 @@ public class ExempleJFrameAnimationDoubleTampon
   Graphics tamponGraphics;
   Image tamponImage;
 
-  public ExempleJFrameAnimationDoubleTampon() {
-    super("Exemple d'animation par double tampon");
+  public ExerciceJFrameAvecCrabeRebondissant() {
+    super("Crabe rebondissant");
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     this.setSize(LARGEURFENETRE, HAUTEURFENETRE);
     this.setVisible(true);
@@ -64,7 +65,11 @@ public class ExempleJFrameAnimationDoubleTampon
     super.paint(g);
     tamponImage = createImage(LARGEURFENETRE, HAUTEURFENETRE);
     tamponGraphics = tamponImage.getGraphics();
-    for (int x = 0; x <= LARGEURFENETRE - LARGEURCRABE; x = x + 5) {
+    int x = 0; // Coordonnée x du crabe
+    int directionCrabe = 1; // +1 vers la droite et -1 vers la gauche
+    // Nombre d'unités de déplacement à chaque itération de la boucle
+    int vitesseCrabe = 5;
+    while (true) {
       // Dessine le crabe dans le tampon
       paintCrabe(tamponGraphics, x, HAUTEURFENETRE - 2 * HAUTEURCRABE,
           LARGEURCRABE, HAUTEURCRABE);
@@ -78,10 +83,14 @@ public class ExempleJFrameAnimationDoubleTampon
       // Efface le crabe
       tamponGraphics.clearRect(x, HAUTEURFENETRE - 2 * HAUTEURCRABE,
           LARGEURCRABE, HAUTEURCRABE);
+      // Déplace le crabe
+      if (x + LARGEURCRABE >= LARGEURFENETRE | x < 0) // Si atteint le bord
+        directionCrabe = -directionCrabe; // Inverser la direction
+      x = x + vitesseCrabe * directionCrabe; // Déplacement du crabe
     }
   }
 
   public static void main(String args[]) {
-    new ExempleJFrameAnimationDoubleTampon();
+    new ExerciceJFrameAvecCrabeRebondissant();
   }
 }

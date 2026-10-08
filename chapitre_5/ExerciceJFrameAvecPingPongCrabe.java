@@ -1,9 +1,9 @@
-// Animation par double tampon
+// Le crabe se déplace en diagonale
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class ExempleJFrameAnimationDoubleTampon
+public class ExerciceJFrameAvecPingPongCrabe
     extends JFrame {
 
   // Constantes pour la taille de la fenêtre et du crabe
@@ -16,8 +16,8 @@ public class ExempleJFrameAnimationDoubleTampon
   Graphics tamponGraphics;
   Image tamponImage;
 
-  public ExempleJFrameAnimationDoubleTampon() {
-    super("Exemple d'animation par double tampon");
+  public ExerciceJFrameAvecPingPongCrabe() {
+    super("Ping pong crabe");
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     this.setSize(LARGEURFENETRE, HAUTEURFENETRE);
     this.setVisible(true);
@@ -64,10 +64,16 @@ public class ExempleJFrameAnimationDoubleTampon
     super.paint(g);
     tamponImage = createImage(LARGEURFENETRE, HAUTEURFENETRE);
     tamponGraphics = tamponImage.getGraphics();
-    for (int x = 0; x <= LARGEURFENETRE - LARGEURCRABE; x = x + 5) {
+
+    int xCrabe = 0; // Coordonnées du crabe
+    int yCrabe = 0;
+    int vitesseXCrabe = 5; // Vitesse du crabe
+    int vitesseYCrabe = 10;
+
+    while (true) {
       // Dessine le crabe dans le tampon
-      paintCrabe(tamponGraphics, x, HAUTEURFENETRE - 2 * HAUTEURCRABE,
-          LARGEURCRABE, HAUTEURCRABE);
+      paintCrabe(tamponGraphics, xCrabe, yCrabe, LARGEURCRABE,
+          HAUTEURCRABE);
       // Copie le tampon dans le contexte graphique de la fenêtre
       g.drawImage(tamponImage, 0, 0, this);
       try {
@@ -76,12 +82,21 @@ public class ExempleJFrameAnimationDoubleTampon
         System.out.println(uneException.toString());
       }
       // Efface le crabe
-      tamponGraphics.clearRect(x, HAUTEURFENETRE - 2 * HAUTEURCRABE,
-          LARGEURCRABE, HAUTEURCRABE);
+      tamponGraphics.clearRect(xCrabe, yCrabe, LARGEURCRABE,
+          HAUTEURCRABE);
+      // Déplace le crabe
+      // Si atteint le bord, inverser la direction selon x
+      if (xCrabe + LARGEURCRABE >= LARGEURFENETRE | xCrabe < 0)
+        vitesseXCrabe = -vitesseXCrabe;
+      xCrabe = xCrabe + vitesseXCrabe; // Déplacement du crabe selon x
+      // Si atteint le bord, inverser la direction selon y
+      if (yCrabe + HAUTEURCRABE >= HAUTEURFENETRE | yCrabe < 0)
+        vitesseYCrabe = -vitesseYCrabe;
+      yCrabe = yCrabe + vitesseYCrabe; // Déplacement du crabe selon y
     }
   }
 
   public static void main(String args[]) {
-    new ExempleJFrameAnimationDoubleTampon();
+    new ExerciceJFrameAvecPingPongCrabe();
   }
 }

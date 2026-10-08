@@ -1,10 +1,10 @@
 package JeuSimple;
 
-import java.applet.*;
 import java.net.URL;
+import javax.sound.sampled.*;
 
 public abstract class EntiteAnimeAvecCri extends EntiteAnime {
-  protected AudioClip unCri; // Cri de l'Entité
+  protected Clip unCri; // Cri de l'entité
 
   public EntiteAnimeAvecCri(
       int x,
@@ -20,11 +20,21 @@ public abstract class EntiteAnimeAvecCri extends EntiteAnime {
     // Le fichier est dans le dossier de EntiteAnimeAvecCri.class
     // Cherche l'URL du fichier
     URL url = EntiteAnimeAvecCri.class.getResource(nomFichierAudio);
-    // Charge le clip audio à partir de l'URL
-    unCri = Applet.newAudioClip(url);
+    try {
+      // Charge le clip audio à partir de l'URL
+      unCri = AudioSystem.getClip();
+      unCri.open(AudioSystem.getAudioInputStream(url));
+    } catch (Exception e) {
+      // Sans dispositif audio, le jeu fonctionne en silence
+      System.err.println("Son non disponible : " + e);
+      unCri = null;
+    }
   }
 
   public void crier() {
-    unCri.play();
+    if (unCri != null) {
+      unCri.setFramePosition(0); // Revient au début du clip
+      unCri.start();
+    }
   }
 }

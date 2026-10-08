@@ -1,28 +1,19 @@
-// Tentative d'animation par itération d'affichage de gauche à droite
 import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import javax.swing.JFrame;
 
-public class ExempleJFrameAvecAnimationRatee
-    extends JFrame {
+public class ExempleMethodePaintCrabe extends JFrame {
 
-  // Constantes pour la taille de la fenêtre et du crabe
-  private static final int LARGEURFENETRE = 400;
-  private static final int HAUTEURFENETRE = 600;
-  private static final int LARGEURCRABE = LARGEURFENETRE / 4;
-  private static final int HAUTEURCRABE = LARGEURCRABE * 2 / 3;
-
-  public ExempleJFrameAvecAnimationRatee() {
-    super("Exemple d'animation ratée");
+  public ExempleMethodePaintCrabe() {
+    super("2 crabes avec méthode paintCrabe()");
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-    this.setSize(LARGEURFENETRE, HAUTEURFENETRE);
+    this.setSize(400, 400);
     this.setVisible(true);
   }
 
   // Méthode qui dessine un crabe dans un objet Graphics g
   // à l'échelle dans un rectangle englobant de paramètres
   // x,y,largeur,hauteur
-  public void paintCrabe(
+  public static void paintCrabe(
       Graphics g, int x, int y, int largeur, int hauteur) {
     g.setColor(Color.green);
     // Le corps
@@ -58,18 +49,13 @@ public class ExempleJFrameAvecAnimationRatee
 
   public void paint(Graphics g) {
     super.paint(g);
-    for (int x = 0; x <= LARGEURFENETRE - LARGEURCRABE; x = x + 5) {
-      paintCrabe(g, x, HAUTEURFENETRE - 2 * HAUTEURCRABE, LARGEURCRABE,
-          HAUTEURCRABE);
-      try {
-        Thread.sleep(50);
-      } catch (InterruptedException uneException) {
-        System.out.println(uneException.toString());
-      }
-    }
+    // Dessin du premier crabe
+    paintCrabe(g, 80, 100, 240, 160);
+    // Dessin du deuxième crabe
+    paintCrabe(g, 20, 280, 120, 80);
   }
 
   public static void main(String args[]) {
-    new ExempleJFrameAvecAnimationRatee();
+    new ExempleMethodePaintCrabe();
   }
 }

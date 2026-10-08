@@ -1,7 +1,7 @@
 # JavaPasAPas
 [![Build all chapters](https://github.com/RobertGodin/JavaPasAPas/actions/workflows/build-all-chapters.yml/badge.svg)](https://github.com/RobertGodin/JavaPasAPas/actions/workflows/build-all-chapters.yml)
 
-Site Web du livre :  Godin et Lemire (2021). Java Pas à Pas. Publié sur GitHub.
+Site Web du livre :  Godin et Lemire (2026). Java Pas à Pas, cinquième édition. Publié sur GitHub.
 
 
 <p><a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/">Vous pouvez aussi acheter la version papier du manuel Java pas à pas chez Amazon</a>:</p>
@@ -163,37 +163,38 @@ racine du projet.
 - ExemplesString
 
 **Chapitre 4**
-- ExerciceDessinIti
-- ExempleBotRectangleEnglobant
+- ExerciceDessinSoucoupe
+- ExempleCrabeRectangleEnglobant
 - ExempleDessin2DDansJFrame
-- Exemple2BotsRectangleEnglobant
+- Exemple2CrabesRectangleEnglobant
 - ExempleVariablesLocales
-- Exercice2Bots
+- Exercice2Crabes
 - ExempleEvenementSouris2Fenetres
-- ExercicePlusieursBotEtIti
-- ExempleMethodePaintBot
-- ExempleMethodeDobjetPaintBot
-- ExerciceMethodePaintIti
+- ExercicePlusieursCrabesEtSoucoupes
+- ExempleMethodePaintCrabe
+- ExempleMethodeDobjetPaintCrabe
+- ExerciceMethodePaintSoucoupe
 - ExempleConstantesFinal
 - ExempleVariableDobjet
 - ExempleEvenementSouris
 
 **Chapitre 5**
-- ExerciceJFrameAvecItiRebondissant
+- ExerciceJFrameAvecSoucoupeRebondissante
 - ExempleJFrameAnimationDoubleTampon
-- ExerciceJFrameAvecPingPongBot
-- ExerciceJFrameAvecPingPongBotsEtItis
-- ExerciceJFrameAvecBotRebondissant
+- ExerciceJFrameAvecPingPongCrabe
+- ExerciceJFrameAvecPingPongCrabesEtSoucoupes
+- ExerciceJFrameAvecCrabeRebondissant
 - ExempleJFrameAvecAnimationRatee
 
 
 **Chapitre 6**
-- ExempleJFrameAvecSuperClassePourBotEtIti
-- ExempleJFrameAvecClassesPourBotEtIti
+- ExempleJFrameAvecSuperClassePourCrabeEtSoucoupe
+- ExempleJFrameAvecClassesPourCrabeEtSoucoupe
 
 **Chapitre 7**
 - ExempleJFrameIncluantJPanelAnimeMondeAnime
 - JFrameIncluantJPanelAvecBoucleAnimeMondeAnime
+- ExempleJFrameIncluantJPanelAvecAnimationParTimer
 
 **Chapitre 8**
 - VerifierExistenceFichier
@@ -240,12 +241,12 @@ java -cp build/classes/chapitre_3 ExerciceIf1
 java -cp build/classes/chapitre_3 Afficher12345
 
 # Chapitre 4
-java -cp build/classes/chapitre_4 ExempleBotRectangleEnglobant
-java -cp build/classes/chapitre_4 ExerciceDessinIti
+java -cp build/classes/chapitre_4 ExempleCrabeRectangleEnglobant
+java -cp build/classes/chapitre_4 ExerciceDessinSoucoupe
 
 # Chapitre 5
 java -cp build/classes/chapitre_5 ExempleJFrameAvecAnimationRatee
-java -cp build/classes/chapitre_5 ExerciceJFrameAvecPingPongBot
+java -cp build/classes/chapitre_5 ExerciceJFrameAvecPingPongCrabe
 ```
 
 > Remplacez le nom de la classe par celle que vous souhaitez exécuter dans le chapitre concerné.

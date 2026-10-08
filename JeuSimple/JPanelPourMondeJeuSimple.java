@@ -4,23 +4,26 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class JPanelPourMondeJeuSimple extends JPanel implements ActionListener, MouseListener {
+public class JPanelPourMondeJeuSimple extends JPanel
+    implements ActionListener, MouseListener, MouseMotionListener {
 
   public static final int INTERVALLEENTRESCENES = 50; // En ms
 
-  // Le chrono génère un évènement a chaque intervalle
+  // Le chrono génère un événement à chaque intervalle
   private Timer chrono;
-  // Le monde a animer
+  // Le monde à animer
   private MondeDuJeu leMondeDuJeu;
 
   // Taille du JPanel
   public static final int LARGEURJPANEL = MondeDuJeu.LARGEURMONDE;
   public static final int HAUTEURJPANEL = MondeDuJeu.HAUTEURMONDE;
 
-  // Conctructeur initialise le monde à animer
+  // Constructeur initialise le monde à animer
   public JPanelPourMondeJeuSimple() {
     leMondeDuJeu = new MondeDuJeu();
+    setBackground(Color.black); // Le fond noir de l'espace
     addMouseListener(this);
+    addMouseMotionListener(this);
   }
 
   public void start() {
@@ -29,6 +32,7 @@ public class JPanelPourMondeJeuSimple extends JPanel implements ActionListener, 
       chrono.start();
     }
   }
+
   // Le chrono appelle actionPerformed périodiquement (boucle d'animation)
   public void actionPerformed(ActionEvent e) {
     repaint();
@@ -48,8 +52,18 @@ public class JPanelPourMondeJeuSimple extends JPanel implements ActionListener, 
   public void mousePressed(MouseEvent leMouseEvent) {
     leMondeDuJeu.mousePressed(leMouseEvent);
   }
+
+  public void mouseMoved(MouseEvent leMouseEvent) {
+    leMondeDuJeu.mouseMoved(leMouseEvent);
+  }
+
+  // Le canon suit aussi la souris lorsqu'un bouton est enfoncé
+  public void mouseDragged(MouseEvent leMouseEvent) {
+    leMondeDuJeu.mouseMoved(leMouseEvent);
+  }
+
   // Il faut absolument définir les autres méthodes pour les autres
-  // événements de souris même s'il ne font rien
+  // événements de souris même s'ils ne font rien
   public void mouseClicked(MouseEvent leMouseEvent) {}
 
   public void mouseEntered(MouseEvent leMouseEvent) {}
