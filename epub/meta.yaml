@@ -1,0 +1,16 @@
+---
+title:
+- type: main
+  text: Java pas à pas
+- type: subtitle
+  text: Introduction à la programmation et au langage Java
+creator:
+- role: author
+  text: Robert Godin
+- role: author
+  text: Daniel Lemire
+lang: fr-CA
+date: 2026-10
+rights: © 2026 Robert Godin et Daniel Lemire
+description: Cinquième édition, octobre 2026.
+...

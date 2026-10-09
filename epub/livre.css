@@ -1,0 +1,21 @@
+body { font-family: serif; line-height: 1.4; margin: 0 2%; }
+h1 { font-family: sans-serif; font-size: 1.6em; margin: 1.5em 0 0.8em; page-break-before: always; }
+h2 { font-family: sans-serif; font-size: 1.3em; margin: 1.4em 0 0.5em; }
+h3 { font-family: sans-serif; font-size: 1.1em; margin: 1.2em 0 0.4em; }
+p { margin: 0.4em 0; text-align: justify; }
+pre, code { font-family: monospace; }
+pre { font-size: 0.75em; line-height: 1.25; white-space: pre-wrap; word-wrap: break-word;
+      background: #f6f8fa; border-left: 3px solid #c8d1dc; padding: 0.5em 0.6em; margin: 0.3em 0 0.8em; }
+p code { font-size: 0.9em; }
+div.entete-code p { font-family: monospace; font-size: 0.75em; background: #e6ebf1;
+      margin: 0.8em 0 0; padding: 0.2em 0.6em; text-align: left; }
+div.entete-code + div.sourceCode pre, div.entete-code + pre { margin-top: 0; }
+div.encadre { border: 1px solid #555; padding: 0.3em 0.7em; margin: 0.8em 0; }
+div.legende p, figcaption { text-align: center; font-size: 0.9em; font-style: italic; margin: 0.3em 0 1em; }
+div.epigraphe p { font-style: italic; text-align: left; margin: 0 0 1em 1.5em; }
+img { max-width: 100%; height: auto; }
+p:has(> img) { text-align: center; }
+figure { margin: 1em 0; text-align: center; }
+table { border-collapse: collapse; margin: 0.8em auto; font-size: 0.9em; }
+td, th { border: 1px solid #999; padding: 0.2em 0.4em; vertical-align: top; }
+.sourceCode .kw, .sourceCode .dt { font-weight: bold; }
